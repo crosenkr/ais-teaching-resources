@@ -6,6 +6,7 @@
     <title>AIS Teaching Resources for IS Educators</title>
     <meta name="description" content="A curated, searchable directory of 160+ teaching resources for Information Systems educators, maintained by the AIS VP Education team.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230072BC'/><text x='16' y='23' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='18' fill='white'>TR</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -179,13 +180,17 @@
         }
 
         .search-box::before {
-            content: "\1F50D";
+            content: "";
             position: absolute;
-            left: 0.75rem;
+            left: 0.85rem;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 1rem;
-            opacity: 0.5;
+            width: 16px;
+            height: 16px;
+            background: currentColor;
+            opacity: 0.4;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") center/contain no-repeat;
         }
 
         .filter-buttons {
@@ -560,6 +565,29 @@
             opacity: 0.7;
         }
 
+        /* Loading spinner */
+        .loading-spinner {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner::before {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--border);
+            border-top-color: var(--ais-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         /* No results */
         .no-results {
             text-align: center;
@@ -746,12 +774,44 @@
             .view-toggle {
                 display: none;
             }
+
+            /* Force grid view on mobile — override list-view styles */
+            .resources-grid.list-view {
+                grid-template-columns: 1fr;
+            }
+
+            .list-view .resource-card {
+                flex-direction: column;
+            }
+
+            .list-view .resource-card h3 {
+                min-width: unset;
+            }
         }
 
         /* Print stylesheet */
         @media print {
             header, .controls-bar, #activeTagFilter, .tag-cloud-panel, footer, .skip-link {
                 display: none !important;
+            }
+
+            .print-header {
+                display: block !important;
+                text-align: center;
+                padding: 1rem 0 0.5rem;
+                border-bottom: 2px solid #333;
+                margin-bottom: 1rem;
+            }
+
+            .print-header h1 {
+                font-size: 16pt;
+                color: #333;
+            }
+
+            .print-header p {
+                font-size: 9pt;
+                color: #666;
+                margin-top: 0.25rem;
             }
 
             body {
@@ -868,9 +928,14 @@
 
     <div class="controls-bar" style="border: none; padding: 0.25rem 2rem; display: none;" id="activeTagFilter"></div>
 
+    <div class="print-header" style="display:none;">
+        <h1>AIS Teaching Resources for IS Educators</h1>
+        <p>Printed on <script>document.write(new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'}))</script> &mdash; aisnet.org</p>
+    </div>
+
     <main id="mainContent">
-        <div class="no-results" id="loading">
-            <h3>Loading resources...</h3>
+        <div class="loading-spinner" id="loading">
+            <p>Loading resources&hellip;</p>
         </div>
     </main>
 
@@ -1058,12 +1123,18 @@
             }
         }
 
+        function isMobile() {
+            return window.innerWidth <= 768;
+        }
+
         function setView(view) {
             currentView = view;
-            document.getElementById('gridBtn').classList.toggle('active', view === 'grid');
-            document.getElementById('gridBtn').setAttribute('aria-pressed', view === 'grid');
-            document.getElementById('listBtn').classList.toggle('active', view === 'list');
-            document.getElementById('listBtn').setAttribute('aria-pressed', view === 'list');
+            // On mobile, always render as grid (list layout doesn't work well)
+            const effectiveView = isMobile() ? 'grid' : view;
+            document.getElementById('gridBtn').classList.toggle('active', effectiveView === 'grid');
+            document.getElementById('gridBtn').setAttribute('aria-pressed', effectiveView === 'grid');
+            document.getElementById('listBtn').classList.toggle('active', effectiveView === 'list');
+            document.getElementById('listBtn').setAttribute('aria-pressed', effectiveView === 'list');
             render();
         }
 

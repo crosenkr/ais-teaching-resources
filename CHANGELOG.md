@@ -5,6 +5,16 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2026-03-15
+
+### Added
+
+- Animated loading spinner replacing static "Loading resources…" text
+- SVG search icon for consistent cross-browser rendering (replaces emoji)
+- Print-only header with site title and print date
+- Favicon (inline SVG with AIS blue "TR" monogram)
+- Mobile grid enforcement: list view is overridden to card layout on small screens (view toggle hidden)
+
 ## [0.3.0] - 2026-03-15
 
 ### Added
