@@ -467,6 +467,38 @@
             margin-left: 0.2em;
         }
 
+        .tag-cloud-other-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0.3rem 0.75rem;
+            margin-top: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .tag-cloud-other-toggle:hover {
+            border-color: var(--ais-light-blue);
+            color: var(--ais-light-blue);
+        }
+
+        .tag-cloud-other-tags {
+            display: none;
+            margin-top: 0.4rem;
+        }
+
+        .tag-cloud-other-tags.open {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            align-items: baseline;
+            line-height: 1.8;
+        }
+
         /* Tag cloud sizes based on frequency */
         .tag-cloud-tag.size-1 { font-size: 0.68rem; }
         .tag-cloud-tag.size-2 { font-size: 0.76rem; }
@@ -1216,8 +1248,8 @@
             });
             if (uncategorized.length > 0) {
                 html += `<div class="tag-cloud-facet">
-                    <div class="tag-cloud-facet-label">Other</div>
-                    <div class="tag-cloud-tags">${renderTagButtons(uncategorized)}</div>
+                    <button class="tag-cloud-other-toggle" onclick="document.getElementById('otherTags').classList.toggle('open'); this.textContent = document.getElementById('otherTags').classList.contains('open') ? 'Hide additional tags ▲' : 'Show ${uncategorized.length} additional tags ▼';">Show ${uncategorized.length} additional tags ▼</button>
+                    <div class="tag-cloud-other-tags" id="otherTags">${renderTagButtons(uncategorized)}</div>
                 </div>`;
             }
 
