@@ -870,7 +870,7 @@
         let schema = null;
         let allResources = [];
         let currentCategory = 'all';
-        let currentTag = null;
+        let currentTags = [];
         let currentSearch = '';
         let currentView = 'grid';
 
@@ -878,7 +878,7 @@
         function readUrlState() {
             const params = new URLSearchParams(window.location.hash.slice(1));
             if (params.has('category')) currentCategory = params.get('category');
-            if (params.has('tag')) currentTag = params.get('tag');
+            if (params.has('tags')) currentTags = params.get('tags').split(',').filter(Boolean);
             if (params.has('q')) {
                 currentSearch = params.get('q');
                 document.getElementById('searchInput').value = currentSearch;
@@ -890,7 +890,7 @@
         function writeUrlState() {
             const params = new URLSearchParams();
             if (currentCategory !== 'all') params.set('category', currentCategory);
-            if (currentTag) params.set('tag', currentTag);
+            if (currentTags.length) params.set('tags', currentTags.join(','));
             if (currentSearch) params.set('q', currentSearch);
             if (currentView !== 'grid') params.set('view', currentView);
             const hash = params.toString();
@@ -974,8 +974,9 @@
 
         function setCategory(cat) {
             currentCategory = cat;
-            currentTag = null;
+            currentTags = [];
             updateActiveTagDisplay();
+            updateTagCloudActive();
             document.querySelectorAll('.filter-btn').forEach(b => {
                 const isActive = b.dataset.category === cat;
                 b.classList.toggle('active', isActive);
@@ -988,11 +989,23 @@
         }
 
         function setTag(tag) {
-            if (currentTag === tag) {
-                currentTag = null;
+            if (!tag) {
+                currentTags = [];
             } else {
-                currentTag = tag;
+                const idx = currentTags.findIndex(t => t.toLowerCase() === tag.toLowerCase());
+                if (idx >= 0) {
+                    currentTags.splice(idx, 1);
+                } else {
+                    currentTags.push(tag);
+                }
             }
+            updateActiveTagDisplay();
+            updateTagCloudActive();
+            render();
+        }
+
+        function removeTag(tag) {
+            currentTags = currentTags.filter(t => t.toLowerCase() !== tag.toLowerCase());
             updateActiveTagDisplay();
             updateTagCloudActive();
             render();
@@ -1000,8 +1013,11 @@
 
         function updateActiveTagDisplay() {
             const el = document.getElementById('activeTagFilter');
-            if (currentTag) {
-                el.innerHTML = `Filtered by tag: <strong>${escapeHtml(currentTag)}</strong> <button onclick="setTag(null); currentTag=null; updateActiveTagDisplay(); render();">&times;</button>`;
+            if (currentTags.length > 0) {
+                const tagPills = currentTags.map(t =>
+                    `<span style="background:var(--ais-gold);color:white;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.8rem;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">${escapeHtml(t)}<button onclick="removeTag('${escapeHtml(t)}')" style="background:none;border:none;color:white;cursor:pointer;font-size:0.9rem;padding:0;line-height:1;">&times;</button></span>`
+                ).join(' ');
+                el.innerHTML = `Filtered by tags: ${tagPills} <button onclick="setTag(null)" style="margin-left:0.5rem;background:none;border:none;color:var(--ais-blue);cursor:pointer;font-size:0.8rem;font-weight:600;">Clear all</button>`;
                 el.style.display = 'flex';
             } else {
                 el.style.display = 'none';
@@ -1020,9 +1036,11 @@
             if (currentCategory !== 'all') {
                 results = results.filter(r => r.category === currentCategory);
             }
-            if (currentTag) {
+            if (currentTags.length > 0) {
                 results = results.filter(r =>
-                    r.tags.some(t => t.toLowerCase() === currentTag.toLowerCase())
+                    currentTags.every(ct =>
+                        r.tags.some(t => t.toLowerCase() === ct.toLowerCase())
+                    )
                 );
             }
             if (currentSearch) {
@@ -1051,7 +1069,7 @@
                     <div class="no-results">
                         <h3>No resources found</h3>
                         <p>Try adjusting your search, category, or tag filter.</p>
-                        <button onclick="currentCategory='all'; currentTag=null; currentSearch=''; document.getElementById('searchInput').value=''; updateActiveTagDisplay(); setCategory('all');" style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
+                        <button onclick="currentCategory='all'; currentTags=[]; currentSearch=''; document.getElementById('searchInput').value=''; updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');" style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
                     </div>`;
                 return;
             }
@@ -1090,7 +1108,7 @@
         function renderCard(r) {
             const tagsHtml = r.tags.slice(0, 5).map(t => {
                 const escaped = escapeHtml(t);
-                const isActive = currentTag && t.toLowerCase() === currentTag.toLowerCase();
+                const isActive = currentTags.some(ct => ct.toLowerCase() === t.toLowerCase());
                 return `<button class="resource-tag ${isActive ? 'tag-active' : ''}" data-tag="${escaped}" title="Click to filter by this tag">${escaped}</button>`;
             }).join('');
 
@@ -1181,7 +1199,7 @@
                     .sort((a, b) => a.tag.localeCompare(b.tag))
                     .map(({ tag, count }) => {
                         const escaped = escapeHtml(tag);
-                        const isActive = currentTag && tag.toLowerCase() === currentTag.toLowerCase();
+                        const isActive = currentTags.some(ct => ct.toLowerCase() === tag.toLowerCase());
                         return `<button class="tag-cloud-tag size-${sizeClass(count)} ${isActive ? 'tag-active' : ''}" data-cloud-tag="${escaped}">${escaped}<span class="tag-count">(${count})</span></button>`;
                     }).join('');
             }
@@ -1209,7 +1227,7 @@
         function updateTagCloudActive() {
             document.querySelectorAll('.tag-cloud-tag').forEach(btn => {
                 const tag = btn.dataset.cloudTag;
-                const isActive = currentTag && tag && tag.toLowerCase() === currentTag.toLowerCase();
+                const isActive = tag && currentTags.some(ct => ct.toLowerCase() === tag.toLowerCase());
                 btn.classList.toggle('tag-active', isActive);
             });
         }
