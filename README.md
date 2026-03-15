@@ -115,9 +115,13 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.3.1 (Prototype)
+**Current version:** 0.4.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
+
+### Roadmap
+
+- **Resource suggestion form** — Allow registered AIS members to suggest new resources via an integrated form (review queue → curation → publish)
 
 ## License
 

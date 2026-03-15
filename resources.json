@@ -10,7 +10,8 @@
       "undergraduate",
       "ACM",
       "AIS",
-      "competency model"
+      "competency model",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -25,7 +26,8 @@
       "curriculum",
       "graduate",
       "ACM",
-      "master's"
+      "master's",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -40,7 +42,8 @@
       "curriculum",
       "ACM",
       "IEEE",
-      "computing"
+      "computing",
+      "Global"
     ],
     "source": "ACM/IEEE",
     "lastAccessed": "15/03/2026"
@@ -55,7 +58,8 @@
       "cybersecurity",
       "NIST",
       "workforce",
-      "framework"
+      "framework",
+      "North America"
     ],
     "source": "NIST",
     "lastAccessed": "15/03/2026"
@@ -69,7 +73,8 @@
     "tags": [
       "AIS",
       "education",
-      "overview"
+      "overview",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -84,7 +89,8 @@
       "AIS",
       "curriculum",
       "graduate",
-      "task force"
+      "task force",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -97,7 +103,8 @@
     "category": "Curricula & Standards",
     "tags": [
       "AIS",
-      "resources"
+      "resources",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -112,7 +119,8 @@
       "cases",
       "Harvard",
       "business",
-      "teaching notes"
+      "teaching notes",
+      "North America"
     ],
     "source": "Harvard Business Publishing",
     "lastAccessed": "15/03/2026"
@@ -128,7 +136,7 @@
       "Ivey",
       "IS",
       "IT",
-      "global"
+      "North America"
     ],
     "source": "Ivey Publishing",
     "lastAccessed": "15/03/2026"
@@ -143,7 +151,8 @@
       "cases",
       "management",
       "free cases",
-      "repository"
+      "repository",
+      "Global"
     ],
     "source": "The Case Centre",
     "lastAccessed": "15/03/2026"
@@ -158,7 +167,8 @@
       "cases",
       "journal",
       "peer-reviewed",
-      "SAGE"
+      "SAGE",
+      "Global"
     ],
     "source": "SAGE",
     "lastAccessed": "15/03/2026"
@@ -173,7 +183,8 @@
       "cases",
       "journal",
       "research",
-      "applications"
+      "applications",
+      "Global"
     ],
     "source": "Taylor & Francis",
     "lastAccessed": "15/03/2026"
@@ -188,7 +199,8 @@
       "cases",
       "JISE",
       "teaching notes",
-      "IS education"
+      "IS education",
+      "North America"
     ],
     "source": "JISE",
     "lastAccessed": "15/03/2026"
@@ -203,7 +215,8 @@
       "cases",
       "MIT",
       "free",
-      "simulations"
+      "simulations",
+      "North America"
     ],
     "source": "MIT Sloan",
     "lastAccessed": "15/03/2026"
@@ -217,7 +230,8 @@
     "tags": [
       "cases",
       "open access",
-      "free"
+      "free",
+      "North America"
     ],
     "source": "Conestoga College",
     "lastAccessed": "15/03/2026"
@@ -233,7 +247,8 @@
       "free",
       "OER",
       "IS2020",
-      "OpenStax"
+      "OpenStax",
+      "North America"
     ],
     "source": "OpenStax",
     "lastAccessed": "15/03/2026"
@@ -248,7 +263,8 @@
       "textbook",
       "free",
       "OER",
-      "open textbook"
+      "open textbook",
+      "North America"
     ],
     "source": "University of Minnesota",
     "lastAccessed": "15/03/2026"
@@ -263,7 +279,8 @@
       "OER",
       "peer-reviewed",
       "repository",
-      "community"
+      "community",
+      "Global"
     ],
     "source": "MERLOT",
     "lastAccessed": "15/03/2026"
@@ -277,7 +294,8 @@
     "tags": [
       "OER",
       "digital library",
-      "search"
+      "search",
+      "Global"
     ],
     "source": "OER Commons",
     "lastAccessed": "15/03/2026"
@@ -292,7 +310,8 @@
       "OER",
       "MIT",
       "courseware",
-      "free"
+      "free",
+      "North America"
     ],
     "source": "MIT",
     "lastAccessed": "15/03/2026"
@@ -307,7 +326,8 @@
       "AIS",
       "AISEL",
       "open access",
-      "teaching"
+      "teaching",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -322,7 +342,8 @@
       "SAP",
       "ERP",
       "free access",
-      "lesson plans"
+      "lesson plans",
+      "Global"
     ],
     "source": "SAP",
     "lastAccessed": "15/03/2026"
@@ -338,7 +359,8 @@
       "database",
       "Java",
       "cloud",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Oracle",
     "lastAccessed": "15/03/2026"
@@ -354,7 +376,8 @@
       "cloud",
       "AI",
       "ML",
-      "free curriculum"
+      "free curriculum",
+      "Global"
     ],
     "source": "Amazon Web Services",
     "lastAccessed": "15/03/2026"
@@ -370,7 +393,8 @@
       "Azure",
       "AI",
       "security",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Microsoft",
     "lastAccessed": "15/03/2026"
@@ -384,7 +408,8 @@
     "tags": [
       "Tableau",
       "data visualization",
-      "free license"
+      "free license",
+      "Global"
     ],
     "source": "Tableau/Salesforce",
     "lastAccessed": "15/03/2026"
@@ -399,7 +424,8 @@
       "Salesforce",
       "CRM",
       "gamified",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Salesforce",
     "lastAccessed": "15/03/2026"
@@ -414,7 +440,8 @@
       "Google",
       "AI",
       "free",
-      "professional development"
+      "professional development",
+      "Global"
     ],
     "source": "Google",
     "lastAccessed": "15/03/2026"
@@ -429,7 +456,8 @@
       "CompTIA",
       "certification",
       "cybersecurity",
-      "IT"
+      "IT",
+      "North America"
     ],
     "source": "CompTIA",
     "lastAccessed": "15/03/2026"
@@ -444,7 +472,8 @@
       "ERP",
       "SAP",
       "simulation",
-      "experiential"
+      "experiential",
+      "North America"
     ],
     "source": "HEC Montreal",
     "lastAccessed": "15/03/2026"
@@ -459,7 +488,8 @@
       "simulation",
       "ERP",
       "supply chain",
-      "AI"
+      "AI",
+      "Global"
     ],
     "source": "MonsoonSIM",
     "lastAccessed": "15/03/2026"
@@ -473,7 +503,8 @@
     "tags": [
       "simulation",
       "strategy",
-      "capstone"
+      "capstone",
+      "North America"
     ],
     "source": "Capsim",
     "lastAccessed": "15/03/2026"
@@ -488,7 +519,8 @@
       "competition",
       "MIS",
       "cases",
-      "undergraduate"
+      "undergraduate",
+      "North America"
     ],
     "source": "Simon Fraser University",
     "lastAccessed": "15/03/2026"
@@ -504,7 +536,8 @@
       "SIGED",
       "community",
       "workshops",
-      "mentoring"
+      "mentoring",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -519,7 +552,8 @@
       "ACM",
       "cybersecurity",
       "IT education",
-      "accreditation"
+      "accreditation",
+      "North America"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -534,7 +568,8 @@
       "ISCAP",
       "EDSIG",
       "conference",
-      "pedagogy"
+      "pedagogy",
+      "North America"
     ],
     "source": "ISCAP",
     "lastAccessed": "15/03/2026"
@@ -549,7 +584,8 @@
       "higher education",
       "IT",
       "digital transformation",
-      "AI"
+      "AI",
+      "North America"
     ],
     "source": "EDUCAUSE",
     "lastAccessed": "15/03/2026"
@@ -565,7 +601,8 @@
       "certification",
       "governance",
       "audit",
-      "security"
+      "security",
+      "Global"
     ],
     "source": "ISACA",
     "lastAccessed": "15/03/2026"
@@ -580,7 +617,8 @@
       "journal",
       "open access",
       "IS education",
-      "pedagogy"
+      "pedagogy",
+      "North America"
     ],
     "source": "JISE",
     "lastAccessed": "15/03/2026"
@@ -594,7 +632,8 @@
     "tags": [
       "journal",
       "IS education",
-      "ISCAP"
+      "ISCAP",
+      "North America"
     ],
     "source": "ISCAP",
     "lastAccessed": "15/03/2026"
@@ -608,7 +647,8 @@
     "tags": [
       "AOM",
       "management",
-      "teaching"
+      "teaching",
+      "North America"
     ],
     "source": "AOM",
     "lastAccessed": "15/03/2026"
@@ -622,7 +662,8 @@
     "tags": [
       "AOM",
       "management education",
-      "spotlight"
+      "spotlight",
+      "North America"
     ],
     "source": "AOM",
     "lastAccessed": "15/03/2026"
@@ -637,7 +678,8 @@
       "AOM",
       "AMR",
       "journal",
-      "classroom"
+      "classroom",
+      "North America"
     ],
     "source": "AOM",
     "lastAccessed": "15/03/2026"
@@ -652,7 +694,8 @@
       "MOOC",
       "courses",
       "certificates",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Coursera",
     "lastAccessed": "15/03/2026"
@@ -667,7 +710,8 @@
       "MOOC",
       "courses",
       "certificates",
-      "degrees"
+      "degrees",
+      "Global"
     ],
     "source": "edX",
     "lastAccessed": "15/03/2026"
@@ -682,7 +726,8 @@
       "datasets",
       "data science",
       "ML",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Kaggle/Google",
     "lastAccessed": "15/03/2026"
@@ -696,7 +741,8 @@
     "tags": [
       "AI",
       "higher education",
-      "community"
+      "community",
+      "North America"
     ],
     "source": "AI Goes to College",
     "lastAccessed": "15/03/2026"
@@ -711,7 +757,8 @@
       "GenAI",
       "LLM",
       "Harvard",
-      "pedagogy"
+      "pedagogy",
+      "North America"
     ],
     "source": "Harvard University",
     "lastAccessed": "15/03/2026"
@@ -726,7 +773,8 @@
       "GenAI",
       "academic integrity",
       "ethics",
-      "Cornell"
+      "Cornell",
+      "North America"
     ],
     "source": "Cornell University",
     "lastAccessed": "15/03/2026"
@@ -741,7 +789,8 @@
       "OECD",
       "GenAI",
       "policy",
-      "research"
+      "research",
+      "Global"
     ],
     "source": "OECD",
     "lastAccessed": "15/03/2026"
@@ -756,7 +805,8 @@
       "AI",
       "pedagogy",
       "articles",
-      "trends"
+      "trends",
+      "North America"
     ],
     "source": "Faculty Focus",
     "lastAccessed": "15/03/2026"
@@ -771,7 +821,8 @@
       "cybersecurity",
       "CISA",
       "NICE",
-      "training"
+      "training",
+      "North America"
     ],
     "source": "CISA",
     "lastAccessed": "15/03/2026"
@@ -786,7 +837,8 @@
       "AIS",
       "open access",
       "proceedings",
-      "research"
+      "research",
+      "Global"
     ],
     "source": "AIS",
     "lastAccessed": "15/03/2026"
@@ -801,7 +853,8 @@
       "Pearson",
       "MIS",
       "textbook",
-      "Laudon"
+      "Laudon",
+      "North America"
     ],
     "source": "Pearson",
     "lastAccessed": "15/03/2026"
@@ -816,7 +869,8 @@
       "McGraw Hill",
       "MIS",
       "textbook",
-      "LMS"
+      "LMS",
+      "North America"
     ],
     "source": "McGraw Hill",
     "lastAccessed": "15/03/2026"
@@ -832,7 +886,8 @@
       "version control",
       "collaboration",
       "free",
-      "classroom tools"
+      "classroom tools",
+      "Global"
     ],
     "source": "GitHub",
     "language": "en",
@@ -850,7 +905,8 @@
       "AI",
       "data science",
       "cybersecurity",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "IBM",
     "language": "en",
@@ -868,7 +924,8 @@
       "networking",
       "cybersecurity",
       "free courses",
-      "certification"
+      "certification",
+      "Global"
     ],
     "source": "Cisco",
     "language": "en",
@@ -886,7 +943,8 @@
       "BPM",
       "BPMN",
       "process modeling",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "SAP Signavio",
     "language": "en",
@@ -904,7 +962,8 @@
       "ERP",
       "free certification",
       "cloud",
-      "self-paced"
+      "self-paced",
+      "Global"
     ],
     "source": "SAP",
     "language": "en",
@@ -922,7 +981,8 @@
       "cloud",
       "AI",
       "free credits",
-      "certification"
+      "certification",
+      "Global"
     ],
     "source": "Google",
     "language": "en",
@@ -940,7 +1000,8 @@
       "analytics",
       "statistics",
       "free software",
-      "certification"
+      "certification",
+      "Global"
     ],
     "source": "SAS",
     "language": "en",
@@ -958,7 +1019,8 @@
       "IDE",
       "development tools",
       "free license",
-      "programming"
+      "programming",
+      "Global"
     ],
     "source": "JetBrains",
     "language": "en",
@@ -976,7 +1038,8 @@
       "process mining",
       "free",
       "digital badges",
-      "thesis support"
+      "thesis support",
+      "Global"
     ],
     "source": "Celonis",
     "language": "en",
@@ -994,7 +1057,8 @@
       "data warehousing",
       "BI",
       "free",
-      "datasets"
+      "datasets",
+      "Global"
     ],
     "source": "Teradata / ACM",
     "language": "en",
@@ -1012,7 +1076,8 @@
       "NoSQL",
       "database",
       "free courses",
-      "certification"
+      "certification",
+      "Global"
     ],
     "source": "MongoDB",
     "language": "en",
@@ -1030,7 +1095,8 @@
       "agile",
       "project management",
       "certification",
-      "curriculum"
+      "curriculum",
+      "Global"
     ],
     "source": "Scrum.org",
     "language": "en",
@@ -1048,7 +1114,8 @@
       "project management",
       "curriculum",
       "accreditation",
-      "CAPM"
+      "CAPM",
+      "Global"
     ],
     "source": "PMI",
     "language": "en",
@@ -1066,7 +1133,8 @@
       "networking",
       "simulation",
       "free",
-      "CCNA"
+      "CCNA",
+      "Global"
     ],
     "source": "Cisco",
     "language": "en",
@@ -1084,7 +1152,8 @@
       "simulation",
       "open source",
       "free",
-      "lab"
+      "lab",
+      "Global"
     ],
     "source": "GNS3 / SolarWinds",
     "language": "en",
@@ -1102,7 +1171,8 @@
       "marketing",
       "strategy",
       "AACSB",
-      "experiential"
+      "experiential",
+      "Global"
     ],
     "source": "Innovative Learning Solutions",
     "language": "en",
@@ -1120,7 +1190,8 @@
       "Harvard",
       "MIT",
       "Wharton",
-      "experiential learning"
+      "experiential learning",
+      "Global"
     ],
     "source": "Forio",
     "language": "en",
@@ -1138,7 +1209,8 @@
       "open source",
       "free",
       "academic",
-      "TU Eindhoven"
+      "TU Eindhoven",
+      "Global"
     ],
     "source": "Eindhoven University of Technology",
     "language": "en",
@@ -1156,7 +1228,8 @@
       "Germany",
       "conference",
       "WKWI",
-      "GI"
+      "GI",
+      "DACH"
     ],
     "source": "WKWI / GI Fachbereich WI",
     "language": "de",
@@ -1174,7 +1247,8 @@
       "Wirtschaftsinformatik",
       "design science",
       "AIS affiliated",
-      "Springer"
+      "Springer",
+      "DACH"
     ],
     "source": "WKWI / GI-FB WI / Springer",
     "language": "en/de",
@@ -1210,7 +1284,8 @@
       "Scandinavia",
       "open access",
       "AIS affiliated",
-      "participatory research"
+      "participatory research",
+      "Nordic"
     ],
     "source": "IRIS Association / AIS",
     "language": "en",
@@ -1228,7 +1303,8 @@
       "conference",
       "organizations",
       "ICT",
-      "NIKT"
+      "NIKT",
+      "Nordic"
     ],
     "source": "NIKT / Norwegian universities",
     "language": "no/en",
@@ -1246,7 +1322,8 @@
       "AIS chapter",
       "francophone",
       "conference",
-      "IS community"
+      "IS community",
+      "Europe"
     ],
     "source": "AIM",
     "language": "fr",
@@ -1263,7 +1340,8 @@
       "Italy",
       "AIS chapter",
       "conference",
-      "IS community"
+      "IS community",
+      "Europe"
     ],
     "source": "ItAIS / AIS",
     "language": "en/it",
@@ -1280,7 +1358,8 @@
       "Mediterranean",
       "AIS affiliated",
       "conference",
-      "proceedings"
+      "proceedings",
+      "Europe"
     ],
     "source": "AIS",
     "language": "en",
@@ -1298,7 +1377,8 @@
       "AIS chapter",
       "ACIS",
       "AJIS",
-      "Oceania"
+      "Oceania",
+      "Asia-Pacific"
     ],
     "source": "AAIS / AIS",
     "language": "en",
@@ -1316,7 +1396,8 @@
       "open access",
       "Australasia",
       "ABDC A",
-      "diamond OA"
+      "diamond OA",
+      "Asia-Pacific"
     ],
     "source": "AAIS",
     "language": "en",
@@ -1334,7 +1415,8 @@
       "AIS chapter",
       "InCIS",
       "conference",
-      "workshops"
+      "workshops",
+      "Asia-Pacific"
     ],
     "source": "INAIS / AIS",
     "language": "en",
@@ -1369,7 +1451,8 @@
       "Southern Africa",
       "AIS chapter",
       "IS community",
-      "student chapter"
+      "student chapter",
+      "Africa"
     ],
     "source": "AISSAC / AIS",
     "language": "en",
@@ -1386,7 +1469,8 @@
       "Central Africa",
       "AIS chapter",
       "conference",
-      "doctoral students"
+      "doctoral students",
+      "Africa"
     ],
     "source": "CACAIS / AIS",
     "language": "en/fr",
@@ -1422,7 +1506,8 @@
       "SBC",
       "conference",
       "ACM",
-      "IS community"
+      "IS community",
+      "Latin America"
     ],
     "source": "SBC (Brazilian Computer Society)",
     "language": "pt/en",
@@ -1440,7 +1525,8 @@
       "technology",
       "case studies",
       "cybersecurity",
-      "AI ethics"
+      "AI ethics",
+      "Global"
     ],
     "source": "Santa Clara University",
     "language": "en",
@@ -1458,7 +1544,8 @@
       "ethics",
       "technology",
       "student competition",
-      "AI"
+      "AI",
+      "Global"
     ],
     "source": "IEEE",
     "language": "en",
@@ -1476,7 +1563,8 @@
       "free toolkit",
       "multilingual",
       "pedagogy",
-      "innovation"
+      "innovation",
+      "Global"
     ],
     "source": "IDEO",
     "language": "en",
@@ -1494,7 +1582,8 @@
       "Stanford",
       "free",
       "tools",
-      "UX"
+      "UX",
+      "Global"
     ],
     "source": "Stanford d.school",
     "language": "en",
@@ -1512,7 +1601,8 @@
       "HCI",
       "design thinking",
       "user research",
-      "affordable"
+      "affordable",
+      "Global"
     ],
     "source": "Interaction Design Foundation",
     "language": "en",
@@ -1530,7 +1620,8 @@
       "TOGAF",
       "ArchiMate",
       "framework",
-      "free tool"
+      "free tool",
+      "Global"
     ],
     "source": "The Open Group",
     "language": "en",
@@ -1548,7 +1639,8 @@
       "cybersecurity",
       "AI",
       "scholarships",
-      "grants"
+      "grants",
+      "North America"
     ],
     "source": "NSF / OPM / DHS",
     "language": "en",
@@ -1566,7 +1658,8 @@
       "STEM education",
       "grants",
       "curriculum",
-      "pedagogy research"
+      "pedagogy research",
+      "North America"
     ],
     "source": "NSF",
     "language": "en",
@@ -1584,7 +1677,8 @@
       "computing education",
       "grants",
       "broadening participation",
-      "curriculum"
+      "curriculum",
+      "North America"
     ],
     "source": "NSF",
     "language": "en",
@@ -1602,7 +1696,8 @@
       "EU",
       "digital education",
       "AI",
-      "grants"
+      "grants",
+      "Europe"
     ],
     "source": "European Commission",
     "language": "en",
@@ -1620,7 +1715,8 @@
       "faculty development",
       "AI",
       "workshops",
-      "accreditation"
+      "accreditation",
+      "Global"
     ],
     "source": "AACSB",
     "language": "en",
@@ -1638,7 +1734,8 @@
       "IS textbook",
       "Valacich",
       "MyLab",
-      "digital world"
+      "digital world",
+      "Global"
     ],
     "source": "Pearson",
     "language": "en",
@@ -1656,7 +1753,8 @@
       "IS textbook",
       "Rainer",
       "WileyPLUS",
-      "data analytics"
+      "data analytics",
+      "Global"
     ],
     "source": "Wiley",
     "language": "en",
@@ -1674,7 +1772,8 @@
       "agile",
       "Scrum@Scale",
       "credentials",
-      "training"
+      "training",
+      "Global"
     ],
     "source": "Scrum Inc.",
     "language": "en",
@@ -1692,7 +1791,8 @@
       "scholarships",
       "government",
       "career",
-      "OPM"
+      "OPM",
+      "North America"
     ],
     "source": "U.S. Office of Personnel Management",
     "language": "en",
@@ -1709,7 +1809,8 @@
       "Hong Kong",
       "AIS chapter",
       "IS community",
-      "Asia"
+      "Asia",
+      "Asia-Pacific"
     ],
     "source": "HKAIS / AIS",
     "language": "en/zh",
@@ -1727,7 +1828,8 @@
       "BPM",
       "dataset",
       "process models",
-      "open data"
+      "open data",
+      "Global"
     ],
     "source": "SAP Signavio / Zenodo",
     "language": "en",
@@ -1745,7 +1847,8 @@
       "Germany",
       "portal",
       "WKWI",
-      "GI"
+      "GI",
+      "DACH"
     ],
     "source": "GI / WKWI",
     "language": "de",
@@ -1763,7 +1866,8 @@
       "computing curricula",
       "case studies",
       "software engineering",
-      "privacy"
+      "privacy",
+      "Global"
     ],
     "source": "Santa Clara University",
     "language": "en",
@@ -1781,7 +1885,8 @@
       "data analytics",
       "Microsoft",
       "certification",
-      "DataCamp"
+      "DataCamp",
+      "Global"
     ],
     "source": "DataCamp / Microsoft",
     "language": "en",
@@ -1799,7 +1904,8 @@
       "conference",
       "IS research",
       "proceedings",
-      "AISeL"
+      "AISeL",
+      "Asia-Pacific"
     ],
     "source": "AAIS",
     "language": "en",
@@ -1817,7 +1923,8 @@
       "ACM",
       "software engineering",
       "code of ethics",
-      "professional standards"
+      "professional standards",
+      "Global"
     ],
     "source": "IEEE Computer Society / ACM",
     "language": "en",
@@ -1835,7 +1942,8 @@
       "research",
       "BPM",
       "process mining",
-      "PhD"
+      "PhD",
+      "Global"
     ],
     "source": "SAP Signavio",
     "language": "en",
@@ -1853,7 +1961,8 @@
       "innovation",
       "business education",
       "showcase",
-      "best practices"
+      "best practices",
+      "Global"
     ],
     "source": "AACSB",
     "language": "en",
@@ -1871,7 +1980,8 @@
       "digital education",
       "policy",
       "community",
-      "DigComp"
+      "DigComp",
+      "Europe"
     ],
     "source": "European Commission",
     "language": "en",
@@ -1889,7 +1999,8 @@
       "thesis",
       "process mining",
       "capstone",
-      "free"
+      "free",
+      "Global"
     ],
     "source": "Celonis",
     "language": "en",
@@ -1906,7 +2017,8 @@
       "technology management",
       "engineering management",
       "IEEE",
-      "digital transformation"
+      "digital transformation",
+      "Global"
     ],
     "source": "IEEE TEMS",
     "lastAccessed": "15/03/2026"
@@ -1922,7 +2034,8 @@
       "IEEE",
       "student competitions",
       "IoT",
-      "AI"
+      "AI",
+      "Global"
     ],
     "source": "IEEE TEMS",
     "lastAccessed": "15/03/2026"
@@ -1938,7 +2051,8 @@
       "technology management",
       "IT governance",
       "project management",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE TEMS",
     "lastAccessed": "15/03/2026"
@@ -1954,7 +2068,8 @@
       "engineering management",
       "technology management",
       "research",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE TEMS",
     "lastAccessed": "15/03/2026"
@@ -1970,7 +2085,8 @@
       "privacy",
       "AI ethics",
       "responsible innovation",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -1987,7 +2103,8 @@
       "GDPR",
       "ethics",
       "curriculum",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE Digital Privacy",
     "lastAccessed": "15/03/2026"
@@ -2003,7 +2120,8 @@
       "curriculum",
       "graduate education",
       "IEEE",
-      "ACM"
+      "ACM",
+      "Global"
     ],
     "source": "IEEE Digital Privacy",
     "lastAccessed": "15/03/2026"
@@ -2019,7 +2137,8 @@
       "human-computer interaction",
       "cybernetics",
       "systems engineering",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE SMC Society",
     "lastAccessed": "15/03/2026"
@@ -2034,7 +2153,8 @@
       "professional communication",
       "technical writing",
       "team communication",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE ProComm",
     "lastAccessed": "15/03/2026"
@@ -2050,7 +2170,8 @@
       "certification",
       "accountability",
       "algorithmic bias",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE Standards Association",
     "lastAccessed": "15/03/2026"
@@ -2066,7 +2187,8 @@
       "autonomous systems",
       "governance",
       "standards",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -2083,7 +2205,8 @@
       "data governance",
       "algorithmic bias",
       "privacy",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE Standards Association",
     "lastAccessed": "15/03/2026"
@@ -2098,7 +2221,8 @@
       "IoT",
       "Internet of Things",
       "digital transformation",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE IoT Initiative",
     "lastAccessed": "15/03/2026"
@@ -2114,7 +2238,8 @@
       "research",
       "journals",
       "conferences",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -2129,7 +2254,8 @@
       "online learning",
       "professional development",
       "IEEE",
-      "technology"
+      "technology",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -2145,7 +2271,8 @@
       "professional development",
       "AI",
       "ethics",
-      "IEEE"
+      "IEEE",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -2161,7 +2288,8 @@
       "MIS",
       "ACM",
       "IS research",
-      "IS workforce"
+      "IS workforce",
+      "Global"
     ],
     "source": "ACM SIGMIS",
     "lastAccessed": "15/03/2026"
@@ -2177,7 +2305,8 @@
       "IS education",
       "conference",
       "ACM",
-      "doctoral consortium"
+      "doctoral consortium",
+      "Global"
     ],
     "source": "ACM SIGMIS",
     "lastAccessed": "15/03/2026"
@@ -2193,7 +2322,8 @@
       "information systems",
       "MIS research",
       "ACM",
-      "open access"
+      "open access",
+      "Global"
     ],
     "source": "ACM SIGMIS",
     "lastAccessed": "15/03/2026"
@@ -2209,7 +2339,8 @@
       "UX design",
       "interaction design",
       "ACM",
-      "user experience"
+      "user experience",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2225,7 +2356,8 @@
       "software engineering",
       "industry",
       "ACM",
-      "open access"
+      "open access",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2241,7 +2373,8 @@
       "professional conduct",
       "case studies",
       "ACM",
-      "teaching resource"
+      "teaching resource",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2257,7 +2390,8 @@
       "pedagogy",
       "case studies",
       "ACM",
-      "classroom activities"
+      "classroom activities",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2273,7 +2407,8 @@
       "MIS",
       "information systems",
       "design science",
-      "ACM"
+      "ACM",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2289,7 +2424,8 @@
       "curriculum",
       "UX education",
       "ACM",
-      "open educational resources"
+      "open educational resources",
+      "Global"
     ],
     "source": "ACM SIGCHI",
     "lastAccessed": "15/03/2026"
@@ -2305,7 +2441,8 @@
       "women in computing",
       "inclusion",
       "ACM",
-      "scholarships"
+      "scholarships",
+      "Global"
     ],
     "source": "ACM-W",
     "lastAccessed": "15/03/2026"
@@ -2321,7 +2458,8 @@
       "equity",
       "inclusion",
       "ACM",
-      "broadening participation"
+      "broadening participation",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2337,7 +2475,8 @@
       "computing education",
       "ethics",
       "responsible computing",
-      "ACM"
+      "ACM",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2353,7 +2492,8 @@
       "OER",
       "computing education",
       "open access",
-      "ACM"
+      "ACM",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2369,7 +2509,8 @@
       "data management",
       "ACM",
       "tutorials",
-      "SQL"
+      "SQL",
+      "Global"
     ],
     "source": "ACM SIGMOD",
     "lastAccessed": "15/03/2026"
@@ -2385,7 +2526,8 @@
       "research",
       "computing",
       "ACM",
-      "open access"
+      "open access",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2401,7 +2543,8 @@
       "research",
       "open access",
       "ACM",
-      "information systems"
+      "information systems",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2417,7 +2560,8 @@
       "curriculum",
       "ACM",
       "computing education",
-      "policy"
+      "policy",
+      "Global"
     ],
     "source": "ACM",
     "lastAccessed": "15/03/2026"
@@ -2433,7 +2577,8 @@
       "innovation",
       "R&D",
       "Academy of Management",
-      "digital transformation"
+      "digital transformation",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2449,7 +2594,8 @@
       "management education",
       "research-based",
       "Academy of Management",
-      "pedagogy"
+      "pedagogy",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2465,7 +2611,8 @@
       "management education",
       "pedagogy",
       "Academy of Management",
-      "research"
+      "research",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2481,7 +2628,8 @@
       "simulations",
       "cases",
       "Academy of Management",
-      "teaching"
+      "teaching",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2496,7 +2644,8 @@
       "simulations",
       "strategy",
       "experiential learning",
-      "Academy of Management"
+      "Academy of Management",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2512,7 +2661,8 @@
       "sustainability",
       "stakeholder management",
       "Academy of Management",
-      "CSR"
+      "CSR",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2527,7 +2677,8 @@
       "management theory",
       "teaching resources",
       "Academy of Management",
-      "research"
+      "research",
+      "Global"
     ],
     "source": "Academy of Management",
     "lastAccessed": "15/03/2026"
@@ -2542,7 +2693,8 @@
       "computing education",
       "curriculum",
       "IEEE",
-      "career resources"
+      "career resources",
+      "Global"
     ],
     "source": "IEEE Computer Society",
     "lastAccessed": "15/03/2026"
@@ -2558,7 +2710,8 @@
       "ACM",
       "education standards",
       "ICIS",
-      "doctoral"
+      "doctoral",
+      "Global"
     ],
     "source": "ACM SIGMIS",
     "lastAccessed": "15/03/2026"
@@ -2574,7 +2727,8 @@
       "Internet of Things",
       "technical resources",
       "IEEE",
-      "digital transformation"
+      "digital transformation",
+      "Global"
     ],
     "source": "IEEE",
     "lastAccessed": "15/03/2026"
@@ -2590,7 +2744,8 @@
       "HCI",
       "sociotechnical",
       "IEEE",
-      "journal"
+      "journal",
+      "Global"
     ],
     "source": "IEEE SMC Society",
     "lastAccessed": "15/03/2026"

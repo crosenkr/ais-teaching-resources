@@ -5,6 +5,17 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-03-15
+
+### Added
+
+- Region tags on all 160 resources (Global, North America, Europe, DACH, Asia-Pacific, Nordic, Africa, Latin America, Middle East)
+- Regions now appear in the tag cloud facet and are filterable like any other tag
+
+### Changed
+
+- Removed lowercase "global" duplicate tag from Ivey Publishing resource
+
 ## [0.3.1] - 2026-03-15
 
 ### Added
