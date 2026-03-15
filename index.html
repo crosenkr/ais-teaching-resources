@@ -1473,15 +1473,15 @@
         document.getElementById('categorySelect').addEventListener('change', (e) => setCategory(e.target.value));
         document.getElementById('aisLogo').addEventListener('error', function() { this.style.display = 'none'; });
 
-        // Welcome banner — dismiss and remember via localStorage
+        // Welcome banner — dismiss and remember via sessionStorage
         (function() {
             const banner = document.getElementById('welcomeBanner');
-            if (localStorage.getItem('ais-welcome-dismissed')) {
+            if (sessionStorage.getItem('ais-welcome-dismissed')) {
                 banner.style.display = 'none';
             }
             document.getElementById('welcomeClose').addEventListener('click', () => {
                 banner.style.display = 'none';
-                localStorage.setItem('ais-welcome-dismissed', '1');
+                sessionStorage.setItem('ais-welcome-dismissed', '1');
             });
         })();
 

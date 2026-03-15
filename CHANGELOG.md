@@ -5,11 +5,17 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1] - 2026-03-15
+
+### Changed
+
+- Welcome banner dismiss now uses `sessionStorage` (per-session) instead of `localStorage` (permanent), so the banner reappears on new browser sessions
+
 ## [0.5.0] - 2026-03-15
 
 ### Added
 
-- Dismissable welcome banner with introductory text for first-time visitors (persisted via localStorage)
+- Dismissable welcome banner with introductory text for first-time visitors
 
 ### Changed
 
