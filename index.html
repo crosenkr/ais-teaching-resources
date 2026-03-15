@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIS Teaching Resources for IS Educators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ais-blue: #0072BC;
+            --ais-dark-blue: #005a96;
+            --ais-light-blue: #2a8fd4;
+            --ais-accent: #eaf3fb;
+            --ais-gold: #8B7530;
+            --ais-nav-blue: #00639B;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --bg-light: #f5f7fa;
+            --border: #dce3eb;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.14);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Header — white top with logo, blue nav bar below (AIS style) */
+        header {
+            background: white;
+            color: var(--text-primary);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .logo-area img {
+            height: 65px;
+            width: auto;
+        }
+
+        .header-title-area {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+        }
+
+        .logo-area h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ais-blue);
+            border-left: 2px solid var(--border);
+            margin-left: 1.25rem;
+            padding-left: 1.25rem;
+        }
+
+        .logo-area h1 span {
+            color: var(--ais-blue);
+            font-weight: 700;
+        }
+
+        .header-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-top: 0.2rem;
+        }
+
+        .header-badge {
+            background: var(--ais-gold);
+            border: none;
+            color: white;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-left: 0.75rem;
+        }
+
+        .header-nav-bar {
+            background: var(--ais-blue);
+            padding: 0;
+        }
+
+        .header-nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .header-nav-inner a {
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .header-nav-inner a:hover {
+            border-bottom-color: var(--ais-gold);
+        }
+
+        .header-nav-inner a.active {
+            border-bottom-color: var(--ais-gold);
+        }
+
+        /* Search & Filter Bar */
+        .controls-bar {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+
+        .controls-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.65rem 1rem 0.65rem 2.5rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: var(--ais-light-blue);
+        }
+
+        .search-box::before {
+            content: "\1F50D";
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            opacity: 0.5;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--ais-light-blue);
+            color: var(--ais-light-blue);
+        }
+
+        .filter-btn.active {
+            background: var(--ais-blue);
+            color: white;
+            border-color: var(--ais-blue);
+        }
+
+        .filter-btn.active:hover {
+            background: var(--ais-dark-blue);
+            border-color: var(--ais-dark-blue);
+        }
+
+        .results-count {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            white-space: nowrap;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 3rem;
+        }
+
+        /* Category Section */
+        .category-section {
+            margin-bottom: 2rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--ais-blue);
+        }
+
+        .category-icon {
+            font-size: 1.3rem;
+        }
+
+        .category-header h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--ais-blue);
+        }
+
+        .category-count {
+            background: var(--ais-accent);
+            color: var(--ais-light-blue);
+            padding: 0.15rem 0.55rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Resource Cards */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1rem;
+        }
+
+        .resource-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            box-shadow: var(--card-hover-shadow);
+            border-color: var(--ais-light-blue);
+            transform: translateY(-1px);
+        }
+
+        .resource-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            line-height: 1.35;
+        }
+
+        .resource-card h3 a {
+            color: var(--ais-blue);
+            text-decoration: none;
+        }
+
+        .resource-card h3 a:hover {
+            color: var(--ais-light-blue);
+            text-decoration: underline;
+        }
+
+        .resource-source {
+            font-size: 0.78rem;
+            color: var(--ais-gold);
+            font-weight: 600;
+        }
+
+        .resource-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-accessed {
+            font-size: 0.72rem;
+            color: #999;
+        }
+
+        .resource-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .resource-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: 0.75rem;
+        }
+
+        .resource-tag {
+            background: var(--ais-accent);
+            color: var(--ais-light-blue);
+            padding: 0.15rem 0.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .resource-tag:hover {
+            background: var(--ais-blue);
+            color: white;
+        }
+
+        .resource-tag.tag-active {
+            background: var(--ais-gold);
+            color: white;
+        }
+
+        #activeTagFilter {
+            background: var(--ais-accent);
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            max-width: 1280px;
+            margin: 0 auto;
+            border-radius: 6px;
+            padding: 0.4rem 1rem !important;
+            margin-top: 0.5rem;
+        }
+
+        #activeTagFilter button {
+            background: none;
+            border: none;
+            color: var(--ais-blue);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0 0.3rem;
+            font-weight: 700;
+        }
+
+        #activeTagFilter button:hover {
+            color: #c00;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a3550;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--ais-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+
+        /* No results */
+        .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* View toggle */
+        .view-toggle {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 0.2rem;
+        }
+
+        .view-toggle button {
+            padding: 0.4rem 0.7rem;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .view-toggle button.active {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            color: var(--text-primary);
+        }
+
+        /* List view */
+        .resources-grid.list-view {
+            grid-template-columns: 1fr;
+        }
+
+        .list-view .resource-card {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .list-view .resource-card h3 {
+            min-width: 250px;
+        }
+
+        /* Mobile category dropdown (replaces pill buttons on small screens) */
+        .filter-dropdown {
+            display: none;
+            width: 100%;
+        }
+
+        .filter-dropdown select {
+            width: 100%;
+            padding: 0.6rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            background: white;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .filter-dropdown select:focus {
+            border-color: var(--ais-light-blue);
+        }
+
+        /* Search highlight */
+        mark.search-highlight {
+            background: #fff3cd;
+            color: inherit;
+            padding: 0 1px;
+            border-radius: 2px;
+        }
+
+        /* Accessibility: focus styles */
+        :focus-visible {
+            outline: 2px solid var(--ais-blue);
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--ais-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            z-index: 200;
+            font-size: 0.9rem;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Responsive — Tablet */
+        @media (max-width: 1024px) {
+            .filter-btn {
+                font-size: 0.72rem;
+                padding: 0.35rem 0.65rem;
+            }
+
+            .resources-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        /* Responsive — Mobile */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 0.75rem 1rem;
+            }
+
+            .logo-area {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .logo-area h1 {
+                border-left: none;
+                margin-left: 0;
+                padding-left: 0;
+                font-size: 1.2rem;
+            }
+
+            .header-nav-bar {
+                overflow-x: auto;
+            }
+
+            .header-nav-inner {
+                gap: 1rem;
+                font-size: 0.8rem;
+                white-space: nowrap;
+                padding: 0 1rem;
+            }
+
+            .controls-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                min-width: unset;
+            }
+
+            /* Hide pill buttons, show dropdown on mobile */
+            .filter-buttons {
+                display: none !important;
+            }
+
+            .filter-dropdown {
+                display: block;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .list-view .resource-card {
+                flex-direction: column;
+            }
+
+            .list-view .resource-card h3 {
+                min-width: unset;
+            }
+
+            .view-toggle {
+                display: none;
+            }
+        }
+
+        /* Print stylesheet */
+        @media print {
+            header, .controls-bar, #activeTagFilter, footer, .skip-link {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+                font-size: 11pt;
+            }
+
+            main {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .resource-card {
+                break-inside: avoid;
+                border: 1px solid #ccc;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .resource-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            .resource-tag {
+                border: 1px solid #ccc;
+                background: #f5f5f5;
+                color: #333;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .category-header {
+                border-bottom-color: #333;
+            }
+
+            .category-header h2 {
+                color: #333;
+            }
+
+            a {
+                color: #333 !important;
+                text-decoration: none !important;
+            }
+
+            a[href]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+                color: #666;
+                word-break: break-all;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to content</a>
+    <header>
+        <div class="header-top">
+            <div class="logo-area">
+                <img src="ais-logo.png" alt="AIS — Association for Information Systems" onerror="this.style.display='none'">
+                <div>
+                    <div class="header-title-area">
+                        <h1>Teaching Resources</h1>
+                        <div class="header-badge">PROTOTYPE</div>
+                    </div>
+                    <div class="header-subtitle">A curated collection for Information Systems educators worldwide</div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav-bar">
+            <div class="header-nav-inner">
+                <a href="https://aisnet.org/" target="_blank" rel="noopener noreferrer">AIS Home</a>
+                <a href="https://aisnet.org/page/Education" target="_blank" rel="noopener noreferrer">Education</a>
+                <a href="https://aisel.aisnet.org/" target="_blank" rel="noopener noreferrer">eLibrary</a>
+                <a href="https://aisnet.org/page/Conferences" target="_blank" rel="noopener noreferrer">Conferences</a>
+                <a href="https://aisnet.org/page/Communities" target="_blank" rel="noopener noreferrer">Communities</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="controls-bar">
+        <div class="controls-inner">
+            <div class="search-box">
+                <input type="text" id="searchInput" aria-label="Search resources" placeholder="Search resources by name, description, or tag...">
+            </div>
+            <div class="view-toggle">
+                <button class="active" onclick="setView('grid')" id="gridBtn">Grid</button>
+                <button onclick="setView('list')" id="listBtn">List</button>
+            </div>
+            <div class="results-count" id="resultsCount" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <div class="controls-bar" style="border-bottom: none; padding-top: 0;">
+        <div class="controls-inner">
+            <div class="filter-buttons" id="filterButtons" role="group" aria-label="Category filters">
+                <button class="filter-btn active" data-category="all" onclick="setCategory('all')">All Categories</button>
+            </div>
+            <div class="filter-dropdown" id="filterDropdown">
+                <select id="categorySelect" aria-label="Category filter" onchange="setCategory(this.value)">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls-bar" style="border: none; padding: 0.25rem 2rem; display: none;" id="activeTagFilter"></div>
+
+    <main id="mainContent">
+        <div class="no-results" id="loading">
+            <h3>Loading resources...</h3>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <strong>AIS Teaching Resources</strong> &mdash; A service of the
+            <a href="https://aisnet.org/" target="_blank" rel="noopener noreferrer">Association for Information Systems</a>
+        </div>
+        <div class="footer-note">
+            Resources are curated and regularly updated by the AIS VP Education team.
+        </div>
+    </footer>
+
+    <script>
+        // Security: escape HTML to prevent XSS
+        function escapeHtml(str) {
+            if (typeof str !== 'string') return '';
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // Security: validate URLs to prevent javascript: injection
+        function safeUrl(url) {
+            if (typeof url !== 'string') return '#';
+            const trimmed = url.trim().toLowerCase();
+            if (trimmed.startsWith('https://') || trimmed.startsWith('http://')) return url;
+            return '#';
+        }
+
+        // State
+        let schema = null;
+        let allResources = [];
+        let currentCategory = 'all';
+        let currentTag = null;
+        let currentSearch = '';
+        let currentView = 'grid';
+
+        // URL state: read filters from hash
+        function readUrlState() {
+            const params = new URLSearchParams(window.location.hash.slice(1));
+            if (params.has('category')) currentCategory = params.get('category');
+            if (params.has('tag')) currentTag = params.get('tag');
+            if (params.has('q')) {
+                currentSearch = params.get('q');
+                document.getElementById('searchInput').value = currentSearch;
+            }
+            if (params.has('view')) currentView = params.get('view');
+        }
+
+        // URL state: write filters to hash
+        function writeUrlState() {
+            const params = new URLSearchParams();
+            if (currentCategory !== 'all') params.set('category', currentCategory);
+            if (currentTag) params.set('tag', currentTag);
+            if (currentSearch) params.set('q', currentSearch);
+            if (currentView !== 'grid') params.set('view', currentView);
+            const hash = params.toString();
+            history.replaceState(null, '', hash ? '#' + hash : window.location.pathname);
+        }
+
+        // Search highlighting helper
+        function highlightText(text, query) {
+            if (!query) return escapeHtml(text);
+            const escaped = escapeHtml(text);
+            const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return escaped.replace(new RegExp(`(${q})`, 'gi'), '<mark class="search-highlight">$1</mark>');
+        }
+
+        // Load schema and resources in parallel
+        async function init() {
+            try {
+                const [schemaRes, resourcesRes] = await Promise.all([
+                    fetch('schema.json'),
+                    fetch('resources.json')
+                ]);
+                if (!schemaRes.ok || !resourcesRes.ok) throw new Error('Failed to load data files');
+                schema = await schemaRes.json();
+                allResources = await resourcesRes.json();
+                buildFilterButtons();
+                readUrlState();
+                // Sync UI state from URL
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    const isActive = b.dataset.category === currentCategory;
+                    b.classList.toggle('active', isActive);
+                    b.setAttribute('aria-pressed', isActive);
+                });
+                const sel = document.getElementById('categorySelect');
+                if (sel) sel.value = currentCategory;
+                updateActiveTagDisplay();
+                setView(currentView);
+                render();
+            } catch (e) {
+                document.getElementById('loading').innerHTML = `
+                    <h3>Could not load resources</h3>
+                    <p>Make sure <code>resources.json</code> and <code>schema.json</code> are in the same directory.</p>
+                `;
+            }
+        }
+
+        function getCategoryIcon(catLabel) {
+            if (!schema) return '\u{1F4C1}';
+            const cat = schema.categories.find(c => c.label === catLabel);
+            return cat ? cat.icon : '\u{1F4C1}';
+        }
+
+        function getCategoryOrder(catLabel) {
+            if (!schema) return 999;
+            const cat = schema.categories.find(c => c.label === catLabel);
+            return cat ? cat.order : 999;
+        }
+
+        function buildFilterButtons() {
+            const categories = [...new Set(allResources.map(r => r.category))];
+            const container = document.getElementById('filterButtons');
+            const dropdown = document.getElementById('categorySelect');
+            const sorted = categories.sort((a, b) => getCategoryOrder(a) - getCategoryOrder(b));
+            sorted.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.category = cat;
+                const count = allResources.filter(r => r.category === cat).length;
+                btn.textContent = `${cat} (${count})`;
+                btn.onclick = () => setCategory(cat);
+                container.appendChild(btn);
+
+                // Also populate mobile dropdown
+                if (dropdown) {
+                    const opt = document.createElement('option');
+                    opt.value = cat;
+                    opt.textContent = `${cat} (${count})`;
+                    dropdown.appendChild(opt);
+                }
+            });
+        }
+
+        function setCategory(cat) {
+            currentCategory = cat;
+            currentTag = null;
+            updateActiveTagDisplay();
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                const isActive = b.dataset.category === cat;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-pressed', isActive);
+            });
+            // Sync mobile dropdown
+            const sel = document.getElementById('categorySelect');
+            if (sel) sel.value = cat;
+            render();
+        }
+
+        function setTag(tag) {
+            if (currentTag === tag) {
+                currentTag = null;
+            } else {
+                currentTag = tag;
+            }
+            updateActiveTagDisplay();
+            render();
+        }
+
+        function updateActiveTagDisplay() {
+            const el = document.getElementById('activeTagFilter');
+            if (currentTag) {
+                el.innerHTML = `Filtered by tag: <strong>${escapeHtml(currentTag)}</strong> <button onclick="setTag(null); currentTag=null; updateActiveTagDisplay(); render();">&times;</button>`;
+                el.style.display = 'flex';
+            } else {
+                el.style.display = 'none';
+            }
+        }
+
+        function setView(view) {
+            currentView = view;
+            document.getElementById('gridBtn').classList.toggle('active', view === 'grid');
+            document.getElementById('listBtn').classList.toggle('active', view === 'list');
+            render();
+        }
+
+        function filterResources() {
+            let results = allResources;
+            if (currentCategory !== 'all') {
+                results = results.filter(r => r.category === currentCategory);
+            }
+            if (currentTag) {
+                results = results.filter(r =>
+                    r.tags.some(t => t.toLowerCase() === currentTag.toLowerCase())
+                );
+            }
+            if (currentSearch) {
+                const q = currentSearch.toLowerCase();
+                results = results.filter(r =>
+                    r.title.toLowerCase().includes(q) ||
+                    r.description.toLowerCase().includes(q) ||
+                    r.tags.some(t => t.toLowerCase().includes(q)) ||
+                    r.source.toLowerCase().includes(q) ||
+                    r.category.toLowerCase().includes(q)
+                );
+            }
+            return results;
+        }
+
+        function render() {
+            writeUrlState();
+            const filtered = filterResources();
+            const main = document.getElementById('mainContent');
+
+            document.getElementById('resultsCount').textContent =
+                `${filtered.length} resource${filtered.length !== 1 ? 's' : ''}`;
+
+            if (filtered.length === 0) {
+                main.innerHTML = `
+                    <div class="no-results">
+                        <h3>No resources found</h3>
+                        <p>Try adjusting your search, category, or tag filter.</p>
+                        <button onclick="currentCategory='all'; currentTag=null; currentSearch=''; document.getElementById('searchInput').value=''; updateActiveTagDisplay(); setCategory('all');" style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
+                    </div>`;
+                return;
+            }
+
+            // Group by category
+            const grouped = {};
+            filtered.forEach(r => {
+                if (!grouped[r.category]) grouped[r.category] = [];
+                grouped[r.category].push(r);
+            });
+
+            const sortedCats = Object.keys(grouped).sort((a, b) =>
+                getCategoryOrder(a) - getCategoryOrder(b)
+            );
+
+            let html = '';
+            sortedCats.forEach(cat => {
+                const resources = grouped[cat];
+                const icon = getCategoryIcon(cat);
+                html += `
+                    <section class="category-section">
+                        <div class="category-header">
+                            <span class="category-icon">${escapeHtml(icon)}</span>
+                            <h2>${escapeHtml(cat)}</h2>
+                            <span class="category-count">${resources.length}</span>
+                        </div>
+                        <div class="resources-grid ${currentView === 'list' ? 'list-view' : ''}">
+                            ${resources.map(r => renderCard(r)).join('')}
+                        </div>
+                    </section>`;
+            });
+
+            main.innerHTML = html;
+        }
+
+        function renderCard(r) {
+            const tagsHtml = r.tags.slice(0, 5).map(t => {
+                const escaped = escapeHtml(t);
+                const isActive = currentTag && t.toLowerCase() === currentTag.toLowerCase();
+                return `<button class="resource-tag ${isActive ? 'tag-active' : ''}" data-tag="${escaped}" title="Click to filter by this tag">${escaped}</button>`;
+            }).join('');
+
+            const accessedHtml = r.lastAccessed
+                ? `<span class="resource-accessed">Last accessed: ${escapeHtml(r.lastAccessed)}</span>`
+                : '';
+
+            const titleHtml = highlightText(r.title, currentSearch);
+            const descHtml = highlightText(r.description, currentSearch);
+            const sourceHtml = highlightText(r.source, currentSearch);
+
+            return `
+                <article class="resource-card">
+                    <h3><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${titleHtml}</a></h3>
+                    <div class="resource-meta">
+                        <span class="resource-source">${sourceHtml}</span>
+                        ${accessedHtml}
+                    </div>
+                    <p class="resource-desc">${descHtml}</p>
+                    <div class="resource-tags">${tagsHtml}</div>
+                </article>`;
+        }
+
+        // Delegated click handler for tags (avoids inline onclick)
+        document.getElementById('mainContent').addEventListener('click', (e) => {
+            const tag = e.target.closest('[data-tag]');
+            if (tag) setTag(tag.dataset.tag);
+        });
+
+        // Search with debounce
+        let searchTimer;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => {
+                currentSearch = e.target.value.trim();
+                render();
+            }, 200);
+        });
+
+        // Also listen for Escape to clear search
+        document.getElementById('searchInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                e.target.value = '';
+                currentSearch = '';
+                e.target.blur();
+                render();
+            }
+        });
+
+        // Keyboard shortcut: / to focus search
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+
+        // Handle browser back/forward with hash state
+        window.addEventListener('hashchange', () => {
+            readUrlState();
+            setCategory(currentCategory);
+        });
+
+        // Init
+        init();
+    </script>
+</body>
+</html>

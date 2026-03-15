@@ -1,0 +1,2617 @@
+[
+  {
+    "id": 1,
+    "title": "IS2020 Competency Model",
+    "url": "https://www.acm.org/education/curricula-recommendations",
+    "description": "ACM/AIS joint model curriculum for undergraduate IS programs. Competency-based approach across 19 competency areas, replacing IS2010.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "curriculum",
+      "undergraduate",
+      "ACM",
+      "AIS",
+      "competency model"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 2,
+    "title": "MSIS 2016 — Global Competency Model for Graduate IS Programs",
+    "url": "https://www.acm.org/binaries/content/assets/education/msis2016.pdf",
+    "description": "Global competency model for graduate degree programs in IS. Profiles include IT consultant, project manager, analytics specialist, and start-up entrepreneur.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "curriculum",
+      "graduate",
+      "ACM",
+      "master's"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 3,
+    "title": "CC2020 — Computing Curricula 2020",
+    "url": "https://dl.acm.org/doi/book/10.1145/3467967",
+    "description": "ACM/IEEE meta-report covering all computing disciplines (CS, IS, IT, SE, CE). Provides competency framework and cross-discipline comparison.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "curriculum",
+      "ACM",
+      "IEEE",
+      "computing"
+    ],
+    "source": "ACM/IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 4,
+    "title": "NICE Cybersecurity Workforce Framework",
+    "url": "https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center",
+    "description": "NIST framework establishing common language for cybersecurity work roles, knowledge, and skills. Widely used for curriculum alignment and accreditation.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "cybersecurity",
+      "NIST",
+      "workforce",
+      "framework"
+    ],
+    "source": "NIST",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 5,
+    "title": "AIS Education Page",
+    "url": "https://aisnet.org/page/Education",
+    "description": "Central education hub of the Association for Information Systems with links to educational initiatives, task forces, and resources.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "AIS",
+      "education",
+      "overview"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 6,
+    "title": "AIS MaCuDE Task Force",
+    "url": "https://aisnet.org/page/MaCuDETaskForce",
+    "description": "AIS Master's Curriculum and Degree Enhancement Task Force. Focuses on advancing IS graduate education globally.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "AIS",
+      "curriculum",
+      "graduate",
+      "task force"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 7,
+    "title": "AIS Resources Page",
+    "url": "https://aisnet.org/page/ResourcesPage",
+    "description": "AIS member resources page with links to IS teaching and research materials.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "AIS",
+      "resources"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 12,
+    "title": "Harvard Business Publishing Education — Cases",
+    "url": "https://hbsp.harvard.edu/cases/",
+    "description": "Thousands of business and IS cases with teaching notes. Faculty get free evaluation access. The gold standard for case-based teaching.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "Harvard",
+      "business",
+      "teaching notes"
+    ],
+    "source": "Harvard Business Publishing",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 13,
+    "title": "Ivey Publishing — IS/IT Case Collection",
+    "url": "https://www.iveypublishing.ca/s/category/collection/information-systems/0ZG5c000000k9bSGAQ",
+    "description": "Over 23,000 cases with a dedicated Business Information Systems collection. Global perspective, also distributes cases from external authors.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "Ivey",
+      "IS",
+      "IT",
+      "global"
+    ],
+    "source": "Ivey Publishing",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 14,
+    "title": "The Case Centre",
+    "url": "https://www.thecasecentre.org/",
+    "description": "World's largest repository of management teaching cases (500+ member institutions). Includes free cases from Stanford and MIT Sloan.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "management",
+      "free cases",
+      "repository"
+    ],
+    "source": "The Case Centre",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 15,
+    "title": "Journal of IT Teaching Cases (JITTC)",
+    "url": "https://journals.sagepub.com/home/ttc",
+    "description": "Peer-reviewed IS/IT teaching cases published by SAGE, covering strategy, emerging tech, business models, and system implementation.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "journal",
+      "peer-reviewed",
+      "SAGE"
+    ],
+    "source": "SAGE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 16,
+    "title": "JITCAR — Journal of IT Case and Application Research",
+    "url": "https://www.tandfonline.com/journals/utca20",
+    "description": "Case-based research on IT/IS applications in organizations. Covers AI, ERP, e-commerce, security, and more.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "journal",
+      "research",
+      "applications"
+    ],
+    "source": "Taylor & Francis",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 17,
+    "title": "JISE Teaching Cases",
+    "url": "https://jise.org/cases.html",
+    "description": "Teaching cases published in the Journal of Information Systems Education, with teaching notes available to instructors.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "JISE",
+      "teaching notes",
+      "IS education"
+    ],
+    "source": "JISE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 18,
+    "title": "MIT Sloan LearningEdge",
+    "url": "https://mitsloan.mit.edu/teaching-resources-library/about-teaching-resources-library",
+    "description": "Free teaching case studies and management flight simulations from MIT Sloan faculty. Includes teaching notes and videos.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "MIT",
+      "free",
+      "simulations"
+    ],
+    "source": "MIT Sloan",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 19,
+    "title": "Open Access Teaching Case Journal (OATCJ)",
+    "url": "https://www.conestogac.on.ca/oatcj",
+    "description": "Open-access teaching cases distributed through The Case Centre. Free to access.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "open access",
+      "free"
+    ],
+    "source": "Conestoga College",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 20,
+    "title": "OpenStax: Foundations of Information Systems",
+    "url": "https://openstax.org/details/books/foundations-information-systems",
+    "description": "Free, peer-reviewed IS textbook (CC BY-NC-SA) aligned with IS2020/ABET/AACSB standards. Covers hardware, software, databases, networks, AI, analytics, and security.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "textbook",
+      "free",
+      "OER",
+      "IS2020",
+      "OpenStax"
+    ],
+    "source": "OpenStax",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 21,
+    "title": "Open Textbook Library — Information Systems",
+    "url": "https://open.umn.edu/opentextbooks/subjects/information-systems",
+    "description": "Catalog of open IS textbooks, faculty-reviewed. Free to use, distribute, and adapt.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "textbook",
+      "free",
+      "OER",
+      "open textbook"
+    ],
+    "source": "University of Minnesota",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 22,
+    "title": "MERLOT",
+    "url": "https://www.merlot.org/",
+    "description": "100,000+ peer-reviewed OER materials across disciplines including Business/IS. International community of 197,000+ members.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "OER",
+      "peer-reviewed",
+      "repository",
+      "community"
+    ],
+    "source": "MERLOT",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 23,
+    "title": "OER Commons",
+    "url": "https://oercommons.org/",
+    "description": "Digital library with 500+ content partners. Search by discipline, level, and media format. Includes IS and cybersecurity materials.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "OER",
+      "digital library",
+      "search"
+    ],
+    "source": "OER Commons",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 24,
+    "title": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/",
+    "description": "Complete course materials (lectures, assignments, exams) for database systems, systems integration, and related IS courses. Fully downloadable.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "OER",
+      "MIT",
+      "courseware",
+      "free"
+    ],
+    "source": "MIT",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 25,
+    "title": "AISEL Teaching Resources",
+    "url": "https://aisel.aisnet.org/teachingresources/",
+    "description": "Open-access teaching resources in the AIS Electronic Library, contributed by IS educators worldwide.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "AIS",
+      "AISEL",
+      "open access",
+      "teaching"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 26,
+    "title": "SAP University Alliances",
+    "url": "https://www.sap.com/about/company/innovation/next-gen-innovation-platform/university-alliances.html",
+    "description": "Free access to SAP systems, academic lesson plans, SAP Learning Hub (student edition), and ERPsim integration. 500+ member institutions.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "SAP",
+      "ERP",
+      "free access",
+      "lesson plans"
+    ],
+    "source": "SAP",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 27,
+    "title": "Oracle Academy",
+    "url": "https://academy.oracle.com/en/oa-web-overview.html",
+    "description": "Free institutional membership with curriculum for Java, databases, cloud, and ERP. Includes Oracle Cloud Free Tier access and professional development.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Oracle",
+      "database",
+      "Java",
+      "cloud",
+      "free"
+    ],
+    "source": "Oracle",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 28,
+    "title": "AWS Academy",
+    "url": "https://aws.amazon.com/training/awsacademy/",
+    "description": "Free ready-to-teach cloud computing and AI/ML curriculum for accredited institutions. Includes AWS Learner Lab sandboxes and certification prep.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "AWS",
+      "cloud",
+      "AI",
+      "ML",
+      "free curriculum"
+    ],
+    "source": "Amazon Web Services",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 29,
+    "title": "Microsoft Learn for Educators (MSLE)",
+    "url": "https://learn.microsoft.com/en-us/training/educator-center/programs/msle/",
+    "description": "Free courseware, lab environments, faculty notes, and certification vouchers for Azure, AI, security, and dev tools.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Microsoft",
+      "Azure",
+      "AI",
+      "security",
+      "free"
+    ],
+    "source": "Microsoft",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 30,
+    "title": "Tableau Academic Programs",
+    "url": "https://www.tableau.com/community/academic",
+    "description": "Free Tableau Desktop and Prep Builder licenses for educators and students. Includes teaching curriculum for data visualization courses.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Tableau",
+      "data visualization",
+      "free license"
+    ],
+    "source": "Tableau/Salesforce",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 31,
+    "title": "Salesforce Trailhead",
+    "url": "https://trailhead.salesforce.com/",
+    "description": "Free gamified learning platform covering CRM, data literacy, AI, and business process automation. Modular trails and badges for class integration.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Salesforce",
+      "CRM",
+      "gamified",
+      "free"
+    ],
+    "source": "Salesforce",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 32,
+    "title": "Google Grow with AI for Educators",
+    "url": "https://grow.google/ai-for-educators/",
+    "description": "Free AI skills course for educators covering how to save time, personalize instruction, and enhance lessons with AI.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Google",
+      "AI",
+      "free",
+      "professional development"
+    ],
+    "source": "Google",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 33,
+    "title": "CompTIA Academic Partner Program",
+    "url": "https://www.comptia.org/en/academic/",
+    "description": "Academic pricing on certifications (A+, Security+, Network+), free curriculum resources, and CertMaster learning tools.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "CompTIA",
+      "certification",
+      "cybersecurity",
+      "IT"
+    ],
+    "source": "CompTIA",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 34,
+    "title": "ERPsim (HEC Montreal / Baton Simulations)",
+    "url": "https://erpsim.hec.ca/en/erpsim",
+    "description": "Business simulation on real SAP S/4HANA. Three difficulty levels. Adopted by 100+ universities. The leading ERP simulation platform for IS courses.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "ERP",
+      "SAP",
+      "simulation",
+      "experiential"
+    ],
+    "source": "HEC Montreal",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 35,
+    "title": "MonsoonSIM",
+    "url": "https://www.monsoonsim.com/",
+    "description": "AI-powered experiential learning platform with business simulations covering ERP, supply chain, finance, and HR. 183,000+ users across 349+ institutions.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulation",
+      "ERP",
+      "supply chain",
+      "AI"
+    ],
+    "source": "MonsoonSIM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 36,
+    "title": "Capsim",
+    "url": "https://www.capsim.com/",
+    "description": "Business strategy simulations widely used in capstone IS/business courses. 1.7M+ student users at hundreds of business schools.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulation",
+      "strategy",
+      "capstone"
+    ],
+    "source": "Capsim",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 37,
+    "title": "CaseIT Competition",
+    "url": "https://www.caseit.org/",
+    "description": "World's premier undergraduate MIS case competition hosted by SFU. Source of high-quality IS case problems and student engagement model.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "competition",
+      "MIS",
+      "cases",
+      "undergraduate"
+    ],
+    "source": "Simon Fraser University",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 38,
+    "title": "AIS SIGED — SIG on Education",
+    "url": "https://ais-siged.org/",
+    "description": "AIS Special Interest Group on Education. Organizes ICISER (pre-ICIS workshop), education tracks at ECIS/AMCIS, career mentoring, and the IS Student Research Journal.",
+    "category": "Professional Communities",
+    "tags": [
+      "AIS",
+      "SIGED",
+      "community",
+      "workshops",
+      "mentoring"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 39,
+    "title": "SIGCITE — ACM SIG on Cybersecurity & IT Education",
+    "url": "https://www.sigite.org/",
+    "description": "ACM Special Interest Group on Cybersecurity & IT Education. 400+ members. Created model IT undergraduate curriculum and accreditation guidelines.",
+    "category": "Professional Communities",
+    "tags": [
+      "ACM",
+      "cybersecurity",
+      "IT education",
+      "accreditation"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 40,
+    "title": "EDSIG / ISCAP",
+    "url": "https://iscap.us/",
+    "description": "Education SIG / Information Systems & Computing Academic Professionals. Annual conference with IS pedagogy, cybersecurity, and data analytics tracks.",
+    "category": "Professional Communities",
+    "tags": [
+      "ISCAP",
+      "EDSIG",
+      "conference",
+      "pedagogy"
+    ],
+    "source": "ISCAP",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 41,
+    "title": "EDUCAUSE",
+    "url": "https://www.educause.edu/",
+    "description": "Leading association for IT in higher education. Publishes EDUCAUSE Review, digital transformation frameworks, and AI landscape studies.",
+    "category": "Professional Communities",
+    "tags": [
+      "higher education",
+      "IT",
+      "digital transformation",
+      "AI"
+    ],
+    "source": "EDUCAUSE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 42,
+    "title": "ISACA Academic Programs",
+    "url": "https://www.isaca.org/credentialing",
+    "description": "Professional association for IT governance/audit/security. Certifications (CISA, CISM, CRISC) map to IS curriculum.",
+    "category": "Professional Communities",
+    "tags": [
+      "ISACA",
+      "certification",
+      "governance",
+      "audit",
+      "security"
+    ],
+    "source": "ISACA",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 43,
+    "title": "Journal of Information Systems Education (JISE)",
+    "url": "https://jise.org/",
+    "description": "Premier diamond open-access journal on IS education. Publishes teaching tips, cases, curriculum design, and pedagogy research. No fees.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "open access",
+      "IS education",
+      "pedagogy"
+    ],
+    "source": "JISE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 44,
+    "title": "Information Systems Education Journal (ISEDJ)",
+    "url": "https://isedj.org/",
+    "description": "Peer-reviewed journal by ISCAP/EDSIG focusing on IS education research, curriculum, and pedagogy.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "IS education",
+      "ISCAP"
+    ],
+    "source": "ISCAP",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 45,
+    "title": "AOM IM Division — Teaching Resources",
+    "url": "https://im.aom.org/resources/teaching-resources",
+    "description": "Academy of Management's Information & Operations Management Division teaching resources for management and IS educators.",
+    "category": "IS Education Journals",
+    "tags": [
+      "AOM",
+      "management",
+      "teaching"
+    ],
+    "source": "AOM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 46,
+    "title": "AOM MED Division — Resource Spotlight",
+    "url": "https://med.aom.org/ourlibrary/resource-spotlight",
+    "description": "Academy of Management's Management Education Division library highlighting teaching and learning resources.",
+    "category": "IS Education Journals",
+    "tags": [
+      "AOM",
+      "management education",
+      "spotlight"
+    ],
+    "source": "AOM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 47,
+    "title": "AMR Teaching Resources",
+    "url": "https://www.aom.org/publications/journals/review/amr-teaching-resources/",
+    "description": "Academy of Management Review teaching resources — guidance on using AMR articles in the classroom.",
+    "category": "IS Education Journals",
+    "tags": [
+      "AOM",
+      "AMR",
+      "journal",
+      "classroom"
+    ],
+    "source": "AOM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 49,
+    "title": "Coursera — IS Courses",
+    "url": "https://www.coursera.org/courses?query=information+systems",
+    "description": "Hundreds of IS, cybersecurity, and data analytics courses from top universities. Includes professional certificates. Many free to audit.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "MOOC",
+      "courses",
+      "certificates",
+      "free"
+    ],
+    "source": "Coursera",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 50,
+    "title": "edX",
+    "url": "https://www.edx.org/",
+    "description": "Courses, certificates, and degrees from MIT, Harvard, and others in IT, cybersecurity, data science, and business management.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "MOOC",
+      "courses",
+      "certificates",
+      "degrees"
+    ],
+    "source": "edX",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 51,
+    "title": "Kaggle — Datasets & Courses",
+    "url": "https://www.kaggle.com/datasets",
+    "description": "Open datasets for data science and ML projects, plus free micro-courses. Useful for hands-on IS analytics and data management assignments.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "datasets",
+      "data science",
+      "ML",
+      "free"
+    ],
+    "source": "Kaggle/Google",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 52,
+    "title": "AI Goes to College",
+    "url": "https://www.aigoestocollege.com/",
+    "description": "Resources and community around integrating artificial intelligence into college curricula and teaching practices.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI",
+      "higher education",
+      "community"
+    ],
+    "source": "AI Goes to College",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 53,
+    "title": "Harvard: Teach with Generative AI",
+    "url": "https://www.harvard.edu/ai/teaching-resources/",
+    "description": "Practical resources on using LLMs in teaching: simulating personas, personalizing feedback, generating assignments, and creating course-specific chatbots.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "GenAI",
+      "LLM",
+      "Harvard",
+      "pedagogy"
+    ],
+    "source": "Harvard University",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 54,
+    "title": "Cornell CTI: Generative AI in Teaching",
+    "url": "https://teaching.cornell.edu/generative-artificial-intelligence",
+    "description": "Faculty support resources on academic integrity, ethical AI use, accessibility, and research on GenAI impacts on student learning.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "GenAI",
+      "academic integrity",
+      "ethics",
+      "Cornell"
+    ],
+    "source": "Cornell University",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 55,
+    "title": "OECD Digital Education Outlook",
+    "url": "https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html",
+    "description": "Evidence-based examination of how GenAI reshapes education. Covers intelligent tutoring, risks of metacognitive laziness, and pedagogical design.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "OECD",
+      "GenAI",
+      "policy",
+      "research"
+    ],
+    "source": "OECD",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 56,
+    "title": "Faculty Focus",
+    "url": "https://www.facultyfocus.com/",
+    "description": "Regular articles on designing AI-powered classrooms, emerging learning trends, and modern pedagogical approaches.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI",
+      "pedagogy",
+      "articles",
+      "trends"
+    ],
+    "source": "Faculty Focus",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 57,
+    "title": "NICCS — National Initiative for Cybersecurity Careers and Studies",
+    "url": "https://niccs.cisa.gov/",
+    "description": "CISA's portal with NICE Framework work roles, education provider search, and free cybersecurity training catalog.",
+    "category": "Cybersecurity Education",
+    "tags": [
+      "cybersecurity",
+      "CISA",
+      "NICE",
+      "training"
+    ],
+    "source": "CISA",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 58,
+    "title": "AIS Electronic Library (AISeL)",
+    "url": "https://aisel.aisnet.org/",
+    "description": "Open-access archive of proceedings from ICIS, AMCIS, ECIS, PACIS, and all AIS-affiliated conferences and journals.",
+    "category": "Research Archives",
+    "tags": [
+      "AIS",
+      "open access",
+      "proceedings",
+      "research"
+    ],
+    "source": "AIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 59,
+    "title": "Pearson MyLab MIS (Laudon)",
+    "url": "https://www.pearson.com/en-us/subject-catalog/p/management-information-systems-managing-the-digital-firm/P200000001392/",
+    "description": "Companion platform for Laudon's MIS textbook with Learning Tracks, Dynamic Study Modules, test banks, and video cases.",
+    "category": "Textbook Companions",
+    "tags": [
+      "Pearson",
+      "MIS",
+      "textbook",
+      "Laudon"
+    ],
+    "source": "Pearson",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 60,
+    "title": "McGraw Hill Connect — MIS",
+    "url": "https://www.mheducation.com/highered/discipline/management-information-systems.html",
+    "description": "MIS digital courseware with SmartBook AI reader, LMS integration, and real-time student insights.",
+    "category": "Textbook Companions",
+    "tags": [
+      "McGraw Hill",
+      "MIS",
+      "textbook",
+      "LMS"
+    ],
+    "source": "McGraw Hill",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 61,
+    "title": "GitHub Education (Campus Program, Classroom & Student Developer Pack)",
+    "url": "https://github.com/education",
+    "description": "Free GitHub Enterprise access for institutions, GitHub Classroom for distributing code assignments with auto-grading, and the Student Developer Pack with 100+ tool offers. Campus Experts program trains student community leaders.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "GitHub",
+      "version control",
+      "collaboration",
+      "free",
+      "classroom tools"
+    ],
+    "source": "GitHub",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 62,
+    "title": "IBM SkillsBuild for Academia",
+    "url": "https://www.ibm.com/academic/",
+    "description": "Free platform with 1,000+ online courses, digital credentials, hands-on labs, and faculty training in AI, data science, cybersecurity, and cloud. Includes guest lectures and group innovation challenges for universities.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "IBM",
+      "AI",
+      "data science",
+      "cybersecurity",
+      "free"
+    ],
+    "source": "IBM",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 63,
+    "title": "Cisco Networking Academy",
+    "url": "https://www.cisco.com/site/us/en/learn/training-certifications/training/netacad/index.html",
+    "description": "Free self-paced courses in networking, cybersecurity, Python, AI, and data analytics. Includes Packet Tracer simulation tool, CCNA certification prep, and alignment with NICE/CSTA standards. Millions of students worldwide.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Cisco",
+      "networking",
+      "cybersecurity",
+      "free courses",
+      "certification"
+    ],
+    "source": "Cisco",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 64,
+    "title": "SAP Signavio Academic Edition (BPM Academic Initiative)",
+    "url": "https://academic.signavio.com/try",
+    "description": "Free access to SAP Signavio process modeling and simulation for students and faculty. Supports BPMN 2.0 modeling, process simulation, and dictionary items. Six-month renewable licenses with institutional email.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "SAP",
+      "BPM",
+      "BPMN",
+      "process modeling",
+      "free"
+    ],
+    "source": "SAP Signavio",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 65,
+    "title": "SAP Learning — Student Edition & Free Courses",
+    "url": "https://learning.sap.com/free-student-edition",
+    "description": "Free SAP Learning Hub Student Edition with full course content, interactive modules, cloud-based practice systems, and two free SAP certification attempts. Over 100 former openSAP courses available as free self-paced learning.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "SAP",
+      "ERP",
+      "free certification",
+      "cloud",
+      "self-paced"
+    ],
+    "source": "SAP",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 66,
+    "title": "Google Cloud for Education",
+    "url": "https://cloud.google.com/edu",
+    "description": "Free Google Cloud credits for faculty and students, Google Cloud Skills Boost with hands-on labs and skill badges, and Google Cloud Certificates. Faculty may receive up to 5,000 skills credits for classroom distribution.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Google",
+      "cloud",
+      "AI",
+      "free credits",
+      "certification"
+    ],
+    "source": "Google",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 67,
+    "title": "SAS Academic Programs",
+    "url": "https://www.sas.com/en_us/learn/academic-programs.html",
+    "description": "Free SAS OnDemand for Academics (cloud-based SAS access) and SAS Viya for Learners. Includes 15+ free e-learning courses, certification exam prep, curriculum support workshops, and campus course materials for analytics education.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "SAS",
+      "analytics",
+      "statistics",
+      "free software",
+      "certification"
+    ],
+    "source": "SAS",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 68,
+    "title": "JetBrains Educational Licenses",
+    "url": "https://www.jetbrains.com/academy/student-pack/",
+    "description": "Free access to all JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, etc.) for students and faculty. Individual licenses via university email or ISIC card; institutional classroom licenses also available free. Renewable annually.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "JetBrains",
+      "IDE",
+      "development tools",
+      "free license",
+      "programming"
+    ],
+    "source": "JetBrains",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 69,
+    "title": "Celonis Academic Alliance",
+    "url": "https://www.celonis.com/academic-alliance/",
+    "description": "Free access to Celonis process mining platform for 700+ partner universities. 400+ hours of free content, digital badges, and the STaR thesis support program. Over 400,000 students trained in 50+ countries.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Celonis",
+      "process mining",
+      "free",
+      "digital badges",
+      "thesis support"
+    ],
+    "source": "Celonis",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 70,
+    "title": "Teradata University Network (TUN)",
+    "url": "https://learning.acm.org/member-offers/teradata",
+    "description": "Free web portal for teaching database, data warehousing, and BI. Includes syllabi, software access, PowerPoint decks with notes, cases with teaching notes, and large corporate datasets. Academic-governed; 45,000+ student users across 72 countries.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Teradata",
+      "data warehousing",
+      "BI",
+      "free",
+      "datasets"
+    ],
+    "source": "Teradata / ACM",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 71,
+    "title": "MongoDB University & Educator Center",
+    "url": "https://www.mongodb.com/academia",
+    "description": "Free self-paced courses on NoSQL, data modeling, aggregation, and Atlas. MongoDB for Educators program provides free certification vouchers. Student benefits available via GitHub Student Developer Pack.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "MongoDB",
+      "NoSQL",
+      "database",
+      "free courses",
+      "certification"
+    ],
+    "source": "MongoDB",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 72,
+    "title": "Scrum.org University Partner Program",
+    "url": "https://www.scrum.org/university-partner-program",
+    "description": "Partner universities integrate Professional Scrum education into degree programs using the Scrum Guide and Scrum.org resources. Students can earn Scrum.org certifications as part of their coursework.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Scrum",
+      "agile",
+      "project management",
+      "certification",
+      "curriculum"
+    ],
+    "source": "Scrum.org",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 73,
+    "title": "PMI Academic Programs & Curriculum Resources",
+    "url": "https://www.pmi.org/learning/academic-programs",
+    "description": "Free curriculum and teaching resources for project management courses, including Foundations course materials, case studies, and desk copies. PMI Global Accreditation Center accredits 205+ PM degree programs worldwide.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "PMI",
+      "project management",
+      "curriculum",
+      "accreditation",
+      "CAPM"
+    ],
+    "source": "PMI",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 74,
+    "title": "Cisco Packet Tracer",
+    "url": "https://www.netacad.com/learning-collections/cisco-packet-tracer",
+    "description": "Free cross-platform network simulation tool for designing and testing network topologies. Supports routing, switching, VLANs, and IoT. Activity Wizard enables instructors to create custom practical assignments. No hardware required.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "Cisco",
+      "networking",
+      "simulation",
+      "free",
+      "CCNA"
+    ],
+    "source": "Cisco",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 75,
+    "title": "GNS3 — Graphical Network Simulator",
+    "url": "https://www.gns3.com/",
+    "description": "Free open-source network emulation platform running actual network operating systems (Cisco IOS, JunOS). 800,000+ member community. Supports multi-vendor environments for CCNA/CCIE certification prep and enterprise network design labs.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "networking",
+      "simulation",
+      "open source",
+      "free",
+      "lab"
+    ],
+    "source": "GNS3 / SolarWinds",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 76,
+    "title": "Marketplace Simulations",
+    "url": "https://www.marketplace-simulation.com/",
+    "description": "Over 30 marketing and business simulations for undergraduate through MBA courses. Covers marketing strategy, entrepreneurship, operations, and supply chain. 1.3M+ students. AACSB assessment tools included.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulation",
+      "marketing",
+      "strategy",
+      "AACSB",
+      "experiential"
+    ],
+    "source": "Innovative Learning Solutions",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 77,
+    "title": "Forio Simulations (Harvard, MIT, Wharton)",
+    "url": "https://forio.com/solutions/business-strategy-simulation-games/",
+    "description": "Online business simulations developed with Harvard, MIT, and Wharton faculty. Includes the MIT Beer Game (supply chain), Harvard Everest (leadership), Design Thinking (food truck), and Change Management simulations. Used by 60%+ of MBAs worldwide.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulation",
+      "Harvard",
+      "MIT",
+      "Wharton",
+      "experiential learning"
+    ],
+    "source": "Forio",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 78,
+    "title": "ProM — Process Mining Framework",
+    "url": "https://promtools.org/",
+    "description": "Open-source (GPL) process mining toolkit from Eindhoven University of Technology. Extensible plug-in architecture for process discovery, conformance checking, and enhancement. Free online course with 15,000+ enrolled students.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "process mining",
+      "open source",
+      "free",
+      "academic",
+      "TU Eindhoven"
+    ],
+    "source": "Eindhoven University of Technology",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 79,
+    "title": "Internationale Tagung Wirtschaftsinformatik (WI Conference)",
+    "url": "https://wirtschaftsinformatik.de/forschung/konferenzen",
+    "description": "The premier research conference for the German-speaking IS (Wirtschaftsinformatik) community, organized jointly by WKWI and GI Fachbereich WI. Held annually since 2019, replacing the former WI/MKWI alternating schedule.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Wirtschaftsinformatik",
+      "Germany",
+      "conference",
+      "WKWI",
+      "GI"
+    ],
+    "source": "WKWI / GI Fachbereich WI",
+    "language": "de",
+    "region": "DACH",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 80,
+    "title": "Business & Information Systems Engineering (BISE / WIRTSCHAFTSINFORMATIK)",
+    "url": "https://bise-journal.com/",
+    "description": "Flagship journal of the German-speaking IS community for 60+ years. Bilingual (English in BISE, German in WIRTSCHAFTSINFORMATIK). AIS-affiliated, Springer-published. Strong design science focus. Sponsored by WKWI and GI-FB WI (1,200+ members).",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "Wirtschaftsinformatik",
+      "design science",
+      "AIS affiliated",
+      "Springer"
+    ],
+    "source": "WKWI / GI-FB WI / Springer",
+    "language": "en/de",
+    "region": "DACH",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 81,
+    "title": "IRIS Association & SCIS Conference (Scandinavian Chapter of AIS)",
+    "url": "https://communities.aisnet.org/scandinavia/home",
+    "description": "The oldest consecutive IS conference in the world (since 1978). IRIS is a working seminar with 45-60 min group discussions per paper; SCIS is the formal proceedings conference. Manages the Scandinavian Journal of Information Systems (SJIS).",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Scandinavia",
+      "AIS chapter",
+      "IRIS",
+      "SCIS",
+      "Nordic"
+    ],
+    "source": "IRIS Association / AIS",
+    "language": "en",
+    "region": "Nordic",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 82,
+    "title": "Scandinavian Journal of Information Systems (SJIS)",
+    "url": "https://aisel.aisnet.org/sjis/",
+    "description": "Official AIS-affiliated journal of the IRIS Association, free on AISeL. Emphasizes participatory research, design science, and Nordic IS traditions. Published since 1989; two issues per year.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "Scandinavia",
+      "open access",
+      "AIS affiliated",
+      "participatory research"
+    ],
+    "source": "IRIS Association / AIS",
+    "language": "en",
+    "region": "Nordic",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 83,
+    "title": "NOKOBIT — Norwegian Conference for Organizations' Use of IT",
+    "url": "https://www.ntnu.no/ojs/index.php/nikt",
+    "description": "Annual Norwegian conference (32+ years) on ICT in organizations and society, part of the broader NIKT conference. Accepts papers in Norwegian, Scandinavian languages, or English. Level 1 in the Norwegian scientific register.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Norway",
+      "conference",
+      "organizations",
+      "ICT",
+      "NIKT"
+    ],
+    "source": "NIKT / Norwegian universities",
+    "language": "no/en",
+    "region": "Nordic",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 84,
+    "title": "AIM — Association Information et Management (French IS Community)",
+    "url": "https://aim.asso.fr/fr/",
+    "description": "Founded in 1991, AIM is the primary academic association for the francophone IS community and an AIS affiliated chapter. Organizes annual French-speaking conferences, workshops, and promotes IS training programs in French-speaking countries.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "France",
+      "AIS chapter",
+      "francophone",
+      "conference",
+      "IS community"
+    ],
+    "source": "AIM",
+    "language": "fr",
+    "region": "Europe",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 85,
+    "title": "ItAIS — Italian Chapter of AIS",
+    "url": "https://communities.aisnet.org/itais/home",
+    "description": "Founded in 2003, ItAIS brings together the Italian IS community with annual conferences, SIGs covering epistemology, design methodologies, e-government, and IS education. Proceedings available on AISeL.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Italy",
+      "AIS chapter",
+      "conference",
+      "IS community"
+    ],
+    "source": "ItAIS / AIS",
+    "language": "en/it",
+    "region": "Europe",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 86,
+    "title": "MCIS — Mediterranean Conference on Information Systems",
+    "url": "https://aisel.aisnet.org/mcis/",
+    "description": "AIS-affiliated conference focusing on IS research relevant to the Mediterranean region's social, economic, and cultural context. Proceedings on AISeL. Sometimes held jointly with MENACIS or ItAIS.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Mediterranean",
+      "AIS affiliated",
+      "conference",
+      "proceedings"
+    ],
+    "source": "AIS",
+    "language": "en",
+    "region": "Europe",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 87,
+    "title": "AAIS — Australasian Association for Information Systems",
+    "url": "https://aaisnet.org/",
+    "description": "AIS Region 3 chapter representing 19 countries in Australia, NZ, and Oceania. Organizes the annual ACIS conference (since 1990) and publishes the Australasian Journal of Information Systems (AJIS). AIS Outstanding Chapter 2023.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Australasia",
+      "AIS chapter",
+      "ACIS",
+      "AJIS",
+      "Oceania"
+    ],
+    "source": "AAIS / AIS",
+    "language": "en",
+    "region": "Asia-Pacific",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 88,
+    "title": "Australasian Journal of Information Systems (AJIS)",
+    "url": "https://ajis.aaisnet.org/",
+    "description": "Diamond open-access journal (no fees for authors or readers) published by AAIS since 1993. ABDC A-ranked, SJR Q1 in Business Management. Covers IS research with emphasis on Australasia and Asia-Pacific.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "open access",
+      "Australasia",
+      "ABDC A",
+      "diamond OA"
+    ],
+    "source": "AAIS",
+    "language": "en",
+    "region": "Asia-Pacific",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 91,
+    "title": "INAIS — AIS India Chapter",
+    "url": "https://inais.org.in/",
+    "description": "Founded 2016; won AIS best chapter award four consecutive years (2019-2022). Organizes InCIS (India Conference on Information Systems), research method workshops, and webinars with IIMs and top Indian institutions.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "India",
+      "AIS chapter",
+      "InCIS",
+      "conference",
+      "workshops"
+    ],
+    "source": "INAIS / AIS",
+    "language": "en",
+    "region": "Asia-Pacific",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 92,
+    "title": "MENA-AIS Chapter & MENACIS Conference",
+    "url": "https://communities.aisnet.org/menachapter/home",
+    "description": "AIS chapter for the Middle East and North Africa region. Organizes the annual MENACIS conference (since 2018) focusing on IS research in the MENA region. Sometimes held jointly with MCIS.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "MENA",
+      "Middle East",
+      "AIS chapter",
+      "MENACIS",
+      "conference"
+    ],
+    "source": "MENA-AIS / AIS",
+    "language": "en",
+    "region": "Middle East",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 93,
+    "title": "AISSAC — Southern African Chapter of AIS",
+    "url": "https://www.aissac.org/",
+    "description": "AIS chapter serving the Southern African IS community with networking, knowledge exchange, and support for internationalization of local IS research. Includes a student chapter and strategic alliances with AIS Region 2 chapters.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Southern Africa",
+      "AIS chapter",
+      "IS community",
+      "student chapter"
+    ],
+    "source": "AISSAC / AIS",
+    "language": "en",
+    "region": "Africa",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 94,
+    "title": "CACAIS — Central Africa Chapter of AIS",
+    "url": "https://cacais.org/about/",
+    "description": "AIS chapter for Central Africa organizing annual conferences bringing together IS researchers from the region and worldwide. Provides networking opportunities for doctoral students with top IS scholars.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Central Africa",
+      "AIS chapter",
+      "conference",
+      "doctoral students"
+    ],
+    "source": "CACAIS / AIS",
+    "language": "en/fr",
+    "region": "Africa",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 95,
+    "title": "CLEI — Latin American Conference on Informatics",
+    "url": "https://clei.org/en/clei-english/",
+    "description": "Annual conference since 1974 organized by the Latin American Center for Informatics Studies. Dedicated Computer Education track. Papers in Spanish, Portuguese, or English. IFIP member. The largest Latin American computing conference.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Latin America",
+      "conference",
+      "IFIP",
+      "computer education",
+      "multilingual"
+    ],
+    "source": "CLEI",
+    "language": "es/pt/en",
+    "region": "Latin America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 96,
+    "title": "SBSI — Brazilian Symposium on Information Systems",
+    "url": "https://dl.acm.org/doi/proceedings/10.1145/3658271",
+    "description": "Annual meeting of the Brazilian IS community since 2004, organized under SBC (Brazilian Computer Society). Proceedings in ACM Digital Library. Covers contemporary IS topics bringing together students, researchers, professionals, and government.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Brazil",
+      "SBC",
+      "conference",
+      "ACM",
+      "IS community"
+    ],
+    "source": "SBC (Brazilian Computer Society)",
+    "language": "pt/en",
+    "region": "Latin America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 97,
+    "title": "Markkula Center for Applied Ethics — Technology Ethics Resources",
+    "url": "https://www.scu.edu/ethics/focus-areas/technology-ethics/resources/",
+    "description": "Free teaching cases, modules, and frameworks for technology ethics education. Dedicated modules on cybersecurity ethics, software engineering ethics, online privacy, and AI ethics. Template for writing tech ethics case studies included.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "ethics",
+      "technology",
+      "case studies",
+      "cybersecurity",
+      "AI ethics"
+    ],
+    "source": "Santa Clara University",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 98,
+    "title": "IEEE TechEthics",
+    "url": "https://techethics.ieee.org/",
+    "description": "Articles, reports, educational modules, and codes of ethics for emerging technologies. Includes the IEEE Student Ethics Competition toolkit with hypothetical case studies, judging forms, and promotional templates for campus events.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "IEEE",
+      "ethics",
+      "technology",
+      "student competition",
+      "AI"
+    ],
+    "source": "IEEE",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 99,
+    "title": "IDEO Design Thinking for Educators Toolkit",
+    "url": "https://designthinking.ideo.com/resources/design-thinking-for-educators",
+    "description": "Free downloadable toolkit and workbook with design thinking process, methods, and real-world classroom examples. Available in 8 languages (Arabic, Chinese, French, German, Korean, Portuguese, Spanish, English).",
+    "category": "Open Educational Resources",
+    "tags": [
+      "design thinking",
+      "free toolkit",
+      "multilingual",
+      "pedagogy",
+      "innovation"
+    ],
+    "source": "IDEO",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 100,
+    "title": "Stanford d.school Design Thinking Bootleg",
+    "url": "https://dschool.stanford.edu/tools/design-thinking-bootleg",
+    "description": "Free compendium of design thinking tools organized around empathize, define, ideate, prototype, and test modes. Available in English, Spanish, and German. Includes d.school Starter Kit (3-hour online intro) for educators.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "design thinking",
+      "Stanford",
+      "free",
+      "tools",
+      "UX"
+    ],
+    "source": "Stanford d.school",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 101,
+    "title": "Interaction Design Foundation (IxDF) — UX Design Courses",
+    "url": "https://www.ixdf.org/",
+    "description": "130,000+ graduates across 40 graduate-level UX/HCI courses covering design thinking, user research, usability testing, and information architecture. Free open-access textbooks and encyclopedia. Affordable subscription ($16/mo).",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "UX",
+      "HCI",
+      "design thinking",
+      "user research",
+      "affordable"
+    ],
+    "source": "Interaction Design Foundation",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 102,
+    "title": "TOGAF Standard & ArchiMate (The Open Group)",
+    "url": "https://www.opengroup.org/togaf",
+    "description": "Industry-standard enterprise architecture framework (TOGAF) and modeling language (ArchiMate). Free ArchiMate specification and Archi freeware modeling tool. Certification paths from short credentials (3hrs) to multi-day courses.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "enterprise architecture",
+      "TOGAF",
+      "ArchiMate",
+      "framework",
+      "free tool"
+    ],
+    "source": "The Open Group",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 103,
+    "title": "NSF CyberAICorps Scholarship for Service (CyberAI SFS)",
+    "url": "https://www.nsf.gov/funding/opportunities/sfs-cybercorps-scholarship-service",
+    "description": "Up to $2.5M grants for institutions to provide cybersecurity/AI scholarships (up to 3 years per student). Innovation Track ($500K) supports curriculum enhancement. Students serve in government cybersecurity roles post-graduation.",
+    "category": "Funding & Grants for IS Education",
+    "tags": [
+      "NSF",
+      "cybersecurity",
+      "AI",
+      "scholarships",
+      "grants"
+    ],
+    "source": "NSF / OPM / DHS",
+    "language": "en",
+    "region": "North America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 104,
+    "title": "NSF IUSE: EDU — Improving Undergraduate STEM Education",
+    "url": "https://www.nsf.gov/funding/opportunities/iuse-edu-improving-undergraduate-stem-education-directorate-stem",
+    "description": "~$61M/year for novel approaches to STEM teaching and learning, including computing and IS. Two tracks: Engaged Student Learning and Institutional/Community Transformation. Awards from $200K-$2M+ depending on level.",
+    "category": "Funding & Grants for IS Education",
+    "tags": [
+      "NSF",
+      "STEM education",
+      "grants",
+      "curriculum",
+      "pedagogy research"
+    ],
+    "source": "NSF",
+    "language": "en",
+    "region": "North America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 105,
+    "title": "NSF IUSE: CUE — Computing in Undergraduate Education",
+    "url": "https://www.nsf.gov/funding/opportunities/iuse-cue-improving-undergraduate-stem-education-computing/505630/nsf24-553",
+    "description": "NSF program specifically for re-envisioning computing education with emphasis on broadening participation, modernizing curricula (AI, quantum), integrating privacy/security/society, and cross-disciplinary computing.",
+    "category": "Funding & Grants for IS Education",
+    "tags": [
+      "NSF",
+      "computing education",
+      "grants",
+      "broadening participation",
+      "curriculum"
+    ],
+    "source": "NSF",
+    "language": "en",
+    "region": "North America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 106,
+    "title": "Erasmus+ Digital Education Funding (Forward-Looking Projects)",
+    "url": "https://education.ec.europa.eu/news/funding-available-for-forward-looking-projects-in-digital-education",
+    "description": "EU funding for transnational digital education projects including AI in education, digital skills assessment (DigComp), and data literacy. Total budget EUR 32M for 2025 call. Up to EUR 1M per project for AI public-private partnerships.",
+    "category": "Funding & Grants for IS Education",
+    "tags": [
+      "Erasmus+",
+      "EU",
+      "digital education",
+      "AI",
+      "grants"
+    ],
+    "source": "European Commission",
+    "language": "en",
+    "region": "Europe",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 107,
+    "title": "AACSB Academy — AI & Technology Workshops for Faculty",
+    "url": "https://www.aacsb.edu/academy",
+    "description": "Professional development for business school faculty including intensive AI integration workshops, on-campus customized training, and the ICAM conference (1,200+ educators from 60+ countries). Covers teaching, accreditation, and digital literacy.",
+    "category": "Professional Development for IS Faculty",
+    "tags": [
+      "AACSB",
+      "faculty development",
+      "AI",
+      "workshops",
+      "accreditation"
+    ],
+    "source": "AACSB",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 108,
+    "title": "Valacich & Schneider — Information Systems Today (Pearson)",
+    "url": "https://www.pearson.com/en-us/subject-catalog/p/information-systems-today-managing-in-the-digital-world/P200000001974/9780136524656",
+    "description": "9th edition covering digital density, API economy, cloud, social media, AI, and IoT. MyLab MIS companion with test banks, PowerPoints, instructor manuals, and student data files. Real-world company cases in every chapter.",
+    "category": "Textbook Companions",
+    "tags": [
+      "Pearson",
+      "IS textbook",
+      "Valacich",
+      "MyLab",
+      "digital world"
+    ],
+    "source": "Pearson",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 109,
+    "title": "Rainer & Prince — Introduction to Information Systems (Wiley/WileyPLUS)",
+    "url": "https://www.wileyplus.com/business-and-decision-science/rainer-introduction-to-information-systems-10e-eprof22940/",
+    "description": "10th edition with WileyPLUS companion featuring lecture videos, Bloomberg real-world video activities, ethics cases, and Data Analysis Bootcamps for Excel, Tableau, Power BI, Alteryx, and SQL.",
+    "category": "Textbook Companions",
+    "tags": [
+      "Wiley",
+      "IS textbook",
+      "Rainer",
+      "WileyPLUS",
+      "data analytics"
+    ],
+    "source": "Wiley",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 111,
+    "title": "Agile Education Program (Scrum Inc.)",
+    "url": "https://agileeducation.org/",
+    "description": "Founded by Scrum co-creator Jeff Sutherland. Provides Scrum Inc Agile credentials and Scrum@Scale framework training. ScrumLab online learning platform for students and organizations pursuing agile transformation.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Scrum",
+      "agile",
+      "Scrum@Scale",
+      "credentials",
+      "training"
+    ],
+    "source": "Scrum Inc.",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 112,
+    "title": "CyberCorps Scholarship for Service Portal (OPM)",
+    "url": "https://sfs.opm.gov/",
+    "description": "Central portal for the SFS program managed by the Office of Personnel Management. Students can find participating institutions, scholarship details, and government job placement opportunities. Connects graduates with federal cybersecurity roles.",
+    "category": "Funding & Grants for IS Education",
+    "tags": [
+      "cybersecurity",
+      "scholarships",
+      "government",
+      "career",
+      "OPM"
+    ],
+    "source": "U.S. Office of Personnel Management",
+    "language": "en",
+    "region": "North America",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 113,
+    "title": "HKAIS — Hong Kong Association for Information Systems",
+    "url": "https://aisnet.org/page/Chapters",
+    "description": "AIS chapter for Hong Kong's IS academic community. All IS groups in Hong Kong universities are located in business schools. Active in promoting IS research and education across Hong Kong's higher education institutions.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Hong Kong",
+      "AIS chapter",
+      "IS community",
+      "Asia"
+    ],
+    "source": "HKAIS / AIS",
+    "language": "en/zh",
+    "region": "Asia-Pacific",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 114,
+    "title": "SAP Signavio Academic Models (SAP-SAM) Dataset",
+    "url": "https://zenodo.org/records/7012043",
+    "description": "Open dataset of hundreds of thousands of business process models created over a decade by the BPM Academic Initiative. Available on Zenodo for research on process mining, BPM, and AI applications.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "SAP",
+      "BPM",
+      "dataset",
+      "process models",
+      "open data"
+    ],
+    "source": "SAP Signavio / Zenodo",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 115,
+    "title": "Wirtschaftsinformatik.de — German IS Community Portal",
+    "url": "https://wirtschaftsinformatik.de/",
+    "description": "Central portal for the German-speaking Wirtschaftsinformatik (IS) community with conference listings, research information, and community resources. Gateway to WKWI and GI Fachbereich WI activities.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Wirtschaftsinformatik",
+      "Germany",
+      "portal",
+      "WKWI",
+      "GI"
+    ],
+    "source": "GI / WKWI",
+    "language": "de",
+    "region": "DACH",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 116,
+    "title": "Markkula Center — Ethics in Technology Practice Toolkit",
+    "url": "https://www.scu.edu/ethics/focus-areas/technology-ethics/resources/embedding-ethics-into-computing-curricula-resources-and-suggestions/case-studies/",
+    "description": "Compendium for embedding ethics into computing curricula: ethical decision-making frameworks, case studies on AI/VR/privacy, cybersecurity ethics modules, software engineering ethics modules, and a toolkit for integrating ethics into product development.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "ethics",
+      "computing curricula",
+      "case studies",
+      "software engineering",
+      "privacy"
+    ],
+    "source": "Santa Clara University",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 117,
+    "title": "DataCamp — Data Analyst in Power BI Track",
+    "url": "https://www.datacamp.com/tracks/data-analyst-in-power-bi",
+    "description": "Co-created with Microsoft, this track covers Power BI from beginner to PL-300 certification prep. Includes hands-on projects, a 50% PL-300 exam discount, and integration with classroom-based data analytics courses.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "Power BI",
+      "data analytics",
+      "Microsoft",
+      "certification",
+      "DataCamp"
+    ],
+    "source": "DataCamp / Microsoft",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 118,
+    "title": "ACIS — Australasian Conference on Information Systems",
+    "url": "https://acis.aaisnet.org/",
+    "description": "Premier IS conference for Australia and New Zealand, held annually since 1990. Covers technical, organizational, business, and social issues in IT. Proceedings on AISeL. ACIS 2025 theme: 'The State of the IS Discipline.'",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "Australasia",
+      "conference",
+      "IS research",
+      "proceedings",
+      "AISeL"
+    ],
+    "source": "AAIS",
+    "language": "en",
+    "region": "Asia-Pacific",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 120,
+    "title": "IEEE-CS/ACM Code of Ethics for Software Engineers",
+    "url": "https://www.computer.org/education/code-of-ethics",
+    "description": "Joint IEEE Computer Society and ACM code of ethics for software engineering professionals. Serves an educational function for teaching professional responsibility, ethical obligations, and standards in IS/CS courses.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "IEEE",
+      "ACM",
+      "software engineering",
+      "code of ethics",
+      "professional standards"
+    ],
+    "source": "IEEE Computer Society / ACM",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 121,
+    "title": "SAP Signavio Research Alliance",
+    "url": "https://www.signavio.com/academic-and-research-alliances/",
+    "description": "Research visits for PhD candidates and postdocs (3-6 months, on SAP payroll). Focus areas: process mining, computer science, and AI in BPM. Enables practice-oriented academic research in collaboration with SAP engineers.",
+    "category": "Professional Development for IS Faculty",
+    "tags": [
+      "SAP",
+      "research",
+      "BPM",
+      "process mining",
+      "PhD"
+    ],
+    "source": "SAP Signavio",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 122,
+    "title": "AACSB Innovations That Inspire",
+    "url": "https://www.aacsb.edu/about-us/advocacy/member-spotlight/innovations-that-inspire",
+    "description": "10-year program recognizing innovative business schools worldwide. Showcases examples of technology integration, entrepreneurship, and social innovation in business education that can inspire IS curriculum design.",
+    "category": "Professional Development for IS Faculty",
+    "tags": [
+      "AACSB",
+      "innovation",
+      "business education",
+      "showcase",
+      "best practices"
+    ],
+    "source": "AACSB",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 123,
+    "title": "European Digital Education Hub",
+    "url": "https://education.ec.europa.eu/focus-topics/digital-education",
+    "description": "EU platform connecting national authorities, private sector, researchers, and educators around digital education. Facilitates exchange of good practices, co-creation, and policy development in digital skills and education.",
+    "category": "Professional Communities",
+    "tags": [
+      "EU",
+      "digital education",
+      "policy",
+      "community",
+      "DigComp"
+    ],
+    "source": "European Commission",
+    "language": "en",
+    "region": "Europe",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 124,
+    "title": "Celonis STaR Program (Student Thesis and Research)",
+    "url": "https://www.celonis.com/acal-thesis-support/",
+    "description": "Free Celonis software, learning resources, Academy access, badges, and certifications for students writing theses, seminar papers, or capstone projects on process intelligence and process mining.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "Celonis",
+      "thesis",
+      "process mining",
+      "capstone",
+      "free"
+    ],
+    "source": "Celonis",
+    "language": "en",
+    "region": "Global",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 125,
+    "title": "IEEE TEMS Educational Materials Portal",
+    "url": "https://www.ieee-tems.org/educational-materials/",
+    "description": "IEEE Technology and Engineering Management Society's curated collection of educational materials including articles, podcasts, and past ITMC conference papers on technology and engineering management.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "technology management",
+      "engineering management",
+      "IEEE",
+      "digital transformation"
+    ],
+    "source": "IEEE TEMS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 126,
+    "title": "IEEE TEMS Education Committee",
+    "url": "https://www.ieee-tems.org/education-committee/",
+    "description": "IEEE TEMS's dedicated education committee overseeing IoT & AI challenges, industry forums, online courses and webinars, and global student competitions relevant to technology management education.",
+    "category": "Professional Communities",
+    "tags": [
+      "technology management",
+      "IEEE",
+      "student competitions",
+      "IoT",
+      "AI"
+    ],
+    "source": "IEEE TEMS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 127,
+    "title": "IEEE TEMS Body of Knowledge (TEMSBOK)",
+    "url": "https://www.ieee-tems.org/ieee-technology-and-engineering-management-society-body-of-knowledge-temsbok/",
+    "description": "Comprehensive body of knowledge covering technology and engineering management topics including business analysis, innovation, entrepreneurship, project management, and IT governance. Published by Wiley/IEEE Press.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "body of knowledge",
+      "technology management",
+      "IT governance",
+      "project management",
+      "IEEE"
+    ],
+    "source": "IEEE TEMS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 128,
+    "title": "IEEE Transactions on Engineering Management",
+    "url": "https://www.ieee-tems.org/ieee-transactions-on-engineering-management/",
+    "description": "Premier IEEE journal for researchers, practitioners, educators, and graduate students in engineering, technology, and innovation management. Covers IS-relevant topics like IT project management and digital transformation.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "engineering management",
+      "technology management",
+      "research",
+      "IEEE"
+    ],
+    "source": "IEEE TEMS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 129,
+    "title": "IEEE TechEthics Education Modules",
+    "url": "https://techethics.ieee.org/resources/education-modules/",
+    "description": "Free educational modules on technology ethics including privacy foundations, transparency in systems, responsible innovation, ethical AI design, and data protection. Directly applicable to IS ethics courses.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "ethics",
+      "privacy",
+      "AI ethics",
+      "responsible innovation",
+      "IEEE"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 130,
+    "title": "IEEE Digital Privacy Education Portal",
+    "url": "https://digitalprivacy.ieee.org/education/",
+    "description": "Comprehensive digital privacy education hub offering courses, curriculum development resources, and the 'Digital Privacy: Principles, Regulations, and Ethics' program. Includes collaboration with ACM on privacy curriculum guidelines for universities.",
+    "category": "Cybersecurity Education",
+    "tags": [
+      "privacy",
+      "data protection",
+      "GDPR",
+      "ethics",
+      "curriculum",
+      "IEEE"
+    ],
+    "source": "IEEE Digital Privacy",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 131,
+    "title": "IEEE Digital Privacy Curriculum Development Initiative",
+    "url": "https://digitalprivacy.ieee.org/education/curriculum-development/",
+    "description": "Joint ACM/IEEE-CS/IFIP initiative developing privacy curricular guidelines for university graduate programs, defining knowledge areas including privacy-preserving software engineering and information systems/technology.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "privacy",
+      "curriculum",
+      "graduate education",
+      "IEEE",
+      "ACM"
+    ],
+    "source": "IEEE Digital Privacy",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 132,
+    "title": "IEEE Systems, Man, and Cybernetics Society (SMCS)",
+    "url": "https://www.ieeesmc.org/",
+    "description": "IEEE society advancing theory and application in systems science, human-machine systems, and cybernetics. Covers sociotechnical systems, organizational interactions, cognitive ergonomics, and computational social systems highly relevant to IS.",
+    "category": "Professional Communities",
+    "tags": [
+      "sociotechnical systems",
+      "human-computer interaction",
+      "cybernetics",
+      "systems engineering",
+      "IEEE"
+    ],
+    "source": "IEEE SMC Society",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 133,
+    "title": "IEEE Professional Communication Society (ProComm)",
+    "url": "https://procomm.ieee.org/",
+    "description": "IEEE society for engineers, technical communicators, and educators focused on improving professional communication. Offers resources on visuals, interpersonal communication, team communication, and written reporting relevant to IS communication courses.",
+    "category": "Professional Communities",
+    "tags": [
+      "professional communication",
+      "technical writing",
+      "team communication",
+      "IEEE"
+    ],
+    "source": "IEEE ProComm",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 134,
+    "title": "IEEE CertifAIEd AI Ethics Professional Certification",
+    "url": "https://standards.ieee.org/products-programs/icap/ieee-certifaied/professional-certification/",
+    "description": "Professional certification program for AI ethics, teaching how to apply IEEE's ethical framework covering accountability, transparency, algorithmic bias, and privacy to AI systems. Applicable to IS students and practitioners.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI ethics",
+      "certification",
+      "accountability",
+      "algorithmic bias",
+      "IEEE"
+    ],
+    "source": "IEEE Standards Association",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 135,
+    "title": "IEEE Ethically Aligned Design (EAD) Framework",
+    "url": "https://standards.ieee.org/initiatives/autonomous-intelligence-systems/",
+    "description": "Comprehensive vision for ethical development of autonomous and intelligent systems, with educational resources and the P7000 standards series. Covers AI governance, privacy, bias, and transparency relevant to IS ethics education.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI ethics",
+      "autonomous systems",
+      "governance",
+      "standards",
+      "IEEE"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 136,
+    "title": "IEEE P7000 Series — Ethics Standards for AI and Autonomous Systems",
+    "url": "https://ethicsstandards.org/p7000/",
+    "description": "Collection of IEEE standards translating ethical principles into technical requirements, including algorithmic bias (P7003), child/student data governance (P7004), data privacy (P7002), and AI transparency (P7001). Essential reference for IS courses on AI governance.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "AI ethics",
+      "standards",
+      "data governance",
+      "algorithmic bias",
+      "privacy",
+      "IEEE"
+    ],
+    "source": "IEEE Standards Association",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 137,
+    "title": "IEEE Internet of Things (IoT) Education Resources",
+    "url": "https://iot.ieee.org/education.html",
+    "description": "Central hub for IoT education including courses, distinguished lecturer program, and resource center. Covers IoT for business, systems design, and technology management relevant to IS curricula.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "IoT",
+      "Internet of Things",
+      "digital transformation",
+      "IEEE"
+    ],
+    "source": "IEEE IoT Initiative",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 138,
+    "title": "IEEE Xplore Digital Library",
+    "url": "https://ieeexplore.ieee.org/",
+    "description": "World's largest technical research database with over 7 million documents including journals, conferences, and standards. Contains IS-relevant content on information systems, human-computer interaction, and technology management. Fully open access for ACM/IEEE publications as of 2026.",
+    "category": "Research Archives",
+    "tags": [
+      "digital library",
+      "research",
+      "journals",
+      "conferences",
+      "IEEE"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 139,
+    "title": "IEEE Xplore Online Courses",
+    "url": "https://ieeexplore.ieee.org/courses/home",
+    "description": "Over 500 online courses on IEEE Xplore covering AI, cybersecurity, IoT, blockchain, ethics, and technology management. Provides CEUs and PDHs for professional development.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "online learning",
+      "professional development",
+      "IEEE",
+      "technology"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 140,
+    "title": "IEEE eLearning Library",
+    "url": "https://innovate.ieee.org/ieee-elearning-library/",
+    "description": "Peer-reviewed online course library with hundreds of course hours in core and emerging technologies. Supports flipped classrooms, project-based learning, and ABET criteria. Includes AI for business managers and ethical AI courses.",
+    "category": "Online Courses & MOOCs",
+    "tags": [
+      "eLearning",
+      "professional development",
+      "AI",
+      "ethics",
+      "IEEE"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 141,
+    "title": "ACM SIGMIS — Special Interest Group on Management Information Systems",
+    "url": "https://sigmis.org/",
+    "description": "ACM's most IS-relevant SIG, promoting research and best practice in management of information systems. Sponsors IS curriculum development, the CPR conference, ICIS doctoral awards, and publishes The Data Base for Advances in Information Systems.",
+    "category": "Professional Communities",
+    "tags": [
+      "information systems",
+      "MIS",
+      "ACM",
+      "IS research",
+      "IS workforce"
+    ],
+    "source": "ACM SIGMIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 142,
+    "title": "ACM SIGMIS CPR Conference (Computers and People Research)",
+    "url": "https://sigmis.org/cpr/",
+    "description": "Annual conference on IT workforce development, education, training, employment, leadership, and management. Includes doctoral consortium and Magid Igbaria Outstanding Paper Award. Proceedings published by ACM.",
+    "category": "Professional Communities",
+    "tags": [
+      "IT workforce",
+      "IS education",
+      "conference",
+      "ACM",
+      "doctoral consortium"
+    ],
+    "source": "ACM SIGMIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 143,
+    "title": "The Data Base for Advances in Information Systems (ACM SIGMIS DATABASE)",
+    "url": "https://sigmis.org/the-data-base/",
+    "description": "Peer-reviewed quarterly journal published since 1969, one of the longest-running IS publications. Covers management of IS, electronic commerce, data management, HCI, and software engineering. Now open access via ACM Digital Library.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "information systems",
+      "MIS research",
+      "ACM",
+      "open access"
+    ],
+    "source": "ACM SIGMIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 144,
+    "title": "ACM Interactions Magazine",
+    "url": "https://interactions.acm.org/",
+    "description": "Bimonthly ACM magazine bridging HCI research and UX practice, covering interaction design, user experience, and service design. Features an HCI Education forum with curricula and pedagogy resources relevant to IS design courses.",
+    "category": "IS Education Journals",
+    "tags": [
+      "HCI",
+      "UX design",
+      "interaction design",
+      "ACM",
+      "user experience"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 145,
+    "title": "ACM Queue — Magazine for Practicing Software Engineers",
+    "url": "https://queue.acm.org/",
+    "description": "ACM's practitioner-focused magazine bridging academic and industrial computing. Features 'Research for Practice' guides, case studies, and articles on real-world technology challenges. Free and open access as of 2026.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "practitioner",
+      "software engineering",
+      "industry",
+      "ACM",
+      "open access"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 146,
+    "title": "ACM Code of Ethics and Professional Conduct",
+    "url": "https://www.acm.org/code-of-ethics",
+    "description": "The conscience of the computing profession, with companion case studies, the CARE ethical decision framework, and a downloadable booklet with classroom activities. Essential teaching resource for IS ethics courses.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "ethics",
+      "professional conduct",
+      "case studies",
+      "ACM",
+      "teaching resource"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 147,
+    "title": "ACM Code of Ethics — Using the Code (Teaching Resources)",
+    "url": "https://www.acm.org/code-of-ethics/using-the-code",
+    "description": "Practical guide for educators on integrating the ACM Code of Ethics into computing courses. Includes the CARE framework (Consider, Analyze, Review, Evaluate), case studies demonstrating ethical principles, and classroom activity suggestions.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "ethics",
+      "pedagogy",
+      "case studies",
+      "ACM",
+      "classroom activities"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 148,
+    "title": "ACM Transactions on Management Information Systems (TMIS)",
+    "url": "https://dl.acm.org/journal/TMIS",
+    "description": "Premier ACM journal for MIS research covering design, development, assessment, and management of IT in organizations. Welcomes design science, analytical modeling, and system-oriented IS research. Open access via ACM Digital Library.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "MIS",
+      "information systems",
+      "design science",
+      "ACM"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 149,
+    "title": "ACM SIGCHI Education Resources and Living Curriculum",
+    "url": "https://medium.com/sigchi/sigchi-education-committee-hci-education-priorities-and-projects-94920855614",
+    "description": "SIGCHI Education Committee's initiatives including a living HCI curriculum, open educational resources via EngageCSEdu, the EduCHI community of practice, and surveys on global HCI education needs. Directly relevant to IS UX/design courses.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "HCI",
+      "curriculum",
+      "UX education",
+      "ACM",
+      "open educational resources"
+    ],
+    "source": "ACM SIGCHI",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 150,
+    "title": "ACM-W — Women in Computing",
+    "url": "https://women.acm.org/",
+    "description": "ACM council supporting women in computing with 36,000+ members. Offers scholarships for conference attendance, celebration events, student chapters, and monthly newsletters. Valuable resource for IS diversity and inclusion teaching.",
+    "category": "Professional Communities",
+    "tags": [
+      "diversity",
+      "women in computing",
+      "inclusion",
+      "ACM",
+      "scholarships"
+    ],
+    "source": "ACM-W",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 151,
+    "title": "ACM Diversity, Equity and Inclusion Resources",
+    "url": "https://www.acm.org/diversity-inclusion",
+    "description": "ACM's DEI council offering best practices for broadening participation in computing, including resources for conferences, organizations, and educational programs. Relevant for IS programs focused on inclusive technology design.",
+    "category": "Professional Communities",
+    "tags": [
+      "diversity",
+      "equity",
+      "inclusion",
+      "ACM",
+      "broadening participation"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 152,
+    "title": "ACM EngageCSEdu — Open Educational Resources for Computing",
+    "url": "https://www.engage-csedu.org/",
+    "description": "Peer-reviewed repository of engaging, classroom-tested OERs for computing education. Includes special issues on AI/ML, responsible computing, and ethics. All resources are designed with diversity and inclusion engagement practices.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "OER",
+      "computing education",
+      "ethics",
+      "responsible computing",
+      "ACM"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 153,
+    "title": "ACM EngageCSEdu — Ethics and Computing Collection",
+    "url": "https://engage-csedu.org/find-resources/oer-ethics-and-computing-open-access-collection",
+    "description": "Open access collection of ethics and computing educational resources curated by the ACM Task Force on Ethics and Computing Education. Categorized articles and teaching materials for embedding ethics across IS/CS courses.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "ethics",
+      "OER",
+      "computing education",
+      "open access",
+      "ACM"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 154,
+    "title": "ACM SIGMOD — Education Resources for Data Management",
+    "url": "https://sigmod.org/",
+    "description": "ACM SIG on Management of Data offering educational resources including tutorial videos, conference tutorials on cutting-edge data topics, and teaching tools for database education. Relevant to IS data management courses.",
+    "category": "Professional Communities",
+    "tags": [
+      "database",
+      "data management",
+      "ACM",
+      "tutorials",
+      "SQL"
+    ],
+    "source": "ACM SIGMOD",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 155,
+    "title": "ACM Computing Surveys",
+    "url": "https://dl.acm.org/journal/csur",
+    "description": "Highest-ranked computer science journal (Impact Factor 23.8) publishing comprehensive survey articles across all computing fields including information systems, HCI, AI, and data science. Fully open access as of 2026.",
+    "category": "Research Archives",
+    "tags": [
+      "surveys",
+      "research",
+      "computing",
+      "ACM",
+      "open access"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 156,
+    "title": "ACM Digital Library",
+    "url": "https://dl.acm.org/",
+    "description": "World's most comprehensive database of computing and IT literature. Now available in Basic (free open access) and Premium editions as of 2026. Contains full ACM publication archive including IS, HCI, and computing education content.",
+    "category": "Research Archives",
+    "tags": [
+      "digital library",
+      "research",
+      "open access",
+      "ACM",
+      "information systems"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 157,
+    "title": "ACM Education Resources Hub",
+    "url": "https://www.acm.org/education",
+    "description": "Central hub for ACM's education initiatives including curriculum recommendations, EngageCSEdu, education policy, and resources for educators at all levels. Covers computing education from K-12 through graduate programs.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "education",
+      "curriculum",
+      "ACM",
+      "computing education",
+      "policy"
+    ],
+    "source": "ACM",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 159,
+    "title": "AOM TIM Division — Technology & Innovation Management",
+    "url": "https://tim.aom.org/home",
+    "description": "AOM division with 4,300+ members studying innovation, R&D management, and technological change. Offers doctoral/junior/mid-career faculty consortia, distinguished scholar awards, and workshops on AI, digital transformation, and emerging technologies.",
+    "category": "Professional Communities",
+    "tags": [
+      "technology management",
+      "innovation",
+      "R&D",
+      "Academy of Management",
+      "digital transformation"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 160,
+    "title": "Academy of Management Learning & Education (AMLE) — Teaching Resources",
+    "url": "https://aom.org/research/journals/learning-and-education/amle-teaching-resources",
+    "description": "AMLE journal's collection of teaching slides based on published research articles, freely available for management educators to adopt in their classes. Covers IS-relevant topics across management education.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "teaching slides",
+      "management education",
+      "research-based",
+      "Academy of Management",
+      "pedagogy"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 161,
+    "title": "Academy of Management Learning & Education (AMLE) Journal",
+    "url": "https://journals.aom.org/journal/amle",
+    "description": "Premier journal for management learning and education research (Impact Factor 5.2). Publishes theory, empirical research, and teaching resources on management education in universities, businesses, and organizations.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "management education",
+      "pedagogy",
+      "Academy of Management",
+      "research"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 162,
+    "title": "AOM STR Division — Strategic Management Teaching Resources",
+    "url": "https://str.aom.org/teaching",
+    "description": "Comprehensive teaching resource library including strategy simulations directory, best-selling case lists, sample syllabi, PDW recordings on YouTube, in-class exercises, and resources for online teaching. Highly relevant to IS strategy courses.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "strategic management",
+      "simulations",
+      "cases",
+      "Academy of Management",
+      "teaching"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 163,
+    "title": "AOM STR Division — Strategy Simulations Directory",
+    "url": "https://str.aom.org/teaching/strategysimulations",
+    "description": "Curated directory of strategy simulation products and platforms for management education, gathered from simulation companies' websites. Useful for IS courses incorporating strategic IT decision-making simulations.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulations",
+      "strategy",
+      "experiential learning",
+      "Academy of Management"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 164,
+    "title": "AOM SIM Division — Social Issues in Management Teaching Resources",
+    "url": "https://sim.aom.org/teaching",
+    "description": "Teaching resources for social issues in management including textbooks/syllabi, class activities, and PDW presentations. Covers business ethics, sustainability, stakeholder management, and technology ethics relevant to IS.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "ethics",
+      "sustainability",
+      "stakeholder management",
+      "Academy of Management",
+      "CSR"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 167,
+    "title": "AOM AMR Teaching Resources",
+    "url": "https://aom.org/research/journals/review/amr-teaching-resources",
+    "description": "Academy of Management Review's teaching resources page providing materials derived from published AMR articles, adaptable for management and IS classroom use.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "management theory",
+      "teaching resources",
+      "Academy of Management",
+      "research"
+    ],
+    "source": "Academy of Management",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 168,
+    "title": "IEEE Computer Society Resource Library",
+    "url": "https://www.computer.org/resources",
+    "description": "Curated collection of computing and engineering resources organized by technical domain, including career guides, curricula recommendations (CC2020, CS2023), conference reports, and technology insights.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "computing education",
+      "curriculum",
+      "IEEE",
+      "career resources"
+    ],
+    "source": "IEEE Computer Society",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 169,
+    "title": "ACM SIGMIS Curriculum Development for IS Education",
+    "url": "https://www.acm.org/special-interest-groups/sigs/sigmis",
+    "description": "SIGMIS represents ACM in developing model curricula for IS education at undergraduate and graduate levels. Partners with AIS on IS curriculum standards and hosts the ICIS Doctoral Dissertation Paper Award.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "IS curriculum",
+      "ACM",
+      "education standards",
+      "ICIS",
+      "doctoral"
+    ],
+    "source": "ACM SIGMIS",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 170,
+    "title": "IEEE IoT Resource Center",
+    "url": "https://resourcecenter.iot.ieee.org/",
+    "description": "Centralized platform for IoT technical resources, videos, documents, and professional development materials. Supports IS courses covering IoT strategy, digital transformation, and smart systems.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "IoT",
+      "Internet of Things",
+      "technical resources",
+      "IEEE",
+      "digital transformation"
+    ],
+    "source": "IEEE",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 171,
+    "title": "IEEE Transactions on Human-Machine Systems",
+    "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221037",
+    "description": "IEEE journal covering human-machine interaction, organizational systems, cognitive ergonomics, and human information processing. Directly relevant to IS research on sociotechnical systems and user-system interaction.",
+    "category": "IS Education Journals",
+    "tags": [
+      "human-machine systems",
+      "HCI",
+      "sociotechnical",
+      "IEEE",
+      "journal"
+    ],
+    "source": "IEEE SMC Society",
+    "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 172,
+    "title": "WKWI Rahmenempfehlung für Wirtschaftsinformatik-Studiengänge",
+    "url": "https://gi.de/fileadmin/GI/Hauptseite/Service/Publikationen/Empfehlungen/Rahmenempfehlung_fuer_Studiengaenge_Wirtschaftsinformatik.pdf",
+    "description": "Framework curriculum recommendation (v1.3, 2025) for Information Systems (Wirtschaftsinformatik) degree programs at German universities. Published jointly by GI, WKWI (VHB), and WI e.V. Covers 16 content areas including AI, digital transformation, process management, and data analytics. Includes models for Bachelor/Master programs in WI, BWL, and Informatik.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "curriculum",
+      "DACH",
+      "de",
+      "model curriculum",
+      "undergraduate",
+      "graduate",
+      "Wirtschaftsinformatik",
+      "GI"
+    ],
+    "source": "GI / WKWI (VHB)",
+    "lastAccessed": "15/03/2026"
+  }
+]

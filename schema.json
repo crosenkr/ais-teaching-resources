@@ -1,0 +1,54 @@
+{
+  "categories": [
+    { "id": "curricula", "label": "Curricula & Standards", "icon": "\ud83d\udccb", "order": 1 },
+    { "id": "oer", "label": "Open Educational Resources", "icon": "\ud83d\udd13", "order": 2 },
+    { "id": "cases", "label": "Case Studies", "icon": "\ud83d\udcda", "order": 3 },
+    { "id": "vendor", "label": "Vendor Academic Programs", "icon": "\ud83c\udfeb", "order": 4 },
+    { "id": "simulations", "label": "Simulations & Experiential Learning", "icon": "\ud83c\udfae", "order": 5 },
+    { "id": "moocs", "label": "Online Courses & MOOCs", "icon": "\ud83d\udcbb", "order": 6 },
+    { "id": "ai-education", "label": "AI & GenAI in Education", "icon": "\ud83e\udd16", "order": 7 },
+    { "id": "cybersecurity", "label": "Cybersecurity Education", "icon": "\ud83d\udd12", "order": 8 },
+    { "id": "ethics", "label": "Ethics & Responsible Technology", "icon": "\u2696\ufe0f", "order": 9 },
+    { "id": "journals", "label": "IS Education Journals", "icon": "\ud83d\udcf0", "order": 10 },
+    { "id": "communities", "label": "Professional Communities", "icon": "\ud83d\udc65", "order": 11 },
+    { "id": "regional", "label": "Regional & Language-Specific IS Communities", "icon": "\ud83c\udf0d", "order": 12 },
+    { "id": "archives", "label": "Research Archives", "icon": "\ud83d\udcc2", "order": 13 },
+    { "id": "textbooks", "label": "Textbook Companions", "icon": "\ud83d\udcd6", "order": 14 },
+    { "id": "funding", "label": "Funding & Grants for IS Education", "icon": "\ud83d\udcb0", "order": 15 },
+    { "id": "faculty-dev", "label": "Professional Development for IS Faculty", "icon": "\ud83c\udf93", "order": 16 }
+  ],
+  "tags": {
+    "topics": [
+      "AI", "analytics", "BPM", "cloud", "CRM", "cybersecurity", "data science",
+      "data visualization", "database", "design thinking", "digital transformation",
+      "enterprise architecture", "ERP", "ethics", "gamified", "governance",
+      "HCI", "IoT", "IT management", "ML", "networking", "NoSQL",
+      "process mining", "project management", "simulation", "software engineering",
+      "supply chain", "UX"
+    ],
+    "resource-type": [
+      "case studies", "certification", "competition", "conference", "courseware",
+      "curriculum", "dataset", "framework", "free", "journal", "lab",
+      "lesson plans", "model curriculum", "MOOC", "OER", "open access",
+      "peer-reviewed", "proceedings", "repository", "simulation", "teaching notes",
+      "textbook", "toolkit", "workshop"
+    ],
+    "organizations": [
+      "AACSB", "ACM", "AIS", "AOM", "AWS", "Celonis", "CISA", "Cisco",
+      "CompTIA", "Coursera", "edX", "Google", "GitHub", "Harvard", "IBM",
+      "IEEE", "ISACA", "JetBrains", "Kaggle", "Microsoft", "MIT", "MongoDB",
+      "NIST", "NSF", "OECD", "Oracle", "Pearson", "PMI", "Salesforce",
+      "SAP", "SAS", "Scrum.org", "Stanford", "Tableau", "Teradata", "Wiley"
+    ],
+    "audience": [
+      "undergraduate", "graduate", "doctoral", "faculty", "practitioners"
+    ],
+    "regions": [
+      "Global", "Africa", "Asia-Pacific", "DACH", "Europe", "Latin America",
+      "Middle East", "Nordic", "North America"
+    ],
+    "languages": [
+      "en", "de", "fr", "it", "es", "pt", "no", "zh", "ja"
+    ]
+  }
+}
