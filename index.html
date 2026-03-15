@@ -363,6 +363,117 @@
             color: white;
         }
 
+        /* Tag cloud panel */
+        .tag-cloud-toggle {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .tag-cloud-toggle:hover {
+            border-color: var(--ais-gold);
+            color: var(--ais-gold);
+        }
+
+        .tag-cloud-toggle.active {
+            background: var(--ais-gold);
+            color: white;
+            border-color: var(--ais-gold);
+        }
+
+        .tag-cloud-panel {
+            display: none;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+
+        .tag-cloud-panel.open {
+            display: block;
+        }
+
+        .tag-cloud-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .tag-cloud-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .tag-cloud-header h3 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .tag-cloud-facet {
+            margin-bottom: 0.6rem;
+        }
+
+        .tag-cloud-facet-label {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .tag-cloud-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            align-items: baseline;
+            line-height: 1.8;
+        }
+
+        .tag-cloud-tag {
+            background: var(--ais-accent);
+            color: var(--ais-light-blue);
+            padding: 0.2rem 0.55rem;
+            border: none;
+            border-radius: 4px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+
+        .tag-cloud-tag:hover {
+            background: var(--ais-blue);
+            color: white;
+        }
+
+        .tag-cloud-tag.tag-active {
+            background: var(--ais-gold);
+            color: white;
+        }
+
+        .tag-cloud-tag .tag-count {
+            font-size: 0.65em;
+            opacity: 0.7;
+            margin-left: 0.2em;
+        }
+
+        /* Tag cloud sizes based on frequency */
+        .tag-cloud-tag.size-1 { font-size: 0.68rem; }
+        .tag-cloud-tag.size-2 { font-size: 0.76rem; }
+        .tag-cloud-tag.size-3 { font-size: 0.84rem; }
+        .tag-cloud-tag.size-4 { font-size: 0.94rem; }
+        .tag-cloud-tag.size-5 { font-size: 1.05rem; }
+
         #activeTagFilter {
             background: var(--ais-accent);
             align-items: center;
@@ -604,7 +715,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .controls-bar, #activeTagFilter, footer, .skip-link {
+            header, .controls-bar, #activeTagFilter, .tag-cloud-panel, footer, .skip-link {
                 display: none !important;
             }
 
@@ -694,6 +805,7 @@
             <div class="search-box">
                 <input type="text" id="searchInput" aria-label="Search resources" placeholder="Search resources by name, description, or tag...">
             </div>
+            <button class="tag-cloud-toggle" id="tagCloudBtn" onclick="toggleTagCloud()">Browse Tags</button>
             <div class="view-toggle">
                 <button class="active" onclick="setView('grid')" id="gridBtn">Grid</button>
                 <button onclick="setView('list')" id="listBtn">List</button>
@@ -713,6 +825,10 @@
                 </select>
             </div>
         </div>
+    </div>
+
+    <div class="tag-cloud-panel" id="tagCloudPanel">
+        <div class="tag-cloud-inner" id="tagCloudContent"></div>
     </div>
 
     <div class="controls-bar" style="border: none; padding: 0.25rem 2rem; display: none;" id="activeTagFilter"></div>
@@ -878,6 +994,7 @@
                 currentTag = tag;
             }
             updateActiveTagDisplay();
+            updateTagCloudActive();
             render();
         }
 
@@ -996,6 +1113,115 @@
                     <div class="resource-tags">${tagsHtml}</div>
                 </article>`;
         }
+
+        // Tag cloud
+        function toggleTagCloud() {
+            const panel = document.getElementById('tagCloudPanel');
+            const btn = document.getElementById('tagCloudBtn');
+            const isOpen = panel.classList.toggle('open');
+            btn.classList.toggle('active', isOpen);
+            if (isOpen && !panel.dataset.built) {
+                buildTagCloud();
+                panel.dataset.built = '1';
+            }
+        }
+
+        function buildTagCloud() {
+            // Count tag usage across all resources
+            const tagCounts = {};
+            allResources.forEach(r => {
+                r.tags.forEach(t => {
+                    tagCounts[t] = (tagCounts[t] || 0) + 1;
+                });
+            });
+
+            // Map tags to their schema facets
+            const facetLabels = {
+                'topics': 'Topics',
+                'resource-type': 'Resource Types',
+                'organizations': 'Organizations',
+                'audience': 'Audience',
+                'regions': 'Regions',
+                'languages': 'Languages'
+            };
+
+            // Build a lookup: tag → facet
+            const tagToFacet = {};
+            if (schema && schema.tags) {
+                for (const [facet, tags] of Object.entries(schema.tags)) {
+                    tags.forEach(t => { tagToFacet[t.toLowerCase()] = facet; });
+                }
+            }
+
+            // Group tags by facet, put uncategorized at the end
+            const facetGroups = {};
+            const uncategorized = [];
+            for (const [tag, count] of Object.entries(tagCounts)) {
+                const facet = tagToFacet[tag.toLowerCase()];
+                if (facet) {
+                    if (!facetGroups[facet]) facetGroups[facet] = [];
+                    facetGroups[facet].push({ tag, count });
+                } else {
+                    uncategorized.push({ tag, count });
+                }
+            }
+
+            // Determine size classes (1-5) based on count distribution
+            const counts = Object.values(tagCounts);
+            const maxCount = Math.max(...counts);
+            const minCount = Math.min(...counts);
+            function sizeClass(count) {
+                if (maxCount === minCount) return 3;
+                const ratio = (count - minCount) / (maxCount - minCount);
+                return Math.ceil(ratio * 4) + 1;
+            }
+
+            function renderTagButtons(items) {
+                return items
+                    .sort((a, b) => a.tag.localeCompare(b.tag))
+                    .map(({ tag, count }) => {
+                        const escaped = escapeHtml(tag);
+                        const isActive = currentTag && tag.toLowerCase() === currentTag.toLowerCase();
+                        return `<button class="tag-cloud-tag size-${sizeClass(count)} ${isActive ? 'tag-active' : ''}" data-cloud-tag="${escaped}">${escaped}<span class="tag-count">(${count})</span></button>`;
+                    }).join('');
+            }
+
+            const facetOrder = ['topics', 'resource-type', 'organizations', 'audience', 'regions', 'languages'];
+            let html = '';
+            facetOrder.forEach(facet => {
+                if (facetGroups[facet] && facetGroups[facet].length > 0) {
+                    html += `<div class="tag-cloud-facet">
+                        <div class="tag-cloud-facet-label">${escapeHtml(facetLabels[facet] || facet)}</div>
+                        <div class="tag-cloud-tags">${renderTagButtons(facetGroups[facet])}</div>
+                    </div>`;
+                }
+            });
+            if (uncategorized.length > 0) {
+                html += `<div class="tag-cloud-facet">
+                    <div class="tag-cloud-facet-label">Other</div>
+                    <div class="tag-cloud-tags">${renderTagButtons(uncategorized)}</div>
+                </div>`;
+            }
+
+            document.getElementById('tagCloudContent').innerHTML = html;
+        }
+
+        function updateTagCloudActive() {
+            document.querySelectorAll('.tag-cloud-tag').forEach(btn => {
+                const tag = btn.dataset.cloudTag;
+                const isActive = currentTag && tag && tag.toLowerCase() === currentTag.toLowerCase();
+                btn.classList.toggle('tag-active', isActive);
+            });
+        }
+
+        // Delegated click handler for tag cloud
+        document.getElementById('tagCloudContent').addEventListener('click', (e) => {
+            const tag = e.target.closest('[data-cloud-tag]');
+            if (tag) {
+                setTag(tag.dataset.cloudTag);
+                updateTagCloudActive();
+            }
+        });
 
         // Delegated click handler for tags (avoids inline onclick)
         document.getElementById('mainContent').addEventListener('click', (e) => {
