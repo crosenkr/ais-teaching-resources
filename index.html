@@ -588,6 +588,47 @@
             to { transform: rotate(360deg); }
         }
 
+        /* Welcome banner */
+        .welcome-banner {
+            background: var(--ais-accent);
+            border-bottom: 1px solid var(--border);
+            padding: 0.75rem 2rem;
+        }
+
+        .welcome-banner-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .welcome-banner-inner p {
+            flex: 1;
+        }
+
+        .welcome-banner-inner strong {
+            color: var(--ais-blue);
+        }
+
+        .welcome-banner-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .welcome-banner-close:hover {
+            color: var(--text-primary);
+        }
+
         /* No results */
         .no-results {
             text-align: center;
@@ -791,7 +832,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .controls-bar, #activeTagFilter, .tag-cloud-panel, footer, .skip-link {
+            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, footer, .skip-link {
                 display: none !important;
             }
 
@@ -894,6 +935,13 @@
             </div>
         </nav>
     </header>
+
+    <div class="welcome-banner" id="welcomeBanner">
+        <div class="welcome-banner-inner">
+            <p><strong>Welcome to AIS Teaching Resources</strong> &mdash; a curated, searchable collection of 160+ resources across 16 categories for Information Systems educators. Browse by category, search by keyword, or use the tag cloud to discover resources by topic, region, or audience. Maintained by the AIS VP Education team.</p>
+            <button class="welcome-banner-close" id="welcomeClose" aria-label="Dismiss welcome message" title="Dismiss">&times;</button>
+        </div>
+    </div>
 
     <div class="controls-bar">
         <div class="controls-inner">
@@ -1424,6 +1472,18 @@
         document.getElementById('listBtn').addEventListener('click', () => setView('list'));
         document.getElementById('categorySelect').addEventListener('change', (e) => setCategory(e.target.value));
         document.getElementById('aisLogo').addEventListener('error', function() { this.style.display = 'none'; });
+
+        // Welcome banner — dismiss and remember via localStorage
+        (function() {
+            const banner = document.getElementById('welcomeBanner');
+            if (localStorage.getItem('ais-welcome-dismissed')) {
+                banner.style.display = 'none';
+            }
+            document.getElementById('welcomeClose').addEventListener('click', () => {
+                banner.style.display = 'none';
+                localStorage.setItem('ais-welcome-dismissed', '1');
+            });
+        })();
 
         // Category filter buttons — delegated on the container
         document.getElementById('filterButtons').addEventListener('click', (e) => {

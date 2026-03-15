@@ -5,6 +5,16 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-03-15
+
+### Added
+
+- Dismissable welcome banner with introductory text for first-time visitors (persisted via localStorage)
+
+### Changed
+
+- Reordered categories for better discoverability: teaching content first (Curricula, OER, MOOCs, Case Studies, Textbooks, Simulations, Vendor Programs), then specialized topics (AI, Ethics, Cybersecurity), research (Journals, Archives), community (Professional, Regional), and support (Professional Development, Funding)
+
 ## [0.4.1] - 2026-03-15
 
 ### Fixed
