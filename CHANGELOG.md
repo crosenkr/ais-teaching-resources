@@ -5,6 +5,16 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-03-15
+
+### Added
+
+- Tag cloud panel: collapsible "Browse Tags" button reveals all tags organized by facet
+- Tags sized proportionally to usage frequency (5 size levels)
+- Resource count shown per tag
+- Click any tag in the cloud to filter resources; click again to clear
+- Bidirectional sync between tag cloud and resource card tag highlights
+
 ## [0.1.0] - 2026-03-15
 
 ### Added
