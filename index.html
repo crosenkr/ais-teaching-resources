@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIS Teaching Resources for IS Educators</title>
+    <meta name="description" content="A curated, searchable directory of 160+ teaching resources for Information Systems educators, maintained by the AIS VP Education team.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1141,11 +1142,16 @@
         }
 
         function renderCard(r) {
-            const tagsHtml = r.tags.slice(0, 5).map(t => {
+            const renderTag = t => {
                 const escaped = escapeHtml(t);
                 const isActive = currentTags.some(ct => ct.toLowerCase() === t.toLowerCase());
                 return `<button class="resource-tag ${isActive ? 'tag-active' : ''}" data-tag="${escaped}" title="Click to filter by this tag">${escaped}</button>`;
-            }).join('');
+            };
+            const visible = r.tags.slice(0, 5).map(renderTag).join('');
+            const extra = r.tags.length > 5
+                ? `<button class="resource-tag" data-expand-tags style="color:var(--text-secondary);">+${r.tags.length - 5} more</button>` + `<span class="extra-tags" style="display:none;">${r.tags.slice(5).map(renderTag).join('')}</span>`
+                : '';
+            const tagsHtml = visible + extra;
 
             const accessedHtml = r.lastAccessed
                 ? `<span class="resource-accessed">Last accessed: ${escapeHtml(r.lastAccessed)}</span>`
@@ -1295,8 +1301,14 @@
             if (clearBtn) { setTag(null); }
         });
 
-        // Delegated click handler for tags and clear-all button
+        // Delegated click handler for tags, expand, and clear-all button
         document.getElementById('mainContent').addEventListener('click', (e) => {
+            const expand = e.target.closest('[data-expand-tags]');
+            if (expand) {
+                const extra = expand.nextElementSibling;
+                if (extra) { extra.style.display = 'inline'; expand.remove(); }
+                return;
+            }
             const tag = e.target.closest('[data-tag]');
             if (tag) { setTag(tag.dataset.tag); return; }
             const clearAll = e.target.closest('[data-clear-all-filters]');
