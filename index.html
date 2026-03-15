@@ -930,7 +930,7 @@
 
     <div class="print-header" style="display:none;">
         <h1>AIS Teaching Resources for IS Educators</h1>
-        <p>Printed on <script>document.write(new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'}))</script> &mdash; aisnet.org</p>
+        <p>Printed on <span id="printDate"></span> &mdash; aisnet.org</p>
     </div>
 
     <main id="mainContent">
@@ -1447,6 +1447,10 @@
             updateTagCloudActive();
             render();
         });
+
+        // Print date (avoid document.write for CSP compatibility)
+        document.getElementById('printDate').textContent =
+            new Date().toLocaleDateString('en-US', {year:'numeric',month:'long',day:'numeric'});
 
         // Init
         init();

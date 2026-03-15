@@ -5,6 +5,12 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2026-03-15
+
+### Fixed
+
+- Replaced `document.write()` in print header with DOM manipulation for better CSP compatibility
+
 ## [0.4.0] - 2026-03-15
 
 ### Added
