@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIS Teaching Resources for IS Educators</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -233,6 +234,7 @@
             max-width: 1280px;
             margin: 0 auto;
             padding: 1.5rem 2rem 3rem;
+            scroll-margin-top: 120px;
         }
 
         /* Category Section */
@@ -323,7 +325,7 @@
 
         .resource-accessed {
             font-size: 0.72rem;
-            color: #999;
+            color: #767676;
         }
 
         .resource-desc {
@@ -423,7 +425,7 @@
 
         .tag-cloud-facet-label {
             font-size: 0.7rem;
-            color: #999;
+            color: #767676;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
@@ -811,7 +813,7 @@
     <header>
         <div class="header-top">
             <div class="logo-area">
-                <img src="ais-logo.png" alt="AIS — Association for Information Systems" onerror="this.style.display='none'">
+                <img src="ais-logo.png" alt="AIS — Association for Information Systems" id="aisLogo">
                 <div>
                     <div class="header-title-area">
                         <h1>Teaching Resources</h1>
@@ -837,10 +839,10 @@
             <div class="search-box">
                 <input type="text" id="searchInput" aria-label="Search resources" placeholder="Search resources by name, description, or tag...">
             </div>
-            <button class="tag-cloud-toggle" id="tagCloudBtn" onclick="toggleTagCloud()">Browse Tags</button>
+            <button class="tag-cloud-toggle" id="tagCloudBtn" aria-expanded="false" aria-controls="tagCloudPanel">Browse Tags</button>
             <div class="view-toggle">
-                <button class="active" onclick="setView('grid')" id="gridBtn">Grid</button>
-                <button onclick="setView('list')" id="listBtn">List</button>
+                <button class="active" id="gridBtn" aria-pressed="true">Grid</button>
+                <button id="listBtn" aria-pressed="false">List</button>
             </div>
             <div class="results-count" id="resultsCount" aria-live="polite"></div>
         </div>
@@ -849,17 +851,17 @@
     <div class="controls-bar" style="border-bottom: none; padding-top: 0;">
         <div class="controls-inner">
             <div class="filter-buttons" id="filterButtons" role="group" aria-label="Category filters">
-                <button class="filter-btn active" data-category="all" onclick="setCategory('all')">All Categories</button>
+                <button class="filter-btn active" data-category="all" aria-pressed="true">All Categories</button>
             </div>
             <div class="filter-dropdown" id="filterDropdown">
-                <select id="categorySelect" aria-label="Category filter" onchange="setCategory(this.value)">
+                <select id="categorySelect" aria-label="Category filter">
                     <option value="all">All Categories</option>
                 </select>
             </div>
         </div>
     </div>
 
-    <div class="tag-cloud-panel" id="tagCloudPanel">
+    <div class="tag-cloud-panel" id="tagCloudPanel" role="region" aria-label="Tag browser">
         <div class="tag-cloud-inner" id="tagCloudContent"></div>
     </div>
 
@@ -991,7 +993,6 @@
                 btn.dataset.category = cat;
                 const count = allResources.filter(r => r.category === cat).length;
                 btn.textContent = `${cat} (${count})`;
-                btn.onclick = () => setCategory(cat);
                 container.appendChild(btn);
 
                 // Also populate mobile dropdown
@@ -1047,9 +1048,9 @@
             const el = document.getElementById('activeTagFilter');
             if (currentTags.length > 0) {
                 const tagPills = currentTags.map(t =>
-                    `<span style="background:var(--ais-gold);color:white;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.8rem;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">${escapeHtml(t)}<button onclick="removeTag('${escapeHtml(t)}')" style="background:none;border:none;color:white;cursor:pointer;font-size:0.9rem;padding:0;line-height:1;">&times;</button></span>`
+                    `<span style="background:var(--ais-gold);color:white;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.8rem;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">${escapeHtml(t)}<button data-remove-tag="${escapeHtml(t)}" style="background:none;border:none;color:white;cursor:pointer;font-size:0.9rem;padding:0;line-height:1;">&times;</button></span>`
                 ).join(' ');
-                el.innerHTML = `Filtered by tags: ${tagPills} <button onclick="setTag(null)" style="margin-left:0.5rem;background:none;border:none;color:var(--ais-blue);cursor:pointer;font-size:0.8rem;font-weight:600;">Clear all</button>`;
+                el.innerHTML = `Filtered by tags: ${tagPills} <button data-clear-tags style="margin-left:0.5rem;background:none;border:none;color:var(--ais-blue);cursor:pointer;font-size:0.8rem;font-weight:600;">Clear all</button>`;
                 el.style.display = 'flex';
             } else {
                 el.style.display = 'none';
@@ -1059,7 +1060,9 @@
         function setView(view) {
             currentView = view;
             document.getElementById('gridBtn').classList.toggle('active', view === 'grid');
+            document.getElementById('gridBtn').setAttribute('aria-pressed', view === 'grid');
             document.getElementById('listBtn').classList.toggle('active', view === 'list');
+            document.getElementById('listBtn').setAttribute('aria-pressed', view === 'list');
             render();
         }
 
@@ -1101,7 +1104,7 @@
                     <div class="no-results">
                         <h3>No resources found</h3>
                         <p>Try adjusting your search, category, or tag filter.</p>
-                        <button onclick="currentCategory='all'; currentTags=[]; currentSearch=''; document.getElementById('searchInput').value=''; updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');" style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
+                        <button data-clear-all-filters style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
                     </div>`;
                 return;
             }
@@ -1124,7 +1127,7 @@
                 html += `
                     <section class="category-section">
                         <div class="category-header">
-                            <span class="category-icon">${escapeHtml(icon)}</span>
+                            <span class="category-icon" aria-hidden="true">${escapeHtml(icon)}</span>
                             <h2>${escapeHtml(cat)}</h2>
                             <span class="category-count">${resources.length}</span>
                         </div>
@@ -1170,6 +1173,7 @@
             const btn = document.getElementById('tagCloudBtn');
             const isOpen = panel.classList.toggle('open');
             btn.classList.toggle('active', isOpen);
+            btn.setAttribute('aria-expanded', isOpen);
             if (isOpen && !panel.dataset.built) {
                 buildTagCloud();
                 panel.dataset.built = '1';
@@ -1237,7 +1241,7 @@
             }
 
             const facetOrder = ['topics', 'resource-type', 'organizations', 'audience', 'regions', 'languages'];
-            let html = '';
+            let html = '<p style="font-size:0.78rem;color:var(--text-secondary);margin-bottom:0.75rem;">Click tags to filter resources. Select multiple tags to show only resources matching all of them.</p>';
             facetOrder.forEach(facet => {
                 if (facetGroups[facet] && facetGroups[facet].length > 0) {
                     html += `<div class="tag-cloud-facet">
@@ -1248,7 +1252,7 @@
             });
             if (uncategorized.length > 0) {
                 html += `<div class="tag-cloud-facet">
-                    <button class="tag-cloud-other-toggle" onclick="document.getElementById('otherTags').classList.toggle('open'); this.textContent = document.getElementById('otherTags').classList.contains('open') ? 'Hide additional tags ▲' : 'Show ${uncategorized.length} additional tags ▼';">Show ${uncategorized.length} additional tags ▼</button>
+                    <button class="tag-cloud-other-toggle" data-toggle-other data-count="${uncategorized.length}">Show ${uncategorized.length} additional tags ▼</button>
                     <div class="tag-cloud-other-tags" id="otherTags">${renderTagButtons(uncategorized)}</div>
                 </div>`;
             }
@@ -1270,13 +1274,37 @@
             if (tag) {
                 setTag(tag.dataset.cloudTag);
                 updateTagCloudActive();
+                return;
+            }
+            const toggle = e.target.closest('[data-toggle-other]');
+            if (toggle) {
+                const other = document.getElementById('otherTags');
+                other.classList.toggle('open');
+                const count = toggle.dataset.count;
+                toggle.textContent = other.classList.contains('open')
+                    ? 'Hide additional tags \u25B2'
+                    : `Show ${count} additional tags \u25BC`;
             }
         });
 
-        // Delegated click handler for tags (avoids inline onclick)
+        // Delegated click handler for active tag filter bar
+        document.getElementById('activeTagFilter').addEventListener('click', (e) => {
+            const removeBtn = e.target.closest('[data-remove-tag]');
+            if (removeBtn) { removeTag(removeBtn.dataset.removeTag); return; }
+            const clearBtn = e.target.closest('[data-clear-tags]');
+            if (clearBtn) { setTag(null); }
+        });
+
+        // Delegated click handler for tags and clear-all button
         document.getElementById('mainContent').addEventListener('click', (e) => {
             const tag = e.target.closest('[data-tag]');
-            if (tag) setTag(tag.dataset.tag);
+            if (tag) { setTag(tag.dataset.tag); return; }
+            const clearAll = e.target.closest('[data-clear-all-filters]');
+            if (clearAll) {
+                currentCategory = 'all'; currentTags = []; currentSearch = '';
+                document.getElementById('searchInput').value = '';
+                updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');
+            }
         });
 
         // Search with debounce
@@ -1307,10 +1335,34 @@
             }
         });
 
+        // Static element event listeners (replacing inline handlers)
+        document.getElementById('tagCloudBtn').addEventListener('click', toggleTagCloud);
+        document.getElementById('gridBtn').addEventListener('click', () => setView('grid'));
+        document.getElementById('listBtn').addEventListener('click', () => setView('list'));
+        document.getElementById('categorySelect').addEventListener('change', (e) => setCategory(e.target.value));
+        document.getElementById('aisLogo').addEventListener('error', function() { this.style.display = 'none'; });
+
+        // Category filter buttons — delegated on the container
+        document.getElementById('filterButtons').addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-category]');
+            if (btn) setCategory(btn.dataset.category);
+        });
+
         // Handle browser back/forward with hash state
         window.addEventListener('hashchange', () => {
             readUrlState();
-            setCategory(currentCategory);
+            // Sync UI without going through setCategory (which clears tags)
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                const isActive = b.dataset.category === currentCategory;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-pressed', isActive);
+            });
+            const sel = document.getElementById('categorySelect');
+            if (sel) sel.value = currentCategory;
+            document.getElementById('searchInput').value = currentSearch;
+            updateActiveTagDisplay();
+            updateTagCloudActive();
+            render();
         });
 
         // Init

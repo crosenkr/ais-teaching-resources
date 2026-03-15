@@ -5,15 +5,28 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0] - 2026-03-15
+## [0.3.0] - 2026-03-15
 
 ### Added
 
-- Tag cloud panel: collapsible "Browse Tags" button reveals all tags organized by facet
-- Tags sized proportionally to usage frequency (5 size levels)
-- Resource count shown per tag
-- Click any tag in the cloud to filter resources; click again to clear
-- Bidirectional sync between tag cloud and resource card tag highlights
+- Multi-tag intersection filtering: select multiple tags to show only resources matching all of them
+- Tag cloud panel with "Browse Tags" toggle, organized by 6 schema facets
+- Tags sized proportionally to usage frequency (5 size levels) with resource counts
+- Collapsible "Other" section for uncategorized tags
+- Instructional hint in tag cloud for multi-tag feature discoverability
+- Content Security Policy meta tag
+- ARIA attributes: `aria-expanded` on tag cloud toggle, `aria-pressed` on view/filter buttons, `aria-hidden` on decorative icons, `role="region"` on tag cloud panel
+- `scroll-margin-top` on main content for sticky header accommodation
+
+### Fixed
+
+- **Security:** XSS vulnerability in active tag filter bar — replaced inline `onclick` handlers with event delegation throughout (tag pills, clear buttons, category filters, view toggles, logo error handler)
+- **Bug:** Browser back/forward navigation now correctly restores tag and search state (previously `hashchange` handler cleared tags)
+- **Accessibility:** "Last accessed" text and tag facet labels now meet WCAG AA contrast (changed from `#999` to `#767676`)
+
+### Changed
+
+- All inline event handlers removed — full event delegation for CSP compatibility
 
 ## [0.1.0] - 2026-03-15
 
