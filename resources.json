@@ -96,20 +96,6 @@
     "lastAccessed": "15/03/2026"
   },
   {
-    "id": 7,
-    "title": "AIS Resources Page",
-    "url": "https://aisnet.org/page/ResourcesPage",
-    "description": "AIS member resources page with links to IS teaching and research materials.",
-    "category": "Curricula & Standards",
-    "tags": [
-      "AIS",
-      "resources",
-      "Global"
-    ],
-    "source": "AIS",
-    "lastAccessed": "15/03/2026"
-  },
-  {
     "id": 12,
     "title": "Harvard Business Publishing Education — Cases",
     "url": "https://hbsp.harvard.edu/cases/",
