@@ -53,20 +53,20 @@ Each resource in `resources.json`:
 |---|----------|:---------:|
 | 1 | Curricula & Standards | 15 |
 | 2 | Open Educational Resources | 21 |
-| 3 | Case Studies | 8 |
-| 4 | Vendor Academic Programs | 23 |
-| 5 | Simulations & Experiential Learning | 11 |
-| 6 | Online Courses & MOOCs | 8 |
-| 7 | AI & GenAI in Education | 7 |
-| 8 | Cybersecurity Education | 2 |
+| 3 | Online Courses & MOOCs | 8 |
+| 4 | Case Studies | 8 |
+| 5 | Textbook Companions | 4 |
+| 6 | Simulations & Experiential Learning | 11 |
+| 7 | Vendor Academic Programs | 23 |
+| 8 | AI & GenAI in Education | 7 |
 | 9 | Ethics & Responsible Technology | 4 |
-| 10 | IS Education Journals | 14 |
-| 11 | Professional Communities | 15 |
-| 12 | Regional & Language-Specific IS Communities | 16 |
-| 13 | Research Archives | 4 |
-| 14 | Textbook Companions | 4 |
-| 15 | Funding & Grants for IS Education | 5 |
-| 16 | Professional Development for IS Faculty | 3 |
+| 10 | Cybersecurity Education | 2 |
+| 11 | IS Education Journals | 14 |
+| 12 | Research Archives | 4 |
+| 13 | Professional Communities | 15 |
+| 14 | Regional & Language-Specific IS Communities | 16 |
+| 15 | Professional Development for IS Faculty | 3 |
+| 16 | Funding & Grants for IS Education | 5 |
 
 ### Tag Taxonomy
 
@@ -125,7 +125,13 @@ This is a working prototype for user testing and feedback collection. See `USER_
 
 ## License
 
-Copyright (c) 2026 Association for Information Systems. All rights reserved.
+Copyright (c) 2026 Christoph Rosenkranz and the Association for Information Systems (AIS). All rights reserved.
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to share and adapt this material for non-commercial purposes with appropriate attribution. See the [LICENSE](LICENSE) file for full terms.
+
+**Exception:** The AIS logo (`ais-logo.png`), AIS trademarks, and branding are proprietary and not covered by the CC BY-NC 4.0 license.
 
 ## Contact
 
