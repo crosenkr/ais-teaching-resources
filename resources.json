@@ -2754,5 +2754,781 @@
     ],
     "source": "GI / WKWI (VHB)",
     "lastAccessed": "15/03/2026"
+  },
+  {
+    "id": 173,
+    "title": "Stanford HAI — Teaching with AI Resources",
+    "url": "https://hai.stanford.edu/education",
+    "description": "Stanford Human-Centered AI Institute resources on responsible AI education, including course materials, policy briefs, and teaching strategies for AI integration.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI",
+      "responsible AI",
+      "Stanford",
+      "higher education",
+      "Global"
+    ],
+    "source": "Stanford HAI",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 174,
+    "title": "Google AI for Anyone / AI Essentials",
+    "url": "https://ai.google/education/",
+    "description": "Free AI literacy and hands-on AI courses from Google. Includes TensorFlow tutorials, Responsible AI toolkit, and courses suitable for non-CS students.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI",
+      "Google",
+      "free courses",
+      "ML",
+      "responsible AI",
+      "Global"
+    ],
+    "source": "Google",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 175,
+    "title": "Elements of AI (University of Helsinki & MinnaLearn)",
+    "url": "https://www.elementsofai.com/",
+    "description": "Free online course introducing AI concepts to non-technical audiences. Available in 25+ languages. Over 1 million registered learners. Ideal for IS students as AI literacy module.",
+    "category": "AI & GenAI in Education",
+    "tags": [
+      "AI",
+      "free",
+      "multilingual",
+      "self-paced",
+      "Europe",
+      "Global"
+    ],
+    "source": "University of Helsinki / MinnaLearn",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 176,
+    "title": "ABET Computing Accreditation Commission (CAC) Criteria",
+    "url": "https://www.abet.org/accreditation/accreditation-criteria/cac-criteria/",
+    "description": "Accreditation criteria for computing programs including IS, IT, CS, cybersecurity, and data science. Updated annually with IS-specific program criteria.",
+    "category": "Accreditation & Quality Assurance",
+    "tags": [
+      "accreditation",
+      "ABET",
+      "IS",
+      "curriculum",
+      "quality assurance",
+      "Global"
+    ],
+    "source": "ABET",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 177,
+    "title": "AACSB International — Accreditation Standards for Business Schools",
+    "url": "https://www.aacsb.edu/accreditation/standards",
+    "description": "Global accreditation body for business schools. Many IS programs are housed in AACSB-accredited schools. Standards cover curriculum, faculty qualifications, and assurance of learning.",
+    "category": "Accreditation & Quality Assurance",
+    "tags": [
+      "accreditation",
+      "AACSB",
+      "business education",
+      "quality assurance",
+      "Global"
+    ],
+    "source": "AACSB",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 178,
+    "title": "EQUIS — EFMD Quality Improvement System",
+    "url": "https://www.efmdglobal.org/accreditations/business-schools/equis/",
+    "description": "European-origin international accreditation for business schools. Emphasizes internationalization and corporate connections. Relevant for IS programs in European institutions.",
+    "category": "Accreditation & Quality Assurance",
+    "tags": [
+      "accreditation",
+      "EQUIS",
+      "Europe",
+      "business education",
+      "quality assurance",
+      "Global"
+    ],
+    "source": "EFMD",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 179,
+    "title": "INSEAD Case Publishing — Technology & Digital Transformation Cases",
+    "url": "https://publishing.insead.edu/case-studies/",
+    "description": "European case publisher with strong focus on digital transformation, platform business models, AI strategy, and technology management. Global perspective.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "digital transformation",
+      "strategy",
+      "INSEAD",
+      "Europe",
+      "Global"
+    ],
+    "source": "INSEAD",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 180,
+    "title": "Stanford Graduate School of Business — Free Cases",
+    "url": "https://www.gsb.stanford.edu/faculty-research/case-studies",
+    "description": "Selected free teaching cases from Stanford GSB covering technology, entrepreneurship, and innovation. Includes Silicon Valley ecosystem cases.",
+    "category": "Case Studies",
+    "tags": [
+      "cases",
+      "free cases",
+      "Stanford",
+      "technology",
+      "innovation",
+      "North America"
+    ],
+    "source": "Stanford GSB",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 181,
+    "title": "DigComp 2.2 — European Digital Competence Framework",
+    "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC128415",
+    "description": "EU reference framework for digital competencies with 5 areas and 21 competences. Widely used in European IS curriculum design and digital literacy assessment.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "digital competence",
+      "EU",
+      "framework",
+      "curriculum",
+      "Europe"
+    ],
+    "source": "European Commission / JRC",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 182,
+    "title": "e-CF — European e-Competence Framework for ICT Professionals",
+    "url": "https://itprofessionalism.org/about-it-professionalism/competences/the-e-competence-framework/",
+    "description": "European standard (EN 16234-1) defining 41 ICT competences. Used by employers and educators across Europe for workforce and curriculum alignment.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "competency model",
+      "EU",
+      "ICT",
+      "workforce",
+      "standards",
+      "Europe"
+    ],
+    "source": "CEN / European Committee for Standardization",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 183,
+    "title": "SFIA — Skills Framework for the Information Age",
+    "url": "https://sfia-online.org/",
+    "description": "Global framework describing digital skills and competencies at 7 levels of responsibility. Used in over 200 countries for curriculum mapping, workforce planning, and professional development.",
+    "category": "Curricula & Standards",
+    "tags": [
+      "competency model",
+      "SFIA",
+      "skills",
+      "workforce",
+      "curriculum",
+      "Global"
+    ],
+    "source": "SFIA Foundation",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 184,
+    "title": "SANS Cyber Ranges & CyberStart (Free for Academic Partners)",
+    "url": "https://www.sans.org/cyber-ranges/",
+    "description": "Hands-on cybersecurity training environments from SANS Institute. CyberStart program offers free resources to identify and nurture cybersecurity talent in universities.",
+    "category": "Cybersecurity Education",
+    "tags": [
+      "cybersecurity",
+      "SANS",
+      "hands-on",
+      "lab",
+      "free",
+      "Global"
+    ],
+    "source": "SANS Institute",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 185,
+    "title": "NIST Cybersecurity Framework (CSF 2.0)",
+    "url": "https://www.nist.gov/cyberframework",
+    "description": "Widely adopted cybersecurity risk management framework. Version 2.0 (2024) adds governance function. Essential reference for teaching IT governance and cybersecurity management.",
+    "category": "Cybersecurity Education",
+    "tags": [
+      "cybersecurity",
+      "NIST",
+      "framework",
+      "governance",
+      "risk management",
+      "Global"
+    ],
+    "source": "NIST",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 186,
+    "title": "Snowflake for Academia",
+    "url": "https://learn.snowflake.com/en/snowflake-for-academia/",
+    "description": "Free cloud data platform access and training for educators and students. Includes certifications, curriculum materials, and hands-on labs for data engineering and analytics.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "cloud",
+      "data warehousing",
+      "SQL",
+      "data analytics",
+      "free",
+      "certification",
+      "Global"
+    ],
+    "source": "Snowflake",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 187,
+    "title": "Databricks Academy & Higher Education Solutions",
+    "url": "https://www.databricks.com/learn/training/home",
+    "description": "Training and certification for data engineering, data science, and ML on the lakehouse platform. Solution accelerators for education include cybersecurity and personalized learning.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "data engineering",
+      "data science",
+      "ML",
+      "Databricks",
+      "cloud",
+      "certification",
+      "Global"
+    ],
+    "source": "Databricks",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 188,
+    "title": "DataCamp for Classrooms",
+    "url": "https://www.datacamp.com/groups/classrooms",
+    "description": "Free access for academic institutions offering interactive courses in Python, R, SQL, and data science. Includes custom assignments and progress tracking.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "data science",
+      "Python",
+      "R",
+      "SQL",
+      "free",
+      "DataCamp",
+      "Global"
+    ],
+    "source": "DataCamp",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 189,
+    "title": "Tableau Public — Free Data Visualization Platform & Sample Datasets",
+    "url": "https://public.tableau.com/",
+    "description": "Free data visualization platform. Includes curated datasets for health, climate, government, and social topics suitable for classroom assignments and student portfolios.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "data visualization",
+      "Tableau",
+      "free",
+      "datasets",
+      "BI",
+      "Global"
+    ],
+    "source": "Tableau / Salesforce",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 190,
+    "title": "Google BigQuery Sandbox — Free Data Warehouse for Teaching",
+    "url": "https://cloud.google.com/bigquery/docs/sandbox",
+    "description": "Free access to Google BigQuery with 1 TB/month query processing and 10 GB storage. No credit card needed — ideal for SQL and data analytics classes.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "Google",
+      "SQL",
+      "cloud",
+      "data warehousing",
+      "free",
+      "Global"
+    ],
+    "source": "Google Cloud",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 191,
+    "title": "FiveThirtyEight Data — Open Datasets for Data Journalism",
+    "url": "https://github.com/fivethirtyeight/data",
+    "description": "Clean, well-documented datasets used in FiveThirtyEight articles on politics, sports, science, and culture. Excellent for classroom data analysis exercises.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "datasets",
+      "open data",
+      "statistics",
+      "free",
+      "Global"
+    ],
+    "source": "FiveThirtyEight / ABC News",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 192,
+    "title": "Data.gov — U.S. Government Open Data",
+    "url": "https://data.gov/",
+    "description": "Over 290,000 federal datasets covering education, health, finance, climate, and more. Excellent for teaching data wrangling and analytics with real-world public sector data.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "datasets",
+      "open data",
+      "government",
+      "free",
+      "North America"
+    ],
+    "source": "U.S. Government",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 193,
+    "title": "EU Open Data Portal",
+    "url": "https://data.europa.eu/",
+    "description": "Central portal for datasets from EU institutions, agencies, and member states. Covers economy, environment, transport, and health. Multilingual interface.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "datasets",
+      "open data",
+      "EU",
+      "Europe",
+      "multilingual",
+      "free"
+    ],
+    "source": "European Union",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 194,
+    "title": "UCI Machine Learning Repository",
+    "url": "https://archive.ics.uci.edu/",
+    "description": "Over 600 curated datasets for machine learning, categorized by task (classification, regression, clustering) and domain. Widely used in academic research and teaching.",
+    "category": "Data & Analytics Education",
+    "tags": [
+      "datasets",
+      "ML",
+      "data science",
+      "free",
+      "research",
+      "Global"
+    ],
+    "source": "UC Irvine",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 195,
+    "title": "AI Ethics Lab — Teaching AI Ethics Resources",
+    "url": "https://aiethicslab.com/",
+    "description": "Case studies, discussion guides, and workshop materials for teaching AI ethics. Covers bias, fairness, accountability, transparency, and the societal impact of AI systems.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "AI ethics",
+      "cases",
+      "teaching resources",
+      "bias",
+      "fairness",
+      "Global"
+    ],
+    "source": "AI Ethics Lab",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 196,
+    "title": "Responsible AI Institute",
+    "url": "https://www.responsible.ai/",
+    "description": "Frameworks, certifications, and toolkits for responsible AI governance. Includes educational materials on AI risk assessment and conformity standards.",
+    "category": "Ethics & Responsible Technology",
+    "tags": [
+      "AI ethics",
+      "governance",
+      "certification",
+      "responsible AI",
+      "framework",
+      "Global"
+    ],
+    "source": "Responsible AI Institute",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 197,
+    "title": "Education and Information Technologies (Springer)",
+    "url": "https://link.springer.com/journal/10639",
+    "description": "Peer-reviewed journal on the application of information and communication technologies in education. Covers learning analytics, blended learning, and educational data mining.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "Springer",
+      "peer-reviewed",
+      "ICT",
+      "education",
+      "Global"
+    ],
+    "source": "Springer",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 198,
+    "title": "Computers & Education (Elsevier)",
+    "url": "https://www.sciencedirect.com/journal/computers-and-education",
+    "description": "High-impact journal covering the use of computing in education. Topics include AI in education, learning analytics, MOOC effectiveness, and digital literacy.",
+    "category": "IS Education Journals",
+    "tags": [
+      "journal",
+      "Elsevier",
+      "peer-reviewed",
+      "computing education",
+      "AI",
+      "Global"
+    ],
+    "source": "Elsevier",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 199,
+    "title": "Mendix University Program & Academy",
+    "url": "https://www.mendix.com/academy/",
+    "description": "Free low-code platform licenses, certification exams, and curriculum resources for 100+ universities worldwide. Includes learning paths from Rapid to Expert Developer.",
+    "category": "Low-Code / No-Code Education",
+    "tags": [
+      "low-code",
+      "Mendix",
+      "free license",
+      "certification",
+      "Global"
+    ],
+    "source": "Mendix (Siemens)",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 200,
+    "title": "OutSystems Training & Education",
+    "url": "https://www.outsystems.com/training/",
+    "description": "Full-stack low-code platform with free personal environment and training courses. Covers web, mobile, and reactive app development.",
+    "category": "Low-Code / No-Code Education",
+    "tags": [
+      "low-code",
+      "OutSystems",
+      "free courses",
+      "certification",
+      "Global"
+    ],
+    "source": "OutSystems",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 201,
+    "title": "Appian Academic Program",
+    "url": "https://community.appian.com/",
+    "description": "Process automation-focused low-code platform with academic access. Covers BPM, RPA, and AI-powered workflow automation.",
+    "category": "Low-Code / No-Code Education",
+    "tags": [
+      "low-code",
+      "Appian",
+      "BPM",
+      "RPA",
+      "automation",
+      "Global"
+    ],
+    "source": "Appian",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 202,
+    "title": "Microsoft Power Platform for Education (Power Apps, Power Automate, Power BI)",
+    "url": "https://learn.microsoft.com/en-us/training/powerplatform/",
+    "description": "Low-code development suite from Microsoft. Power Apps for app building, Power Automate for workflows, and Power BI for analytics. Free for students with .edu accounts.",
+    "category": "Low-Code / No-Code Education",
+    "tags": [
+      "low-code",
+      "Microsoft",
+      "Power Apps",
+      "Power BI",
+      "automation",
+      "free",
+      "Global"
+    ],
+    "source": "Microsoft",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 203,
+    "title": "Awesome Public Datasets (GitHub)",
+    "url": "https://github.com/awesomedata/awesome-public-datasets",
+    "description": "Community-curated list of high-quality open datasets organized by topic (agriculture, biology, economics, government, machine learning, transportation, etc.).",
+    "category": "Open Educational Resources",
+    "tags": [
+      "datasets",
+      "open data",
+      "free",
+      "Global"
+    ],
+    "source": "Community (GitHub)",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 204,
+    "title": "CORGIS Datasets Project",
+    "url": "https://corgis-edu.github.io/corgis/",
+    "description": "40+ curated datasets for introductory programming and data analysis in Python, Java, and Racket. Domains include education, politics, medicine, and history.",
+    "category": "Open Educational Resources",
+    "tags": [
+      "datasets",
+      "Python",
+      "programming",
+      "free",
+      "Global"
+    ],
+    "source": "Virginia Tech / CORGIS",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 205,
+    "title": "IFIP TC8 — Information Systems Technical Committee",
+    "url": "https://www.ifip.org/tc/tc8/",
+    "description": "International Federation for Information Processing technical committee on IS. Working groups cover design science, IS in organizations, smart cities, and IS education.",
+    "category": "Professional Communities",
+    "tags": [
+      "IFIP",
+      "IS research",
+      "design science",
+      "conference",
+      "Global"
+    ],
+    "source": "IFIP",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 206,
+    "title": "POD Network — Professional & Organizational Development Network in Higher Education",
+    "url": "https://podnetwork.org/",
+    "description": "Resources for faculty development in higher education, including teaching improvement strategies, course design, and assessment methods relevant for IS educators.",
+    "category": "Professional Development for IS Faculty",
+    "tags": [
+      "faculty development",
+      "pedagogy",
+      "higher education",
+      "teaching",
+      "Global"
+    ],
+    "source": "POD Network",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 207,
+    "title": "K-AIS — Korean Association for Information Systems",
+    "url": "https://www.kais.or.kr/",
+    "description": "Korean chapter of AIS promoting IS education and research in South Korea. Hosts the Korean Conference on Information Systems.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "AIS chapter",
+      "IS community",
+      "conference",
+      "Asia",
+      "Asia-Pacific"
+    ],
+    "source": "K-AIS",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 208,
+    "title": "JASMIN — Japan Society for Management Information",
+    "url": "https://www.jasmin.jp/en/",
+    "description": "Japanese IS research community promoting information systems education and research. Publishes research and hosts annual conferences.",
+    "category": "Regional & Language-Specific IS Communities",
+    "tags": [
+      "IS community",
+      "conference",
+      "Asia",
+      "Japan",
+      "Asia-Pacific"
+    ],
+    "source": "JASMIN",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 209,
+    "title": "SSRN — Social Science Research Network (IS eJournals)",
+    "url": "https://www.ssrn.com/",
+    "description": "Working paper repository widely used by IS researchers. Includes dedicated IS, eCommerce, and innovation eJournals. Free to download most papers.",
+    "category": "Research Archives",
+    "tags": [
+      "research",
+      "working papers",
+      "preprints",
+      "IS research",
+      "free",
+      "Global"
+    ],
+    "source": "SSRN / Elsevier",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 210,
+    "title": "HBR Simulations & Experiential Learning",
+    "url": "https://hbsp.harvard.edu/simulations/",
+    "description": "Interactive simulations for IT strategy, digital disruption, cybersecurity, data analytics, and change management. Includes instructor guides and debrief materials.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "simulation",
+      "Harvard",
+      "strategy",
+      "digital transformation",
+      "experiential learning",
+      "Global"
+    ],
+    "source": "Harvard Business Publishing",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 211,
+    "title": "Hacking Lab — Cybersecurity Training Labs",
+    "url": "https://hacking-lab.com/",
+    "description": "Online ethical hacking lab environment with CTF challenges and tutorials. Free for academic use. Covers web application security, network attacks, and forensics.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "cybersecurity",
+      "hands-on",
+      "CTF",
+      "free",
+      "lab",
+      "Global"
+    ],
+    "source": "Hacking Lab / Compass Security",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 212,
+    "title": "TryHackMe — Cybersecurity Learning Platform",
+    "url": "https://tryhackme.com/",
+    "description": "Gamified cybersecurity learning with browser-based labs. Learning paths for beginners to advanced. Free tier available; educational discounts for institutions.",
+    "category": "Simulations & Experiential Learning",
+    "tags": [
+      "cybersecurity",
+      "gamified",
+      "hands-on",
+      "lab",
+      "free",
+      "Global"
+    ],
+    "source": "TryHackMe",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 213,
+    "title": "Camunda Academic Program (BPM & Process Orchestration)",
+    "url": "https://camunda.com/",
+    "description": "Open-source process orchestration platform. Free academic licenses for teaching BPMN execution, workflow automation, and microservices orchestration.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "BPM",
+      "BPMN",
+      "open source",
+      "Camunda",
+      "workflow",
+      "automation",
+      "free",
+      "Global"
+    ],
+    "source": "Camunda",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 214,
+    "title": "UiPath Academic Alliance (RPA Education)",
+    "url": "https://www.uipath.com/rpa/academic-alliance",
+    "description": "Free RPA software, curriculum, and certifications for universities. Teaching resources for robotic process automation, AI-powered automation, and process mining.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "RPA",
+      "automation",
+      "AI",
+      "UiPath",
+      "free license",
+      "certification",
+      "Global"
+    ],
+    "source": "UiPath",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 215,
+    "title": "ServiceNow Academic Program (NextGen Professionals)",
+    "url": "https://www.servicenow.com/community/nextgen-professionals/ct-p/nextgen-professionals",
+    "description": "Free platform access, training, and certifications for students and educators. Covers IT service management, workflow automation, and digital transformation.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "ITSM",
+      "ServiceNow",
+      "workflow",
+      "digital transformation",
+      "free",
+      "certification",
+      "Global"
+    ],
+    "source": "ServiceNow",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 216,
+    "title": "Atlassian Education Program (Jira, Confluence)",
+    "url": "https://www.atlassian.com/teams/education",
+    "description": "Free Atlassian Cloud for educators and students. Includes Jira for agile project management and Confluence for team collaboration — essential tools for IS project courses.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "agile",
+      "project management",
+      "Atlassian",
+      "collaboration",
+      "free",
+      "Global"
+    ],
+    "source": "Atlassian",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 217,
+    "title": "Figma for Education",
+    "url": "https://www.figma.com/education/",
+    "description": "Free professional plan for students and educators. Industry-standard tool for UI/UX design, prototyping, and collaborative design thinking exercises.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "UX design",
+      "prototyping",
+      "Figma",
+      "free",
+      "collaboration",
+      "design thinking",
+      "Global"
+    ],
+    "source": "Figma",
+    "lastAccessed": "16/03/2026"
+  },
+  {
+    "id": 218,
+    "title": "Notion for Education",
+    "url": "https://www.notion.so/product/notion-for-education",
+    "description": "Free Plus plan for students and educators. Versatile workspace for knowledge management, project documentation, and collaborative coursework.",
+    "category": "Vendor Academic Programs",
+    "tags": [
+      "knowledge management",
+      "Notion",
+      "collaboration",
+      "free",
+      "Global"
+    ],
+    "source": "Notion",
+    "lastAccessed": "16/03/2026"
   }
 ]
