@@ -6,13 +6,14 @@ A curated collection of teaching resources for Information Systems (IS) educator
 
 ## Overview
 
-This website provides IS faculty with a searchable, filterable directory of 160+ teaching resources across 16 categories — from curricula and case studies to vendor academic programs, simulations, and regional IS communities.
+This website provides IS faculty with a searchable, filterable directory of 200+ teaching resources across 19 categories — from curricula and case studies to vendor academic programs, simulations, and regional IS communities.
 
 ### Features
 
 - **Search** with highlighted results across titles, descriptions, tags, and sources
 - **Category filtering** via pill buttons (desktop) or dropdown (mobile)
 - **Tag-based filtering** — click any tag to filter across all categories
+- **Share bar** — copy link, share to X, LinkedIn, Facebook, Bluesky, WhatsApp, or email directly from each resource card; native sharing on mobile
 - **Shareable URLs** — filter state is persisted in the URL hash
 - **Responsive design** — optimized for desktop, tablet, and mobile
 - **Accessible** — WCAG-compliant contrast, keyboard navigation, ARIA labels, skip-to-content
@@ -51,30 +52,33 @@ Each resource in `resources.json`:
 
 | # | Category | Resources |
 |---|----------|:---------:|
-| 1 | Curricula & Standards | 15 |
-| 2 | Open Educational Resources | 21 |
-| 3 | Online Courses & MOOCs | 8 |
-| 4 | Case Studies | 8 |
+| 1 | Curricula & Standards | 17 |
+| 2 | Open Educational Resources | 24 |
+| 3 | Online Courses & MOOCs | 7 |
+| 4 | Case Studies | 10 |
 | 5 | Textbook Companions | 4 |
-| 6 | Simulations & Experiential Learning | 11 |
-| 7 | Vendor Academic Programs | 23 |
-| 8 | AI & GenAI in Education | 7 |
-| 9 | Ethics & Responsible Technology | 4 |
-| 10 | Cybersecurity Education | 2 |
-| 11 | IS Education Journals | 14 |
-| 12 | Research Archives | 4 |
-| 13 | Professional Communities | 15 |
-| 14 | Regional & Language-Specific IS Communities | 16 |
-| 15 | Professional Development for IS Faculty | 3 |
+| 6 | Simulations & Experiential Learning | 14 |
+| 7 | Vendor Academic Programs | 29 |
+| 8 | AI & GenAI in Education | 10 |
+| 9 | Ethics & Responsible Technology | 6 |
+| 10 | Cybersecurity Education | 4 |
+| 11 | IS Education Journals | 16 |
+| 12 | Research Archives | 5 |
+| 13 | Professional Communities | 16 |
+| 14 | Regional & Language-Specific IS Communities | 18 |
+| 15 | Professional Development for IS Faculty | 4 |
 | 16 | Funding & Grants for IS Education | 5 |
+| 17 | Accreditation & Quality Assurance | 3 |
+| 18 | Data & Analytics Education | 9 |
+| 19 | Low-Code / No-Code Education | 4 |
 
 ### Tag Taxonomy
 
 Tags are organized into 6 facets (see `schema.json` for the full controlled vocabulary):
 
-- **Topics** (28): AI, analytics, BPM, cloud, cybersecurity, data science, ERP, ethics, etc.
-- **Resource types** (24): case studies, certification, courseware, dataset, journal, MOOC, OER, etc.
-- **Organizations** (36): AACSB, ACM, AIS, AWS, Cisco, Google, IEEE, Microsoft, SAP, etc.
+- **Topics** (34): AI, analytics, automation, BPM, cloud, cybersecurity, data engineering, data science, digital competence, ERP, ethics, low-code, responsible AI, RPA, etc.
+- **Resource types** (28): accreditation, case studies, certification, courseware, dataset, journal, MOOC, OER, open data, preprints, quality assurance, etc.
+- **Organizations** (55): AACSB, ABET, ACM, AIS, Appian, Atlassian, AWS, Camunda, Celonis, Cisco, Databricks, DataCamp, Google, IBM, IEEE, IFIP, Mendix, Microsoft, OutSystems, SANS, SAP, ServiceNow, Snowflake, UiPath, etc.
 - **Audience** (5): undergraduate, graduate, doctoral, faculty, practitioners
 - **Regions** (9): Global, Africa, Asia-Pacific, DACH, Europe, Latin America, etc.
 - **Languages** (9): en, de, fr, it, es, pt, no, zh, ja
@@ -92,7 +96,7 @@ python3 -m http.server 8080
 
 1. Edit `resources.json`
 2. Assign a unique `id` (use the next available number)
-3. Set `category` to one of the 16 labels from `schema.json`
+3. Set `category` to one of the 19 labels from `schema.json`
 4. Use tags from the controlled vocabulary in `schema.json` where possible
 5. Set `lastAccessed` to the date you verified the URL (DD/MM/YYYY)
 6. Commit and push — GitHub Pages deploys automatically
@@ -115,13 +119,15 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.5.1 (Prototype)
+**Current version:** 0.6.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
 ### Roadmap
 
 - **Resource suggestion form** — Allow registered AIS members to suggest new resources via an integrated form (review queue → curation → publish)
+- **Star/voting system** — Registered users can star or vote on resources to surface the most useful ones
+- **Report dead link / miscategorization** — Users can flag broken URLs or suggest category corrections
 
 ## License
 

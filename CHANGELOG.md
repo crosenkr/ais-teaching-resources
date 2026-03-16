@@ -5,6 +5,45 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-03-16
+
+### Added
+
+- **Share bar** on every resource card — copy link, share to X, LinkedIn, Facebook, Bluesky, WhatsApp, or email with a single click
+- Native Share API integration for mobile devices (progressive enhancement)
+- 3 new categories: Accreditation & Quality Assurance (3), Data & Analytics Education (9), Low-Code / No-Code Education (4)
+- 46 new resources across all categories (205 total, up from 159):
+  - AI & GenAI in Education (+3): Stanford HAI, Google AI Essentials, Elements of AI
+  - Accreditation & Quality Assurance (3): ABET CAC, AACSB, EQUIS
+  - Case Studies (+2): INSEAD Case Publishing, Stanford GSB Free Cases
+  - Curricula & Standards (+3): DigComp 2.2, e-CF, SFIA
+  - Cybersecurity Education (+2): SANS CyberStart, NIST CSF 2.0
+  - Data & Analytics Education (9): Snowflake, Databricks, DataCamp, Tableau Public, BigQuery Sandbox, FiveThirtyEight, Data.gov, EU Open Data, UCI ML Repository
+  - Ethics & Responsible Technology (+2): AI Ethics Lab, Responsible AI Institute
+  - Funding & Grants (+2): DAAD, Fulbright Scholar Program
+  - IS Education Journals (+2): Education and Information Technologies, Computers & Education
+  - Low-Code / No-Code Education (4): Mendix, OutSystems, Appian, Microsoft Power Platform
+  - Online Courses & MOOCs (+3): LinkedIn Learning, Udacity, Google Digital Garage
+  - Open Educational Resources (+5): Awesome Public Datasets, CORGIS, Khan Academy, FigJam, Padlet
+  - Professional Communities (+1): IFIP TC8
+  - Professional Development (+1): POD Network
+  - Regional Communities (+2): K-AIS, JASMIN
+  - Research Archives (+1): SSRN
+  - Simulations & Experiential Learning (+3): HBR Simulations, Hacking Lab, TryHackMe
+  - Vendor Academic Programs (+6): Camunda, UiPath, ServiceNow, Atlassian, Figma, Notion
+- New tags: 6 topics (automation, data engineering, digital competence, low-code, responsible AI, RPA), 4 resource types (accreditation, open data, preprints, quality assurance), 19 organizations (ABET, Appian, Atlassian, Camunda, Databricks, DataCamp, Elsevier, Figma, IFIP, INSEAD, Mendix, Notion, OutSystems, SANS, ServiceNow, SFIA, Snowflake, Springer, UiPath)
+- ARIA labels on all share buttons for screen reader accessibility
+
+### Changed
+
+- Moved Kaggle (ID 51) from "Online Courses & MOOCs" to "Open Educational Resources"
+- Updated copyright to include Philipp Hukal as co-copyright holder (LICENSE, README, footer)
+- Welcome banner updated to "200+ resources across 19 categories"
+
+### Removed
+
+- AIS Resources Page (ID 7) — obsolete, replaced by this website
+
 ## [0.5.1] - 2026-03-15
 
 ### Changed
