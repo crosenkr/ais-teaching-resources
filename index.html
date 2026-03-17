@@ -447,6 +447,31 @@
             border-color: var(--ais-gold);
         }
 
+        .clear-filters-btn {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid #c00;
+            border-radius: 20px;
+            background: white;
+            color: #c00;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 500;
+            display: none;
+        }
+
+        .clear-filters-btn:hover {
+            background: #c00;
+            color: white;
+        }
+
+        .clear-filters-btn.visible {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
         .tag-cloud-panel {
             display: none;
             background: white;
@@ -1005,6 +1030,7 @@
                 <button id="listBtn" aria-pressed="false">List</button>
             </div>
             <div class="results-count" id="resultsCount" aria-live="polite"></div>
+            <button class="clear-filters-btn" id="clearFiltersBtn" aria-label="Clear all filters">&times; Clear filters</button>
         </div>
     </div>
 
@@ -1238,6 +1264,12 @@
             render();
         }
 
+        function updateClearFiltersBtn() {
+            const btn = document.getElementById('clearFiltersBtn');
+            const hasFilters = currentCategory !== 'all' || currentTags.length > 0 || currentSearch;
+            btn.classList.toggle('visible', !!hasFilters);
+        }
+
         function filterResources() {
             let results = allResources;
             if (currentCategory !== 'all') {
@@ -1270,6 +1302,7 @@
 
             document.getElementById('resultsCount').textContent =
                 `${filtered.length} resource${filtered.length !== 1 ? 's' : ''}`;
+            updateClearFiltersBtn();
 
             if (filtered.length === 0) {
                 main.innerHTML = `
@@ -1550,6 +1583,13 @@
                 document.getElementById('searchInput').value = '';
                 updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');
             }
+        });
+
+        // Clear all filters button in controls bar
+        document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+            currentCategory = 'all'; currentTags = []; currentSearch = '';
+            document.getElementById('searchInput').value = '';
+            updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');
         });
 
         // Search with debounce

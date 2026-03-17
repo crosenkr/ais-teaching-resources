@@ -5,6 +5,12 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1] - 2026-03-17
+
+### Added
+
+- **Clear filters button** in the controls bar — appears whenever any filter (search, category, or tag) is active; clears all filters in one click
+
 ## [0.6.0] - 2026-03-16
 
 ### Added
