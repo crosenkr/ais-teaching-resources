@@ -5,6 +5,28 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-03-17
+
+### Added
+
+- **Multi-category selection** — category filter buttons now toggle on/off; select multiple categories simultaneously (desktop pill buttons)
+- **Collapsible category sections** — click the ▼ toggle on any category header to collapse/expand its resource cards
+- **Expand all / Collapse all** button in the controls bar
+- **Reduced motion support** — respects `prefers-reduced-motion` OS setting
+- **High contrast mode** — respects `prefers-contrast: more` with thicker borders and darker text
+- **Escape-to-close** for tag cloud panel
+- **Referrer policy** — `strict-origin-when-cross-origin` meta tag for privacy
+- `aria-label` on "+N more" tag expand buttons
+
+### Changed
+
+- **Contrast fixes (WCAG 2.1 AA):** `--ais-light-blue` darkened from `#2a8fd4` to `#1a73b5` (4.7:1 ratio); "last accessed" text darkened from `#767676` to `#595959` (7:1 ratio)
+- **Share button touch targets** increased from 26px to 32px with 6px padding for better mobile tapping
+- **Category collapse toggle** refactored from `role="button"` on `<div>` to a proper `<button>` element — fixes screen reader heading-inside-button confusion
+- Category filter group now labeled "select one or more" for discoverability
+- Search input focus style enhanced with blue border and accent shadow
+- Controls bar wrapped in `<nav aria-label="Resource filters">` landmark
+
 ## [0.6.1] - 2026-03-17
 
 ### Added

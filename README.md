@@ -11,13 +11,14 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 ### Features
 
 - **Search** with highlighted results across titles, descriptions, tags, and sources
-- **Category filtering** via pill buttons (desktop) or dropdown (mobile)
+- **Multi-category filtering** — select one or more categories via pill buttons (desktop) or dropdown (mobile)
+- **Collapsible categories** — expand/collapse individual category sections; "Collapse all / Expand all" button
 - **Tag-based filtering** — click any tag to filter across all categories
 - **Share bar** — copy link, share to X, LinkedIn, Facebook, Bluesky, WhatsApp, or email directly from each resource card; native sharing on mobile
 - **Clear filters** — persistent button in the controls bar appears whenever any filter is active, resets all filters in one click
-- **Shareable URLs** — filter state is persisted in the URL hash
+- **Shareable URLs** — filter state is persisted in the URL hash (supports multi-category)
 - **Responsive design** — optimized for desktop, tablet, and mobile
-- **Accessible** — WCAG-compliant contrast, keyboard navigation, ARIA labels, skip-to-content
+- **Accessible** — WCAG 2.1 AA contrast, keyboard navigation, ARIA labels, skip-to-content, reduced motion, high contrast mode
 - **Print-friendly** — clean print layout with URLs shown after links
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
 
@@ -120,7 +121,7 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.6.1 (Prototype)
+**Current version:** 0.7.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 

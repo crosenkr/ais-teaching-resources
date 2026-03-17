@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIS Teaching Resources for IS Educators</title>
     <meta name="description" content="A curated, searchable directory of 200+ teaching resources for Information Systems educators, maintained by the AIS VP Education team.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230072BC'/><text x='16' y='23' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='18' fill='white'>TR</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
         :root {
             --ais-blue: #0072BC;
             --ais-dark-blue: #005a96;
-            --ais-light-blue: #2a8fd4;
+            --ais-light-blue: #1a73b5;
             --ais-accent: #eaf3fb;
             --ais-gold: #8B7530;
             --ais-nav-blue: #00639B;
@@ -176,7 +177,8 @@
         }
 
         .search-box input:focus {
-            border-color: var(--ais-light-blue);
+            border-color: var(--ais-blue);
+            box-shadow: 0 0 0 2px var(--ais-accent);
         }
 
         .search-box::before {
@@ -255,14 +257,29 @@
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--ais-blue);
+        }
+
+        .category-collapse-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
             cursor: pointer;
-            user-select: none;
+            padding: 0.3rem 0.5rem;
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .category-collapse-btn:hover {
+            background: var(--ais-accent);
         }
 
         .category-toggle {
             font-size: 0.7rem;
             color: var(--text-secondary);
-            margin-left: auto;
             transition: transform 0.2s;
         }
 
@@ -348,7 +365,7 @@
 
         .resource-accessed {
             font-size: 0.72rem;
-            color: #767676;
+            color: #595959;
         }
 
         .resource-desc {
@@ -406,8 +423,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 26px;
-            height: 26px;
+            width: 32px;
+            height: 32px;
             border: none;
             border-radius: 4px;
             background: var(--ais-accent);
@@ -415,7 +432,7 @@
             cursor: pointer;
             font-size: 0.75rem;
             transition: all 0.15s;
-            padding: 0;
+            padding: 6px;
             position: relative;
         }
         .share-btn:hover {
@@ -489,6 +506,24 @@
             gap: 0.3rem;
         }
 
+        .collapse-all-btn {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .collapse-all-btn:hover {
+            border-color: var(--ais-blue);
+            color: var(--ais-blue);
+        }
+
         .tag-cloud-panel {
             display: none;
             background: white;
@@ -524,7 +559,7 @@
 
         .tag-cloud-facet-label {
             font-size: 0.7rem;
-            color: #767676;
+            color: #595959;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
@@ -923,6 +958,28 @@
             }
         }
 
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+
+        /* High contrast preference */
+        @media (prefers-contrast: more) {
+            :root {
+                --text-secondary: #333;
+                --border: #999;
+            }
+            .resource-card {
+                border-width: 2px;
+            }
+            .filter-btn, .share-btn, .resource-tag {
+                border: 2px solid currentColor;
+            }
+        }
+
         /* Print stylesheet */
         @media print {
             header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link {
@@ -1036,7 +1093,7 @@
         </div>
     </div>
 
-    <div class="controls-bar">
+    <nav class="controls-bar" aria-label="Resource filters">
         <div class="controls-inner">
             <div class="search-box">
                 <input type="text" id="searchInput" aria-label="Search resources" placeholder="Search resources by name, description, or tag...">
@@ -1048,12 +1105,13 @@
             </div>
             <div class="results-count" id="resultsCount" aria-live="polite"></div>
             <button class="clear-filters-btn" id="clearFiltersBtn" aria-label="Clear all filters">&times; Clear filters</button>
+            <button class="collapse-all-btn" id="collapseAllBtn" aria-label="Collapse all categories" style="display:none;">Collapse all</button>
         </div>
-    </div>
+    </nav>
 
     <div class="controls-bar" style="border-bottom: none; padding-top: 0;">
         <div class="controls-inner">
-            <div class="filter-buttons" id="filterButtons" role="group" aria-label="Category filters">
+            <div class="filter-buttons" id="filterButtons" role="group" aria-label="Category filters — select one or more">
                 <button class="filter-btn active" data-category="all" aria-pressed="true">All Categories</button>
             </div>
             <div class="filter-dropdown" id="filterDropdown">
@@ -1360,11 +1418,11 @@
                 const isCollapsed = collapsedCategories.has(cat);
                 html += `
                     <section class="category-section">
-                        <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapeHtml(cat)}" role="button" aria-expanded="${!isCollapsed}" tabindex="0">
+                        <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapeHtml(cat)}">
                             <span class="category-icon" aria-hidden="true">${escapeHtml(icon)}</span>
                             <h2>${escapeHtml(cat)}</h2>
                             <span class="category-count">${resources.length}</span>
-                            <span class="category-toggle" aria-hidden="true">&#9660;</span>
+                            <button class="category-collapse-btn" aria-expanded="${!isCollapsed}" aria-label="${isCollapsed ? 'Expand' : 'Collapse'} ${escapeHtml(cat)}" title="${isCollapsed ? 'Expand' : 'Collapse'}"><span class="category-toggle" aria-hidden="true">&#9660;</span></button>
                         </div>
                         <div class="resources-grid ${currentView === 'list' ? 'list-view' : ''}">
                             ${resources.map(r => renderCard(r)).join('')}
@@ -1373,6 +1431,7 @@
             });
 
             main.innerHTML = html;
+            updateCollapseAllBtn();
         }
 
         function renderCard(r) {
@@ -1383,7 +1442,7 @@
             };
             const visible = r.tags.slice(0, 5).map(renderTag).join('');
             const extra = r.tags.length > 5
-                ? `<button class="resource-tag" data-expand-tags style="color:var(--text-secondary);">+${r.tags.length - 5} more</button>` + `<span class="extra-tags" style="display:none;">${r.tags.slice(5).map(renderTag).join('')}</span>`
+                ? `<button class="resource-tag" data-expand-tags style="color:var(--text-secondary);" aria-label="Show ${r.tags.length - 5} more tags">+${r.tags.length - 5} more</button>` + `<span class="extra-tags" style="display:none;">${r.tags.slice(5).map(renderTag).join('')}</span>`
                 : '';
             const tagsHtml = visible + extra;
 
@@ -1425,10 +1484,10 @@
         }
 
         // Tag cloud
-        function toggleTagCloud() {
+        function toggleTagCloud(forceClose) {
             const panel = document.getElementById('tagCloudPanel');
             const btn = document.getElementById('tagCloudBtn');
-            const isOpen = panel.classList.toggle('open');
+            const isOpen = forceClose ? (panel.classList.remove('open'), false) : panel.classList.toggle('open');
             btn.classList.toggle('active', isOpen);
             btn.setAttribute('aria-expanded', isOpen);
             if (isOpen && !panel.dataset.built) {
@@ -1552,29 +1611,24 @@
             if (clearBtn) { setTag(null); }
         });
 
-        // Keyboard support for collapsible category headers
-        document.getElementById('mainContent').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                const header = e.target.closest('[data-collapse-cat]');
-                if (header) { e.preventDefault(); header.click(); }
-            }
-        });
-
         // Delegated click handler for tags, expand, collapse, and clear-all button
         document.getElementById('mainContent').addEventListener('click', (e) => {
-            const collapseBtn = e.target.closest('[data-collapse-cat]');
-            if (collapseBtn && !e.target.closest('.resource-tag, .share-btn, a')) {
-                const cat = collapseBtn.dataset.collapseCat;
+            const collapseBtn = e.target.closest('.category-collapse-btn');
+            if (collapseBtn) {
+                const header = collapseBtn.closest('[data-collapse-cat]');
+                const cat = header.dataset.collapseCat;
                 if (collapsedCategories.has(cat)) {
                     collapsedCategories.delete(cat);
-                    collapseBtn.classList.remove('collapsed');
+                    header.classList.remove('collapsed');
                     collapseBtn.setAttribute('aria-expanded', 'true');
+                    collapseBtn.setAttribute('aria-label', 'Collapse ' + cat);
                 } else {
                     collapsedCategories.add(cat);
-                    collapseBtn.classList.add('collapsed');
+                    header.classList.add('collapsed');
                     collapseBtn.setAttribute('aria-expanded', 'false');
+                    collapseBtn.setAttribute('aria-label', 'Expand ' + cat);
                 }
-                const grid = collapseBtn.nextElementSibling;
+                const grid = header.nextElementSibling;
                 if (grid) grid.style.display = collapsedCategories.has(cat) ? 'none' : '';
                 return;
             }
@@ -1639,6 +1693,28 @@
             }
         });
 
+        // Collapse/Expand all categories button
+        document.getElementById('collapseAllBtn').addEventListener('click', () => {
+            const allCats = [...document.querySelectorAll('[data-collapse-cat]')].map(el => el.dataset.collapseCat);
+            const allCollapsed = allCats.length > 0 && allCats.every(c => collapsedCategories.has(c));
+            if (allCollapsed) {
+                collapsedCategories.clear();
+            } else {
+                allCats.forEach(c => collapsedCategories.add(c));
+            }
+            render();
+        });
+
+        function updateCollapseAllBtn() {
+            const btn = document.getElementById('collapseAllBtn');
+            const sections = document.querySelectorAll('[data-collapse-cat]');
+            if (sections.length === 0) { btn.style.display = 'none'; return; }
+            btn.style.display = '';
+            const allCollapsed = [...sections].every(el => collapsedCategories.has(el.dataset.collapseCat));
+            btn.textContent = allCollapsed ? 'Expand all' : 'Collapse all';
+            btn.setAttribute('aria-label', allCollapsed ? 'Expand all categories' : 'Collapse all categories');
+        }
+
         // Clear all filters button in controls bar
         document.getElementById('clearFiltersBtn').addEventListener('click', () => {
             currentCategories = []; currentTags = []; currentSearch = '';
@@ -1654,6 +1730,13 @@
                 currentSearch = e.target.value.trim();
                 render();
             }, 200);
+        });
+
+        // Escape closes tag cloud panel
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.getElementById('tagCloudPanel').classList.contains('open')) {
+                toggleTagCloud(true);
+            }
         });
 
         // Also listen for Escape to clear search
