@@ -679,7 +679,7 @@
         }
 
         footer a {
-            color: var(--ais-gold);
+            color: #d4b94e;
             text-decoration: none;
         }
 
@@ -958,6 +958,99 @@
             }
         }
 
+        /* Dark mode — applied via .dark-mode class on <html> (set by JS from OS preference or manual toggle) */
+        .dark-mode {
+            --ais-blue: #4da6e8;
+            --ais-dark-blue: #3a8fd4;
+            --ais-light-blue: #5bb5f0;
+            --ais-accent: #1a2a3a;
+            --ais-gold: #c4a84d;
+            --ais-nav-blue: #4da6e8;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b8c0;
+            --bg-light: #121820;
+            --border: #2a3545;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.5);
+        }
+        .dark-mode body, .dark-mode { background: #121820; }
+        .dark-mode header { background: #1a2230; }
+        .dark-mode .header-nav-bar { background: #1a3050; }
+        .dark-mode .controls-bar { background: #1a2230; }
+        .dark-mode .resource-card { background: #1e2a38; }
+        .dark-mode .resource-card:hover { border-color: #5bb5f0; }
+        .dark-mode .resource-card h3 a { color: #5bb5f0; }
+        .dark-mode .search-box input { background: #1e2a38; color: #e0e0e0; border-color: #2a3545; }
+        .dark-mode .filter-btn { background: #1e2a38; }
+        .dark-mode .filter-dropdown select { background: #1e2a38; color: #e0e0e0; border-color: #2a3545; }
+        .dark-mode .view-toggle { background: #1e2a38; }
+        .dark-mode .view-toggle button.active { background: #2a3a4a; }
+        .dark-mode .welcome-banner { background: #1a2a3a; }
+        .dark-mode .tag-cloud-panel { background: #1a2230; }
+        .dark-mode footer { background: #0d1520; }
+        .dark-mode mark.search-highlight { background: #4a3a00; color: #f0d060; }
+        .dark-mode .resource-accessed { color: #a0a8b0; }
+        .dark-mode .share-btn:hover { background: #4da6e8; color: #121820; }
+        .dark-mode .clear-filters-btn { background: #1e2a38; }
+        .dark-mode .collapse-all-btn { background: #1e2a38; }
+        .dark-mode .tag-cloud-toggle { background: #1e2a38; }
+        .dark-mode .tag-cloud-other-toggle { background: #1e2a38; }
+
+        /* "New" badge for recently added resources */
+        .new-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+        }
+
+        /* Back-to-top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--ais-blue);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: opacity 0.2s, background 0.2s;
+            z-index: 50;
+            font-size: 1.2rem;
+        }
+        .back-to-top:hover { background: var(--ais-dark-blue); }
+        .back-to-top.visible { display: flex; }
+
+        /* Dark mode toggle button */
+        .dark-mode-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 0.35rem 0.65rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .dark-mode-toggle:hover {
+            border-color: var(--ais-blue);
+            color: var(--ais-blue);
+        }
+
         /* Reduced motion preference */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -982,7 +1075,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link {
+            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle {
                 display: none !important;
             }
 
@@ -1106,6 +1199,7 @@
             <div class="results-count" id="resultsCount" aria-live="polite"></div>
             <button class="clear-filters-btn" id="clearFiltersBtn" aria-label="Clear all filters">&times; Clear filters</button>
             <button class="collapse-all-btn" id="collapseAllBtn" aria-label="Collapse all categories" style="display:none;">Collapse all</button>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">&#9790; Dark</button>
         </div>
     </nav>
 
@@ -1138,6 +1232,8 @@
             <p>Loading resources&hellip;</p>
         </div>
     </main>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">&#8593;</button>
 
     <footer>
         <div>
@@ -1395,7 +1491,7 @@
                     <div class="no-results">
                         <h3>No resources found</h3>
                         <p>Try adjusting your search, category, or tag filter.</p>
-                        <button data-clear-all-filters style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:white; color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
+                        <button data-clear-all-filters style="margin-top:1rem; padding:0.5rem 1.2rem; border:1px solid var(--ais-blue); background:var(--bg-light); color:var(--ais-blue); border-radius:6px; cursor:pointer; font-size:0.9rem;">Clear all filters</button>
                     </div>`;
                 return;
             }
@@ -1450,6 +1546,17 @@
                 ? `<span class="resource-accessed">Last accessed: ${escapeHtml(r.lastAccessed)}</span>`
                 : '';
 
+            // "New" badge: show if lastAccessed is within the last 60 days
+            let newBadge = '';
+            if (r.lastAccessed) {
+                const parts = r.lastAccessed.split('/');
+                if (parts.length === 3) {
+                    const accessed = new Date(parts[2], parts[1] - 1, parts[0]);
+                    const daysSince = (Date.now() - accessed.getTime()) / (1000 * 60 * 60 * 24);
+                    if (daysSince <= 60) newBadge = '<span class="new-badge">New</span>';
+                }
+            }
+
             const titleHtml = highlightText(r.title, currentSearch);
             const descHtml = highlightText(r.description, currentSearch);
             const sourceHtml = highlightText(r.source, currentSearch);
@@ -1461,7 +1568,7 @@
 
             return `
                 <article class="resource-card">
-                    <h3><a href="${shareUrl}" target="_blank" rel="noopener noreferrer">${titleHtml}</a></h3>
+                    <h3><a href="${shareUrl}" target="_blank" rel="noopener noreferrer">${titleHtml}</a>${newBadge}</h3>
                     <div class="resource-meta">
                         <span class="resource-source">${sourceHtml}</span>
                         ${accessedHtml}
@@ -1803,6 +1910,37 @@
 
         // Detect native share API
         if (navigator.share) document.body.classList.add('has-native-share');
+
+        // Dark mode toggle — respect OS preference, allow manual override
+        (function() {
+            const toggle = document.getElementById('darkModeToggle');
+            const stored = localStorage.getItem('ais-dark-mode');
+            const osPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = stored !== null ? stored === '1' : osPrefersDark;
+            if (isDark) {
+                document.documentElement.classList.add('dark-mode');
+                toggle.innerHTML = '&#9788; Light';
+                toggle.setAttribute('aria-pressed', 'true');
+            }
+            toggle.addEventListener('click', () => {
+                const nowDark = document.documentElement.classList.toggle('dark-mode');
+                toggle.innerHTML = nowDark ? '&#9788; Light' : '&#9790; Dark';
+                toggle.setAttribute('aria-pressed', nowDark);
+                localStorage.setItem('ais-dark-mode', nowDark ? '1' : '0');
+            });
+        })();
+
+        // Back-to-top button
+        (function() {
+            const btn = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            }, { passive: true });
+            btn.addEventListener('click', () => {
+                const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+                window.scrollTo({ top: 0, behavior });
+            });
+        })();
 
         // Init
         init();

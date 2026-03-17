@@ -18,6 +18,9 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 - **Clear filters** — persistent button in the controls bar appears whenever any filter is active, resets all filters in one click
 - **Shareable URLs** — filter state is persisted in the URL hash (supports multi-category)
 - **Responsive design** — optimized for desktop, tablet, and mobile
+- **Dark mode** — automatic via `prefers-color-scheme`, with manual toggle button; preference saved in `localStorage`
+- **"New" badges** — resources accessed within the last 60 days display a green "New" badge
+- **Back-to-top button** — floating button appears after scrolling down, smooth-scrolls to top
 - **Accessible** — WCAG 2.1 AA contrast, keyboard navigation, ARIA labels, skip-to-content, reduced motion, high contrast mode
 - **Print-friendly** — clean print layout with URLs shown after links
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
@@ -121,15 +124,28 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.7.0 (Prototype)
+**Current version:** 0.8.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
 ### Roadmap
 
+#### Near-term
 - **Resource suggestion form** — Allow registered AIS members to suggest new resources via an integrated form (review queue → curation → publish)
-- **Star/voting system** — Registered users can star or vote on resources to surface the most useful ones
 - **Report dead link / miscategorization** — Users can flag broken URLs or suggest category corrections
+- **Sort options** — Sort within categories by title A-Z, source, or date last accessed
+- **Export filtered view** — "Download as CSV" button for the currently filtered resources (useful for syllabi planning)
+
+#### Medium-term
+- **Star/voting system** — Registered users can star or vote on resources to surface the most useful ones
+- **Bookmarks / "My List"** — Save favorites to `localStorage` and export as shareable URL or CSV (no login needed)
+- **Resource count badge in URL** — Show "Showing 12 of 205 resources" more prominently when sharing filtered views
+- **Keyboard shortcut legend** — "?" modal showing available keyboard shortcuts
+
+#### Long-term
+- **Embed widget** — Let faculty embed a filtered subset (e.g., "AI resources") in their LMS or course page via `<iframe>`
+- **Usage analytics** — Anonymous tracking of which categories/resources get the most clicks to inform curation
+- **Multi-language UI** — Support for multiple UI languages (de/fr/es) alongside the already-tagged resource languages
 
 ## License
 

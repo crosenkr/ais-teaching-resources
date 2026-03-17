@@ -5,6 +5,21 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-03-17
+
+### Added
+
+- **Dark mode** — automatic detection via `prefers-color-scheme: dark` with full dark palette; manual toggle button (crescent/sun icon) in controls bar; preference persisted in `localStorage`
+- **"New" badges** — resources with a `lastAccessed` date within the last 60 days display a green "New" badge next to the title
+- **Back-to-top button** — fixed floating button appears after scrolling 400px, smooth-scrolls to top; 44px touch target for mobile accessibility
+- **Extended roadmap** in README — organized into near-term, medium-term, and long-term sections with 11 planned features
+
+### Changed
+
+- Dark mode CSS variables and element overrides for all components (header, cards, controls, footer, search highlights, tags, share buttons)
+- Print stylesheet updated to hide back-to-top button and dark mode toggle
+- README updated with new features and expanded roadmap
+
 ## [0.7.0] - 2026-03-17
 
 ### Added
