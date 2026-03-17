@@ -255,6 +255,23 @@
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--ais-blue);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .category-toggle {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-left: auto;
+            transition: transform 0.2s;
+        }
+
+        .category-header.collapsed .category-toggle {
+            transform: rotate(-90deg);
+        }
+
+        .category-header.collapsed + .resources-grid {
+            display: none !important;
         }
 
         .category-icon {
@@ -1095,15 +1112,20 @@
         // State
         let schema = null;
         let allResources = [];
-        let currentCategory = 'all';
+        let currentCategories = []; // empty = all categories
         let currentTags = [];
         let currentSearch = '';
         let currentView = 'grid';
+        const collapsedCategories = new Set();
 
         // URL state: read filters from hash
         function readUrlState() {
             const params = new URLSearchParams(window.location.hash.slice(1));
-            if (params.has('category')) currentCategory = params.get('category');
+            if (params.has('category')) {
+                // Support legacy single-category URLs and new multi-category
+                currentCategories = params.get('category').split(',').filter(Boolean);
+                if (currentCategories.length === 1 && currentCategories[0] === 'all') currentCategories = [];
+            }
             if (params.has('tags')) currentTags = params.get('tags').split(',').filter(Boolean);
             if (params.has('q')) {
                 currentSearch = params.get('q');
@@ -1115,7 +1137,7 @@
         // URL state: write filters to hash
         function writeUrlState() {
             const params = new URLSearchParams();
-            if (currentCategory !== 'all') params.set('category', currentCategory);
+            if (currentCategories.length) params.set('category', currentCategories.join(','));
             if (currentTags.length) params.set('tags', currentTags.join(','));
             if (currentSearch) params.set('q', currentSearch);
             if (currentView !== 'grid') params.set('view', currentView);
@@ -1143,14 +1165,7 @@
                 allResources = await resourcesRes.json();
                 buildFilterButtons();
                 readUrlState();
-                // Sync UI state from URL
-                document.querySelectorAll('.filter-btn').forEach(b => {
-                    const isActive = b.dataset.category === currentCategory;
-                    b.classList.toggle('active', isActive);
-                    b.setAttribute('aria-pressed', isActive);
-                });
-                const sel = document.getElementById('categorySelect');
-                if (sel) sel.value = currentCategory;
+                updateCategoryUI();
                 updateActiveTagDisplay();
                 setView(currentView);
                 render();
@@ -1198,19 +1213,32 @@
         }
 
         function setCategory(cat) {
-            currentCategory = cat;
-            currentTags = [];
-            updateActiveTagDisplay();
-            updateTagCloudActive();
+            if (cat === 'all') {
+                currentCategories = [];
+            } else {
+                const idx = currentCategories.indexOf(cat);
+                if (idx >= 0) {
+                    currentCategories.splice(idx, 1);
+                } else {
+                    currentCategories.push(cat);
+                }
+            }
+            updateCategoryUI();
+            render();
+        }
+
+        function updateCategoryUI() {
             document.querySelectorAll('.filter-btn').forEach(b => {
-                const isActive = b.dataset.category === cat;
+                const cat = b.dataset.category;
+                const isActive = cat === 'all'
+                    ? currentCategories.length === 0
+                    : currentCategories.includes(cat);
                 b.classList.toggle('active', isActive);
                 b.setAttribute('aria-pressed', isActive);
             });
-            // Sync mobile dropdown
+            // Sync mobile dropdown (show first selected or 'all')
             const sel = document.getElementById('categorySelect');
-            if (sel) sel.value = cat;
-            render();
+            if (sel) sel.value = currentCategories.length === 1 ? currentCategories[0] : 'all';
         }
 
         function setTag(tag) {
@@ -1266,14 +1294,14 @@
 
         function updateClearFiltersBtn() {
             const btn = document.getElementById('clearFiltersBtn');
-            const hasFilters = currentCategory !== 'all' || currentTags.length > 0 || currentSearch;
+            const hasFilters = currentCategories.length > 0 || currentTags.length > 0 || currentSearch;
             btn.classList.toggle('visible', !!hasFilters);
         }
 
         function filterResources() {
             let results = allResources;
-            if (currentCategory !== 'all') {
-                results = results.filter(r => r.category === currentCategory);
+            if (currentCategories.length > 0) {
+                results = results.filter(r => currentCategories.includes(r.category));
             }
             if (currentTags.length > 0) {
                 results = results.filter(r =>
@@ -1329,12 +1357,14 @@
             sortedCats.forEach(cat => {
                 const resources = grouped[cat];
                 const icon = getCategoryIcon(cat);
+                const isCollapsed = collapsedCategories.has(cat);
                 html += `
                     <section class="category-section">
-                        <div class="category-header">
+                        <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapeHtml(cat)}" role="button" aria-expanded="${!isCollapsed}" tabindex="0">
                             <span class="category-icon" aria-hidden="true">${escapeHtml(icon)}</span>
                             <h2>${escapeHtml(cat)}</h2>
                             <span class="category-count">${resources.length}</span>
+                            <span class="category-toggle" aria-hidden="true">&#9660;</span>
                         </div>
                         <div class="resources-grid ${currentView === 'list' ? 'list-view' : ''}">
                             ${resources.map(r => renderCard(r)).join('')}
@@ -1522,8 +1552,32 @@
             if (clearBtn) { setTag(null); }
         });
 
-        // Delegated click handler for tags, expand, and clear-all button
+        // Keyboard support for collapsible category headers
+        document.getElementById('mainContent').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const header = e.target.closest('[data-collapse-cat]');
+                if (header) { e.preventDefault(); header.click(); }
+            }
+        });
+
+        // Delegated click handler for tags, expand, collapse, and clear-all button
         document.getElementById('mainContent').addEventListener('click', (e) => {
+            const collapseBtn = e.target.closest('[data-collapse-cat]');
+            if (collapseBtn && !e.target.closest('.resource-tag, .share-btn, a')) {
+                const cat = collapseBtn.dataset.collapseCat;
+                if (collapsedCategories.has(cat)) {
+                    collapsedCategories.delete(cat);
+                    collapseBtn.classList.remove('collapsed');
+                    collapseBtn.setAttribute('aria-expanded', 'true');
+                } else {
+                    collapsedCategories.add(cat);
+                    collapseBtn.classList.add('collapsed');
+                    collapseBtn.setAttribute('aria-expanded', 'false');
+                }
+                const grid = collapseBtn.nextElementSibling;
+                if (grid) grid.style.display = collapsedCategories.has(cat) ? 'none' : '';
+                return;
+            }
             const expand = e.target.closest('[data-expand-tags]');
             if (expand) {
                 const extra = expand.nextElementSibling;
@@ -1579,17 +1633,17 @@
             }
             const clearAll = e.target.closest('[data-clear-all-filters]');
             if (clearAll) {
-                currentCategory = 'all'; currentTags = []; currentSearch = '';
+                currentCategories = []; currentTags = []; currentSearch = '';
                 document.getElementById('searchInput').value = '';
-                updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');
+                updateActiveTagDisplay(); updateTagCloudActive(); updateCategoryUI(); render();
             }
         });
 
         // Clear all filters button in controls bar
         document.getElementById('clearFiltersBtn').addEventListener('click', () => {
-            currentCategory = 'all'; currentTags = []; currentSearch = '';
+            currentCategories = []; currentTags = []; currentSearch = '';
             document.getElementById('searchInput').value = '';
-            updateActiveTagDisplay(); updateTagCloudActive(); setCategory('all');
+            updateActiveTagDisplay(); updateTagCloudActive(); updateCategoryUI(); render();
         });
 
         // Search with debounce
@@ -1624,7 +1678,12 @@
         document.getElementById('tagCloudBtn').addEventListener('click', toggleTagCloud);
         document.getElementById('gridBtn').addEventListener('click', () => setView('grid'));
         document.getElementById('listBtn').addEventListener('click', () => setView('list'));
-        document.getElementById('categorySelect').addEventListener('change', (e) => setCategory(e.target.value));
+        document.getElementById('categorySelect').addEventListener('change', (e) => {
+            // Mobile dropdown: replace selection (not toggle)
+            currentCategories = e.target.value === 'all' ? [] : [e.target.value];
+            updateCategoryUI();
+            render();
+        });
         document.getElementById('aisLogo').addEventListener('error', function() { this.style.display = 'none'; });
 
         // Welcome banner — dismiss and remember via sessionStorage
@@ -1648,14 +1707,7 @@
         // Handle browser back/forward with hash state
         window.addEventListener('hashchange', () => {
             readUrlState();
-            // Sync UI without going through setCategory (which clears tags)
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                const isActive = b.dataset.category === currentCategory;
-                b.classList.toggle('active', isActive);
-                b.setAttribute('aria-pressed', isActive);
-            });
-            const sel = document.getElementById('categorySelect');
-            if (sel) sel.value = currentCategory;
+            updateCategoryUI();
             document.getElementById('searchInput').value = currentSearch;
             updateActiveTagDisplay();
             updateTagCloudActive();
