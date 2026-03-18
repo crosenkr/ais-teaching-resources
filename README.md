@@ -22,6 +22,9 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 - **"New" badges** — resources accessed within the last 60 days display a green "New" badge
 - **Back-to-top button** — floating button appears after scrolling down, smooth-scrolls to top
 - **Accessible** — WCAG 2.1 AA contrast, keyboard navigation, ARIA labels, skip-to-content, reduced motion, high contrast mode
+- **Suggest a resource** — modal form opens a pre-filled GitHub Issue for community contributions
+- **Report issue** — flag button on each card opens a GitHub Issue for dead links or miscategorization
+- **Sort options** — sort within each category by title (A–Z), source, or newest
 - **Print-friendly** — clean print layout with URLs shown after links
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
 
@@ -124,17 +127,15 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.8.0 (Prototype)
+**Current version:** 0.9.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
 ### Roadmap
 
 #### Near-term
-- **Resource suggestion form** — Allow registered AIS members to suggest new resources via an integrated form (review queue → curation → publish)
-- **Report dead link / miscategorization** — Users can flag broken URLs or suggest category corrections
-- **Sort options** — Sort within categories by title A-Z, source, or date last accessed
 - **Export filtered view** — "Download as CSV" button for the currently filtered resources (useful for syllabi planning)
+- **"New" badge refinement** — add "Recently Updated" indicator alongside existing "New" badges
 
 #### Medium-term
 - **Star/voting system** — Registered users can star or vote on resources to surface the most useful ones

@@ -5,6 +5,23 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] - 2026-03-18
+
+### Added
+
+- **Suggest a Resource** — "+" button in controls bar opens a modal form (title, URL, category, description, name); submits as a pre-filled GitHub Issue with `suggestion` label for community-driven curation
+- **Report Issue** — flag button on each resource card opens a pre-filled GitHub Issue with `bug` label for reporting dead links, miscategorization, or incorrect information
+- **Sort options** — dropdown per category header to sort resources by title (A–Z), source, or newest (by last-accessed date); sort state persists per category during the session
+
+### Changed
+
+- Suggest and Report features use GitHub Issues (no email dependency) — configurable via `GITHUB_ISSUES_URL` constant
+- Modal includes focus trapping, Escape-to-close with priority over tag cloud panel, and focus return to trigger on close
+- Added `aria-required="true"` on required form fields for improved screen reader compatibility
+- Sort dropdown uses `:focus-visible` instead of `:focus` for proper focus indicator
+- Inline form validation (focus empty field) replaces `alert()` dialog
+- Print stylesheet updated to hide modal, sort dropdowns, and report buttons
+
 ## [0.8.0] - 2026-03-17
 
 ### Added

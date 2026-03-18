@@ -1034,6 +1034,177 @@
         .back-to-top:hover { background: var(--ais-dark-blue); }
         .back-to-top.visible { display: flex; }
 
+        /* Suggest a resource button */
+        .suggest-btn {
+            padding: 0.45rem 0.85rem;
+            border: 1px solid var(--ais-gold);
+            border-radius: 20px;
+            background: white;
+            color: var(--ais-gold);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+        .suggest-btn:hover {
+            background: var(--ais-gold);
+            color: white;
+        }
+
+        /* Suggest modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.open {
+            display: flex;
+        }
+        .modal {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 520px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .modal h2 {
+            font-size: 1.2rem;
+            color: var(--ais-blue);
+            margin-bottom: 0.3rem;
+        }
+        .modal p.modal-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0.25rem;
+            line-height: 1;
+        }
+        .modal-close:hover { color: var(--text-primary); }
+        .modal label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        .modal input, .modal select, .modal textarea {
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            background: white;
+        }
+        .modal textarea { resize: vertical; min-height: 80px; }
+        .modal input:focus, .modal select:focus, .modal textarea:focus {
+            outline: none;
+            border-color: var(--ais-blue);
+            box-shadow: 0 0 0 2px var(--ais-accent);
+        }
+        .modal-actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+            margin-top: 0.5rem;
+        }
+        .modal-actions button {
+            padding: 0.55rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .modal-submit {
+            background: var(--ais-blue);
+            color: white;
+            border: none;
+        }
+        .modal-submit:hover { background: var(--ais-dark-blue); }
+        .modal-cancel {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .modal-cancel:hover { border-color: var(--text-secondary); }
+        .modal .required-note {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Report issue button on cards */
+        .report-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 4px;
+            background: var(--ais-accent);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.15s;
+            padding: 6px;
+            margin-left: auto;
+        }
+        .report-btn:hover {
+            background: #c00;
+            color: white;
+        }
+        .report-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* Sort controls */
+        .category-sort {
+            margin-left: 0.5rem;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-family: inherit;
+            color: var(--text-secondary);
+            background: white;
+            cursor: pointer;
+            min-height: 28px;
+        }
+        .category-sort:focus-visible {
+            outline: 2px solid var(--ais-blue);
+            outline-offset: 2px;
+        }
+
+        /* Dark mode overrides for new elements */
+        .dark-mode .suggest-btn { background: #1e2a38; }
+        .dark-mode .modal { background: #1e2a38; }
+        .dark-mode .modal input, .dark-mode .modal select, .dark-mode .modal textarea { background: #121820; color: #e0e0e0; border-color: #2a3545; }
+        .dark-mode .modal-cancel { background: #121820; }
+        .dark-mode .report-btn:hover { background: #c00; }
+        .dark-mode .category-sort { background: #1e2a38; color: #b0b8c0; border-color: #2a3545; }
+
         /* Dark mode toggle button */
         .dark-mode-toggle {
             background: none;
@@ -1075,7 +1246,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle {
+            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle, .modal-overlay, .category-sort, .report-btn {
                 display: none !important;
             }
 
@@ -1199,9 +1370,43 @@
             <div class="results-count" id="resultsCount" aria-live="polite"></div>
             <button class="clear-filters-btn" id="clearFiltersBtn" aria-label="Clear all filters">&times; Clear filters</button>
             <button class="collapse-all-btn" id="collapseAllBtn" aria-label="Collapse all categories" style="display:none;">Collapse all</button>
+            <button class="suggest-btn" id="suggestBtn" aria-label="Suggest a resource">+ Suggest</button>
             <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">&#9790; Dark</button>
         </div>
     </nav>
+
+    <!-- Suggest a Resource modal -->
+    <div class="modal-overlay" id="suggestModal" role="dialog" aria-modal="true" aria-labelledby="suggestModalTitle">
+        <div class="modal">
+            <button class="modal-close" id="suggestClose" aria-label="Close">&times;</button>
+            <h2 id="suggestModalTitle">Suggest a Resource</h2>
+            <p class="modal-desc">Know a great teaching resource for IS educators? Submit your suggestion as a GitHub Issue and we'll review it for inclusion.</p>
+            <p class="required-note">* Required fields</p>
+            <form id="suggestForm" novalidate>
+                <label for="suggestTitle">Resource title *</label>
+                <input type="text" id="suggestTitle" required aria-required="true" placeholder="e.g., MIT OpenCourseWare">
+
+                <label for="suggestUrl">URL *</label>
+                <input type="url" id="suggestUrl" required aria-required="true" placeholder="https://...">
+
+                <label for="suggestCategory">Suggested category</label>
+                <select id="suggestCategory">
+                    <option value="">— Select a category —</option>
+                </select>
+
+                <label for="suggestDesc">Description</label>
+                <textarea id="suggestDesc" placeholder="Brief description of what this resource offers and why it's useful for IS educators..."></textarea>
+
+                <label for="suggestName">Your name (optional)</label>
+                <input type="text" id="suggestName" placeholder="Your name">
+
+                <div class="modal-actions">
+                    <button type="button" class="modal-cancel" id="suggestCancelBtn">Cancel</button>
+                    <button type="submit" class="modal-submit">Submit via GitHub</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <div class="controls-bar" style="border-bottom: none; padding-top: 0;">
         <div class="controls-inner">
@@ -1271,6 +1476,7 @@
         let currentSearch = '';
         let currentView = 'grid';
         const collapsedCategories = new Set();
+        const categorySortOrder = {}; // cat label → 'title' | 'source' | 'date'
 
         // URL state: read filters from hash
         function readUrlState() {
@@ -1510,15 +1716,32 @@
             let html = '';
             sortedCats.forEach(cat => {
                 const resources = grouped[cat];
+                // Sort resources within category
+                const sortKey = categorySortOrder[cat] || 'title';
+                resources.sort((a, b) => {
+                    if (sortKey === 'source') return a.source.localeCompare(b.source) || a.title.localeCompare(b.title);
+                    if (sortKey === 'date') {
+                        // Parse DD/MM/YYYY and sort newest first
+                        const parseDate = d => { if (!d) return 0; const p = d.split('/'); return new Date(p[2], p[1]-1, p[0]).getTime(); };
+                        return parseDate(b.lastAccessed) - parseDate(a.lastAccessed) || a.title.localeCompare(b.title);
+                    }
+                    return a.title.localeCompare(b.title);
+                });
                 const icon = getCategoryIcon(cat);
                 const isCollapsed = collapsedCategories.has(cat);
+                const escapedCat = escapeHtml(cat);
                 html += `
                     <section class="category-section">
-                        <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapeHtml(cat)}">
+                        <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapedCat}">
                             <span class="category-icon" aria-hidden="true">${escapeHtml(icon)}</span>
-                            <h2>${escapeHtml(cat)}</h2>
+                            <h2>${escapedCat}</h2>
                             <span class="category-count">${resources.length}</span>
-                            <button class="category-collapse-btn" aria-expanded="${!isCollapsed}" aria-label="${isCollapsed ? 'Expand' : 'Collapse'} ${escapeHtml(cat)}" title="${isCollapsed ? 'Expand' : 'Collapse'}"><span class="category-toggle" aria-hidden="true">&#9660;</span></button>
+                            <select class="category-sort" data-sort-cat="${escapedCat}" aria-label="Sort ${escapedCat}">
+                                <option value="title"${sortKey==='title'?' selected':''}>A–Z</option>
+                                <option value="source"${sortKey==='source'?' selected':''}>Source</option>
+                                <option value="date"${sortKey==='date'?' selected':''}>Newest</option>
+                            </select>
+                            <button class="category-collapse-btn" aria-expanded="${!isCollapsed}" aria-label="${isCollapsed ? 'Expand' : 'Collapse'} ${escapedCat}" title="${isCollapsed ? 'Expand' : 'Collapse'}"><span class="category-toggle" aria-hidden="true">&#9660;</span></button>
                         </div>
                         <div class="resources-grid ${currentView === 'list' ? 'list-view' : ''}">
                             ${resources.map(r => renderCard(r)).join('')}
@@ -1586,6 +1809,7 @@
                         <button class="share-btn" data-share-bluesky="${shareText}%20${shareUrlEnc}" title="Share on Bluesky" aria-label="Share on Bluesky"><svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.595 3.496 6.178 3.21-3.597.502-6.761 1.725-2.797 6.022C7.278 23.123 10.299 17.894 12 14.842c1.701 3.052 4.478 8.093 7.995 4.637 3.964-4.297.8-5.52-2.797-6.022 2.583.286 5.393-.583 6.178-3.21.246-.828.624-5.788.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg></button>
                         <button class="share-btn share-btn-native" data-share-native data-share-native-title="${safeTitle}" data-share-native-url="${escapeHtml(r.url)}" title="More sharing options" aria-label="More sharing options"><svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg></button>
                         <span class="share-copied" aria-live="polite">Copied!</span>
+                        <button class="report-btn" data-report-title="${safeTitle}" data-report-url="${escapeHtml(r.url)}" title="Report issue with this resource" aria-label="Report issue with ${safeTitle}"><svg viewBox="0 0 24 24"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6z"/></svg></button>
                     </div>
                 </article>`;
         }
@@ -1792,6 +2016,22 @@
                 navigator.share({ title: nativeBtn.dataset.shareNativeTitle, url: nativeBtn.dataset.shareNativeUrl }).catch(() => {});
                 return;
             }
+            const reportBtn = e.target.closest('[data-report-title]');
+            if (reportBtn) {
+                const title = reportBtn.dataset.reportTitle;
+                const url = reportBtn.dataset.reportUrl;
+                const issueTitle = encodeURIComponent('Issue: ' + title);
+                const issueBody = encodeURIComponent(
+                    '### Issue Report\n\n' +
+                    '**Resource:** ' + title + '\n' +
+                    '**URL:** ' + url + '\n\n' +
+                    '**Issue type:** [Dead link / Miscategorized / Incorrect info / Other]\n\n' +
+                    '**Description:**\n\n' +
+                    '---\n_Submitted via the Report Issue button on AIS Teaching Resources._'
+                );
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody + '&labels=bug', '_blank');
+                return;
+            }
             const clearAll = e.target.closest('[data-clear-all-filters]');
             if (clearAll) {
                 currentCategories = []; currentTags = []; currentSearch = '';
@@ -1939,6 +2179,107 @@
             btn.addEventListener('click', () => {
                 const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
                 window.scrollTo({ top: 0, behavior });
+            });
+        })();
+
+        // Sort dropdown change handler (delegated on mainContent)
+        document.getElementById('mainContent').addEventListener('change', (e) => {
+            const sortSel = e.target.closest('[data-sort-cat]');
+            if (sortSel) {
+                categorySortOrder[sortSel.dataset.sortCat] = sortSel.value;
+                render();
+            }
+        });
+
+        // Report issue button — handled inside existing mainContent click handler below
+
+        // GitHub repo for issues
+        const GITHUB_ISSUES_URL = 'https://github.com/crosenkr/ais-teaching-resources/issues/new';
+
+        // Suggest a Resource modal
+        (function() {
+            const modal = document.getElementById('suggestModal');
+            const openBtn = document.getElementById('suggestBtn');
+            const closeBtn = document.getElementById('suggestClose');
+            const cancelBtn = document.getElementById('suggestCancelBtn');
+            const form = document.getElementById('suggestForm');
+
+            function openModal() {
+                // Populate category dropdown from schema
+                const sel = document.getElementById('suggestCategory');
+                if (sel.options.length <= 1 && schema) {
+                    schema.categories
+                        .sort((a, b) => a.order - b.order)
+                        .forEach(c => {
+                            const opt = document.createElement('option');
+                            opt.value = c.label;
+                            opt.textContent = c.label;
+                            sel.appendChild(opt);
+                        });
+                }
+                modal.classList.add('open');
+                document.getElementById('suggestTitle').focus();
+            }
+
+            function closeModal() {
+                modal.classList.remove('open');
+                form.reset();
+                openBtn.focus(); // Return focus to trigger
+            }
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+
+            // Close on overlay click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Focus trap inside modal
+            modal.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') { closeModal(); e.stopPropagation(); return; }
+                if (e.key !== 'Tab') return;
+                const focusable = modal.querySelectorAll('input, select, textarea, button, [tabindex]:not([tabindex="-1"])');
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey) {
+                    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+                } else {
+                    if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+                }
+            });
+
+            // Submit → open pre-filled GitHub Issue
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const title = document.getElementById('suggestTitle').value.trim();
+                const url = document.getElementById('suggestUrl').value.trim();
+                if (!title || !url) {
+                    if (!title) document.getElementById('suggestTitle').focus();
+                    else document.getElementById('suggestUrl').focus();
+                    return;
+                }
+                const category = document.getElementById('suggestCategory').value;
+                const desc = document.getElementById('suggestDesc').value.trim();
+                const name = document.getElementById('suggestName').value.trim();
+
+                const issueTitle = encodeURIComponent('Resource suggestion: ' + title);
+                const bodyParts = [
+                    '### Resource Suggestion',
+                    '',
+                    '**Title:** ' + title,
+                    '**URL:** ' + url,
+                    category ? '**Suggested category:** ' + category : '',
+                    desc ? '**Description:** ' + desc : '',
+                    name ? '**Submitted by:** ' + name : '',
+                    '',
+                    '---',
+                    '_Submitted via the Suggest a Resource form on AIS Teaching Resources._'
+                ].filter(Boolean);
+                const issueBody = encodeURIComponent(bodyParts.join('\n'));
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody + '&labels=suggestion', '_blank');
+                closeModal();
             });
         })();
 
