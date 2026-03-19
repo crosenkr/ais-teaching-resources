@@ -419,7 +419,6 @@
             margin-top: 0.6rem;
             padding-top: 0.5rem;
             border-top: 1px solid var(--border);
-            flex-wrap: wrap;
         }
         .share-bar-label {
             font-size: 0.68rem;
@@ -430,10 +429,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
-            min-width: 44px;
-            min-height: 44px;
+            width: 28px;
+            height: 28px;
             border: none;
             border-radius: 4px;
             background: var(--ais-accent);
@@ -441,8 +438,14 @@
             cursor: pointer;
             font-size: 0.75rem;
             transition: all 0.15s;
-            padding: 6px;
+            padding: 0;
             position: relative;
+        }
+        /* Expand touch target to 44px without changing visual size */
+        .share-btn::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
         }
         .share-btn:hover {
             background: var(--ais-blue);
@@ -1182,10 +1185,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
-            min-width: 44px;
-            min-height: 44px;
+            width: 28px;
+            height: 28px;
             border: none;
             border-radius: 4px;
             background: var(--ais-accent);
@@ -1193,10 +1194,14 @@
             cursor: pointer;
             font-size: 0.75rem;
             transition: all 0.15s;
-            padding: 6px;
-            margin-left: 0.25rem;
-            border-left: 1px solid var(--border);
-            padding-left: 0.5rem;
+            padding: 0;
+            margin-left: 0.5rem;
+            position: relative;
+        }
+        .report-btn::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
         }
         .report-btn:hover {
             background: #c00;
