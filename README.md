@@ -21,7 +21,7 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 - **Dark mode** — automatic via `prefers-color-scheme`, with manual toggle button; preference saved in `localStorage`
 - **"New" badges** — resources accessed within the last 60 days display a green "New" badge
 - **Back-to-top button** — floating button appears after scrolling down, smooth-scrolls to top
-- **Accessible** — WCAG 2.1 AA contrast, keyboard navigation, ARIA labels, skip-to-content, reduced motion, high contrast mode
+- **Accessible** — WCAG 2.1 AA contrast, 44px touch targets, keyboard navigation, ARIA labels, skip-to-content, reduced motion, high contrast mode, modal inert background
 - **Suggest a resource** — modal form opens a pre-filled GitHub Issue for community contributions
 - **Report issue** — flag button on each card opens a GitHub Issue for dead links or miscategorization
 - **Sort options** — sort within each category by title (A–Z), source, or newest
@@ -129,7 +129,7 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.10.1 (Prototype)
+**Current version:** 0.10.2 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 

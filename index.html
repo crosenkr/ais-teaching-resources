@@ -425,6 +425,8 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            min-width: 44px;
+            min-height: 44px;
             border: none;
             border-radius: 4px;
             background: var(--ais-accent);
@@ -751,6 +753,11 @@
             padding: 0;
             line-height: 1;
             flex-shrink: 0;
+            min-width: 44px;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .welcome-banner-close:hover {
@@ -989,7 +996,7 @@
         .dark-mode .tag-cloud-panel { background: #1a2230; }
         .dark-mode footer { background: #0d1520; }
         .dark-mode mark.search-highlight { background: #4a3a00; color: #f0d060; }
-        .dark-mode .resource-accessed { color: #a0a8b0; }
+        .dark-mode .resource-accessed { color: #b8c0c8; }
         .dark-mode .share-btn:hover { background: #4da6e8; color: #121820; }
         .dark-mode .clear-filters-btn { background: #1e2a38; }
         .dark-mode .collapse-all-btn { background: #1e2a38; }
@@ -1163,6 +1170,8 @@
             justify-content: center;
             width: 32px;
             height: 32px;
+            min-width: 44px;
+            min-height: 44px;
             border: none;
             border-radius: 4px;
             background: var(--ais-accent);
@@ -1203,7 +1212,7 @@
             border-bottom: 1px solid var(--border);
             padding: 0.75rem 2rem;
             position: sticky;
-            top: 0;
+            top: var(--header-height, 0px);
             z-index: 90;
             display: flex;
             align-items: center;
@@ -1406,6 +1415,7 @@
         .dark-mode .export-card:hover { border-color: #5bb5f0; }
         .dark-mode .export-back-link { color: #5bb5f0; }
         .dark-mode .kbd-modal { background: #1e2a38; }
+        .dark-mode .modal-overlay, .dark-mode .kbd-modal-overlay { background: rgba(0,0,0,0.7); }
         .dark-mode .kbd-key { background: #121820; border-color: #2a3545; }
 
         /* Dark mode toggle button */
@@ -1449,7 +1459,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle, .modal-overlay, .category-sort, .report-btn, .export-toolbar, .kbd-modal-overlay {
+            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle, .modal-overlay, .category-sort, .report-btn, .export-toolbar, .kbd-modal-overlay, .collapse-all-btn, .category-collapse-btn {
                 display: none !important;
             }
 
@@ -1862,7 +1872,7 @@
             const el = document.getElementById('activeTagFilter');
             if (currentTags.length > 0) {
                 const tagPills = currentTags.map(t =>
-                    `<span style="background:var(--ais-gold);color:white;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.8rem;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">${escapeHtml(t)}<button data-remove-tag="${escapeHtml(t)}" style="background:none;border:none;color:white;cursor:pointer;font-size:0.9rem;padding:0;line-height:1;">&times;</button></span>`
+                    `<span style="background:var(--ais-gold);color:white;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.8rem;font-weight:500;display:inline-flex;align-items:center;gap:0.3rem;">${escapeHtml(t)}<button data-remove-tag="${escapeHtml(t)}" aria-label="Remove tag: ${escapeHtml(t)}" style="background:none;border:none;color:white;cursor:pointer;font-size:0.9rem;padding:0;line-height:1;min-width:28px;min-height:28px;">&times;</button></span>`
                 ).join(' ');
                 el.innerHTML = `Filtered by tags: ${tagPills} <button data-clear-tags style="margin-left:0.5rem;background:none;border:none;color:var(--ais-blue);cursor:pointer;font-size:0.8rem;font-weight:600;">Clear all</button>`;
                 el.style.display = 'flex';
@@ -2004,8 +2014,11 @@
         function enterExportMode(doRender) {
             exportMode = true;
             exportChecked.clear();
+            // Set header height for sticky export toolbar offset
+            const hdr = document.querySelector('header');
+            if (hdr) document.documentElement.style.setProperty('--header-height', hdr.offsetHeight + 'px');
             // Hide non-essential controls
-            document.querySelectorAll('#tagCloudBtn, .view-toggle, #clearFiltersBtn, #collapseAllBtn, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('#tagCloudBtn, .view-toggle, #clearFiltersBtn, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = 'none');
             if (doRender !== false) render();
         }
 
@@ -2015,7 +2028,7 @@
             const tb = document.getElementById('exportToolbar');
             if (tb) tb.remove();
             // Restore controls
-            document.querySelectorAll('#tagCloudBtn, .view-toggle, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = '');
+            document.querySelectorAll('#tagCloudBtn, .view-toggle, #clearFiltersBtn, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = '');
             if (doRender !== false) render();
         }
 
@@ -2074,13 +2087,15 @@
                 const resources = grouped[cat].sort((a, b) => a.title.localeCompare(b.title));
                 const icon = getCategoryIcon(cat);
                 const escapedCat = escapeHtml(cat);
+                const isCollapsed = collapsedCategories.has(cat);
                 html += `<section class="category-section">
-                    <div class="category-header">
+                    <div class="category-header${isCollapsed ? ' collapsed' : ''}" data-collapse-cat="${escapedCat}">
                         <span class="category-icon" aria-hidden="true">${escapeHtml(icon)}</span>
                         <h2>${escapedCat}</h2>
                         <span class="category-count">${resources.length}</span>
+                        <button class="category-collapse-btn" aria-expanded="${!isCollapsed}" aria-label="${isCollapsed ? 'Expand' : 'Collapse'} ${escapedCat}" title="${isCollapsed ? 'Expand' : 'Collapse'}"><span class="category-toggle" aria-hidden="true">&#9660;</span></button>
                     </div>
-                    <div class="export-grid">
+                    <div class="export-grid" ${isCollapsed ? 'style="display:none"' : ''}>
                         ${resources.map(r => renderExportCard(r)).join('')}
                     </div>
                 </section>`;
@@ -2126,7 +2141,7 @@
             allResources.forEach(r => {
                 const rid = getResourceId(r);
                 if (!exportChecked.has(rid)) return;
-                const csvEscape = (s) => { let v = (s || '').replace(/"/g, '""'); if (/^[=+\-@|\t]/.test(v)) v = "'" + v; return '"' + v + '"'; };
+                const csvEscape = (s) => { let v = (s || '').replace(/"/g, '""').replace(/[\r\n]+/g, ' '); if (/^[=+\-@|\t;]/.test(v)) v = "'" + v; return '"' + v + '"'; };
                 rows.push([
                     csvEscape(r.title),
                     csvEscape(r.url),
@@ -2379,12 +2394,12 @@
             }
             const xBtn = e.target.closest('[data-share-x]');
             if (xBtn) {
-                window.open('https://x.com/intent/tweet?url=' + xBtn.dataset.shareX + '&text=' + xBtn.dataset.shareText, '_blank', 'width=550,height=420');
+                window.open('https://x.com/intent/tweet?url=' + xBtn.dataset.shareX + '&text=' + xBtn.dataset.shareText, '_blank', 'noopener,width=550,height=420');
                 return;
             }
             const liBtn = e.target.closest('[data-share-linkedin]');
             if (liBtn) {
-                window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + liBtn.dataset.shareLinkedin, '_blank', 'width=550,height=420');
+                window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + liBtn.dataset.shareLinkedin, '_blank', 'noopener,width=550,height=420');
                 return;
             }
             const emailBtn = e.target.closest('[data-share-email]');
@@ -2394,17 +2409,17 @@
             }
             const waBtn = e.target.closest('[data-share-whatsapp]');
             if (waBtn) {
-                window.open('https://wa.me/?text=' + waBtn.dataset.shareWhatsapp, '_blank');
+                window.open('https://wa.me/?text=' + waBtn.dataset.shareWhatsapp, '_blank', 'noopener');
                 return;
             }
             const fbBtn = e.target.closest('[data-share-facebook]');
             if (fbBtn) {
-                window.open('https://www.facebook.com/sharer/sharer.php?u=' + fbBtn.dataset.shareFacebook, '_blank', 'width=550,height=420');
+                window.open('https://www.facebook.com/sharer/sharer.php?u=' + fbBtn.dataset.shareFacebook, '_blank', 'noopener,width=550,height=420');
                 return;
             }
             const bskyBtn = e.target.closest('[data-share-bluesky]');
             if (bskyBtn) {
-                window.open('https://bsky.app/intent/compose?text=' + bskyBtn.dataset.shareBluesky, '_blank', 'width=550,height=420');
+                window.open('https://bsky.app/intent/compose?text=' + bskyBtn.dataset.shareBluesky, '_blank', 'noopener,width=550,height=420');
                 return;
             }
             const nativeBtn = e.target.closest('[data-share-native]');
@@ -2425,7 +2440,7 @@
                     '**Description:**\n\n' +
                     '---\n_Submitted via the Report Issue button on AIS Teaching Resources._'
                 );
-                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank');
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank', 'noopener');
                 return;
             }
             const clearAll = e.target.closest('[data-clear-all-filters]');
@@ -2608,6 +2623,14 @@
             const cancelBtn = document.getElementById('suggestCancelBtn');
             const form = document.getElementById('suggestForm');
 
+            function setPageInert(inert) {
+                document.querySelectorAll('header, main, footer, .export-toolbar').forEach(el => {
+                    if (inert) el.setAttribute('inert', '');
+                    else el.removeAttribute('inert');
+                });
+                document.body.style.overflow = inert ? 'hidden' : '';
+            }
+
             function openModal() {
                 // Populate category dropdown from schema
                 const sel = document.getElementById('suggestCategory');
@@ -2622,11 +2645,13 @@
                         });
                 }
                 modal.classList.add('open');
+                setPageInert(true);
                 document.getElementById('suggestTitle').focus();
             }
 
             function closeModal() {
                 modal.classList.remove('open');
+                setPageInert(false);
                 form.reset();
                 openBtn.focus(); // Return focus to trigger
             }
@@ -2682,7 +2707,7 @@
                     '_Submitted via the Suggest a Resource form on AIS Teaching Resources._'
                 ].filter(Boolean);
                 const issueBody = encodeURIComponent(bodyParts.join('\n'));
-                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank');
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank', 'noopener');
                 closeModal();
             });
         })();
@@ -2700,14 +2725,24 @@
             const closeBtn = document.getElementById('kbdClose');
             let kbdTrigger = null;
 
+            function setKbdPageInert(inert) {
+                document.querySelectorAll('header, main, footer, .export-toolbar').forEach(el => {
+                    if (inert) el.setAttribute('inert', '');
+                    else el.removeAttribute('inert');
+                });
+                document.body.style.overflow = inert ? 'hidden' : '';
+            }
+
             function openKbdModal() {
                 kbdTrigger = document.activeElement;
                 modal.classList.add('open');
+                setKbdPageInert(true);
                 closeBtn.focus();
             }
 
             function closeKbdModal() {
                 modal.classList.remove('open');
+                setKbdPageInert(false);
                 if (kbdTrigger && kbdTrigger.focus) kbdTrigger.focus();
             }
 

@@ -5,6 +5,23 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.2] - 2026-03-19
+
+### Fixed
+
+- **Report/Suggest 404 fix** — repo made public so GitHub Issues URLs work for all visitors
+- **Modal accessibility** — background content now set `inert` and body scroll locked when modals are open
+- **Touch targets** — share, report, and welcome-close buttons now meet 44px WCAG minimum
+- **Dark mode contrast** — improved `resource-accessed` text color for WCAG AA compliance
+- **Tag remove buttons** — added `aria-label="Remove tag: ..."` and 28px minimum touch target
+- **Dark mode overlay** — increased opacity for better modal/background distinction
+- **Print stylesheet** — hide collapse buttons in print output
+- **Export toolbar** — sticky offset below header so toolbar doesn't hide behind it
+- **CSV export** — extended formula injection protection to cover `\r`, `\n`, `;` characters
+- **`window.open` calls** — added `noopener` to all share/report/suggest popups
+- **Export collapsible categories** — categories in export view now collapsible like the main view
+- **Clear filters button** — properly restored when leaving export mode
+
 ## [0.10.1] - 2026-03-19
 
 ### Changed
