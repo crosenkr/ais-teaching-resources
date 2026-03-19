@@ -1197,27 +1197,6 @@
             outline-offset: 2px;
         }
 
-        /* Bookmark button */
-        .bookmark-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border: none;
-            border-radius: 4px;
-            background: var(--ais-accent);
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.15s;
-            padding: 0;
-            line-height: 1;
-        }
-        .bookmark-btn:hover { background: var(--ais-blue); color: white; }
-        .bookmark-btn.bookmarked { color: #e25555; background: #fde8e8; }
-        .bookmark-btn.bookmarked:hover { background: #e25555; color: white; }
-
         /* Export view toolbar */
         .export-toolbar {
             background: white;
@@ -1422,10 +1401,6 @@
         .dark-mode .modal-cancel { background: #121820; }
         .dark-mode .report-btn:hover { background: #c00; }
         .dark-mode .category-sort { background: #1e2a38; color: #b0b8c0; border-color: #2a3545; }
-        .dark-mode .bookmark-btn { background: #1a2a3a; }
-        .dark-mode .bookmark-btn:hover { background: #4da6e8; color: #121820; }
-        .dark-mode .bookmark-btn.bookmarked { color: #e25555; background: #3a1a1a; }
-        .dark-mode .bookmark-btn.bookmarked:hover { background: #e25555; color: white; }
         .dark-mode .export-toolbar { background: #1a2230; }
         .dark-mode .export-card { background: #1e2a38; }
         .dark-mode .export-card:hover { border-color: #5bb5f0; }
@@ -1474,7 +1449,7 @@
 
         /* Print stylesheet */
         @media print {
-            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle, .modal-overlay, .category-sort, .report-btn, .bookmark-btn, .export-toolbar, .kbd-modal-overlay {
+            header, .welcome-banner, .controls-bar, #activeTagFilter, .tag-cloud-panel, .share-bar, footer, .skip-link, .back-to-top, .dark-mode-toggle, .modal-overlay, .category-sort, .report-btn, .export-toolbar, .kbd-modal-overlay {
                 display: none !important;
             }
 
@@ -1574,7 +1549,6 @@
                 <a href="https://aisel.aisnet.org/" target="_blank" rel="noopener noreferrer">eLibrary</a>
                 <a href="https://aisnet.org/page/Conferences" target="_blank" rel="noopener noreferrer">Conferences</a>
                 <a href="https://aisnet.org/page/Communities" target="_blank" rel="noopener noreferrer">Communities</a>
-                <a href="#mode=export" id="exportNavLink" style="cursor:pointer;">Export</a>
             </div>
         </nav>
     </header>
@@ -1600,6 +1574,7 @@
             <button class="clear-filters-btn" id="clearFiltersBtn" aria-label="Clear all filters">&times; Clear filters</button>
             <button class="collapse-all-btn" id="collapseAllBtn" aria-label="Collapse all categories" style="display:none;">Collapse all</button>
             <button class="suggest-btn" id="suggestBtn" aria-label="Suggest a resource">+ Suggest</button>
+            <button class="suggest-btn" id="exportBtn" aria-label="Export resources" style="border-color:var(--ais-blue);color:var(--ais-blue);">&#8681; Export</button>
             <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">&#9790; Dark</button>
         </div>
     </nav>
@@ -1723,29 +1698,10 @@
         const collapsedCategories = new Set();
         const categorySortOrder = {}; // cat label → 'title' | 'source' | 'date'
 
-        // Bookmarks — persisted in localStorage as JSON array of resource IDs (title+url hash)
-        let bookmarks = new Set();
-        function loadBookmarks() {
-            try {
-                const stored = localStorage.getItem('ais-bookmarks');
-                const parsed = JSON.parse(stored); if (Array.isArray(parsed)) bookmarks = new Set(parsed.filter(x => typeof x === 'string'));
-            } catch(e) { bookmarks = new Set(); }
-        }
-        function saveBookmarks() {
-            localStorage.setItem('ais-bookmarks', JSON.stringify([...bookmarks]));
-        }
+        // Resource ID helper (used by export mode)
         function getResourceId(r) {
             return r.title + '||' + r.url;
         }
-        function isBookmarked(r) {
-            return bookmarks.has(getResourceId(r));
-        }
-        function toggleBookmark(resourceId) {
-            if (bookmarks.has(resourceId)) bookmarks.delete(resourceId);
-            else bookmarks.add(resourceId);
-            saveBookmarks();
-        }
-        loadBookmarks();
 
         // Export mode checked items
         const exportChecked = new Set();
@@ -1971,7 +1927,7 @@
             updateClearFiltersBtn();
 
             // Update Export nav link active state
-            const exportLink = document.getElementById('exportNavLink');
+            const exportLink = document.getElementById('exportBtn');
             if (exportLink) exportLink.classList.toggle('active', exportMode);
 
             if (exportMode) {
@@ -2047,11 +2003,9 @@
         // Export mode functions
         function enterExportMode(doRender) {
             exportMode = true;
-            // Pre-check bookmarked resources
             exportChecked.clear();
-            allResources.forEach(r => {
-                if (isBookmarked(r)) exportChecked.add(getResourceId(r));
-            });
+            // Hide non-essential controls
+            document.querySelectorAll('#tagCloudBtn, .view-toggle, #clearFiltersBtn, #collapseAllBtn, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = 'none');
             if (doRender !== false) render();
         }
 
@@ -2060,6 +2014,8 @@
             // Remove export toolbar
             const tb = document.getElementById('exportToolbar');
             if (tb) tb.remove();
+            // Restore controls
+            document.querySelectorAll('#tagCloudBtn, .view-toggle, #suggestBtn, #darkModeToggle, #exportBtn').forEach(el => el.style.display = '');
             if (doRender !== false) render();
         }
 
@@ -2239,7 +2195,6 @@
                     <p class="resource-desc">${descHtml}</p>
                     <div class="resource-tags">${tagsHtml}</div>
                     <div class="share-bar">
-                        <button class="bookmark-btn${isBookmarked(r) ? ' bookmarked' : ''}" data-bookmark-id="${escapeHtml(getResourceId(r))}" title="${isBookmarked(r) ? 'Remove bookmark' : 'Bookmark this resource'}" aria-label="${isBookmarked(r) ? 'Remove bookmark from' : 'Bookmark'} ${safeTitle}" aria-pressed="${isBookmarked(r)}">${isBookmarked(r) ? '\u2665' : '\u2661'}</button>
                         <span class="share-bar-label">Share:</span>
                         <button class="share-btn" data-share-copy="${escapeHtml(r.url)}" title="Copy link" aria-label="Copy link"><svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg></button>
                         <button class="share-btn" data-share-x="${shareUrlEnc}" data-share-text="${shareText}" title="Share on X" aria-label="Share on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
@@ -2412,18 +2367,6 @@
             }
             const tag = e.target.closest('[data-tag]');
             if (tag) { setTag(tag.dataset.tag); return; }
-            // Bookmark button
-            const bmBtn = e.target.closest('[data-bookmark-id]');
-            if (bmBtn) {
-                const rid = bmBtn.dataset.bookmarkId;
-                toggleBookmark(rid);
-                const nowBm = bookmarks.has(rid);
-                bmBtn.classList.toggle('bookmarked', nowBm);
-                bmBtn.textContent = nowBm ? '\u2665' : '\u2661';
-                bmBtn.setAttribute('aria-pressed', nowBm);
-                bmBtn.title = nowBm ? 'Remove bookmark' : 'Bookmark this resource';
-                return;
-            }
             // Share buttons
             const copyBtn = e.target.closest('[data-share-copy]');
             if (copyBtn) {
@@ -2482,7 +2425,7 @@
                     '**Description:**\n\n' +
                     '---\n_Submitted via the Report Issue button on AIS Teaching Resources._'
                 );
-                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody + '&labels=bug', '_blank');
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank');
                 return;
             }
             const clearAll = e.target.closest('[data-clear-all-filters]');
@@ -2739,13 +2682,13 @@
                     '_Submitted via the Suggest a Resource form on AIS Teaching Resources._'
                 ].filter(Boolean);
                 const issueBody = encodeURIComponent(bodyParts.join('\n'));
-                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody + '&labels=suggestion', '_blank');
+                window.open(GITHUB_ISSUES_URL + '?title=' + issueTitle + '&body=' + issueBody, '_blank');
                 closeModal();
             });
         })();
 
         // Export nav link click handler
-        document.getElementById('exportNavLink').addEventListener('click', (e) => {
+        document.getElementById('exportBtn').addEventListener('click', (e) => {
             e.preventDefault();
             if (exportMode) exitExportMode();
             else enterExportMode();

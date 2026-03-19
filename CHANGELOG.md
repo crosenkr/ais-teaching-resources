@@ -5,6 +5,15 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.1] - 2026-03-19
+
+### Changed
+
+- Removed bookmark/heart feature — simplified to just the Export view with checkboxes
+- Moved Export button from nav bar to controls bar (next to "+ Suggest") with matching pill style
+- Export mode now hides non-essential controls (Suggest, Dark mode, Browse Tags, Collapse all) for a cleaner export experience
+- Removed `&labels=` parameter from GitHub Issues URLs (requires collaborator access; caused 404 for regular users)
+
 ## [0.10.0] - 2026-03-19
 
 ### Added

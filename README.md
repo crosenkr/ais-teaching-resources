@@ -25,8 +25,7 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 - **Suggest a resource** — modal form opens a pre-filled GitHub Issue for community contributions
 - **Report issue** — flag button on each card opens a GitHub Issue for dead links or miscategorization
 - **Sort options** — sort within each category by title (A–Z), source, or newest
-- **Bookmarks** — heart icon on each card saves favorites to `localStorage`; bookmarked resources are pre-checked in Export view
-- **Export view** — dedicated view with checkboxes to select resources and download as CSV; filters still work; bookmarks pre-checked
+- **Export view** — dedicated view with checkboxes to select resources and download as CSV; all filters work in export mode
 - **Keyboard shortcuts** — press `?` to see all shortcuts; `/` search, `d` dark mode, `e` export, `Esc` clear/close
 - **Print-friendly** — clean print layout with URLs shown after links
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
@@ -130,7 +129,7 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.10.0 (Prototype)
+**Current version:** 0.10.1 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
