@@ -2229,7 +2229,7 @@
         function toggleTagCloud(forceClose) {
             const panel = document.getElementById('tagCloudPanel');
             const btn = document.getElementById('tagCloudBtn');
-            const isOpen = forceClose ? (panel.classList.remove('open'), false) : panel.classList.toggle('open');
+            const isOpen = (forceClose === true) ? (panel.classList.remove('open'), false) : panel.classList.toggle('open');
             btn.classList.toggle('active', isOpen);
             btn.setAttribute('aria-expanded', isOpen);
             if (isOpen && !panel.dataset.built) {
