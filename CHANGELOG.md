@@ -5,6 +5,13 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0] - 2026-03-19
+
+### Changed
+
+- **CSP hardening** — extracted all inline JavaScript to external `app.js` file, enabling removal of `'unsafe-inline'` from `script-src` CSP directive. This is the single most impactful security improvement, preventing execution of injected inline scripts.
+- CSP is now `script-src 'self'` (previously `script-src 'self' 'unsafe-inline'`)
+
 ## [0.10.2] - 2026-03-19
 
 ### Fixed

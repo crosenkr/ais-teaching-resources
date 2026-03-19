@@ -122,14 +122,16 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Security
 
+- **Content Security Policy** — strict CSP with `script-src 'self'` (no `unsafe-inline`); JavaScript in external `app.js`
 - All resource data is HTML-escaped before rendering (XSS prevention)
 - URLs are validated against `http://` and `https://` protocols only
 - External links use `rel="noopener noreferrer"`
 - Tag filtering uses delegated event listeners (no inline script injection)
+- CSV export sanitizes formula-injection characters
 
 ## Status
 
-**Current version:** 0.10.2 (Prototype)
+**Current version:** 0.11.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
