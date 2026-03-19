@@ -1,6 +1,6 @@
 # AIS Teaching Resources
 
-A curated collection of teaching resources for Information Systems (IS) educators worldwide, maintained by the AIS VP Education team.
+A curated collection of teaching resources for Information Systems (IS) educators worldwide, maintained by the AIS Education advisory board.
 
 **Live site:** [crosenkr.github.io/ais-teaching-resources](https://crosenkr.github.io/ais-teaching-resources/)
 
@@ -25,6 +25,9 @@ This website provides IS faculty with a searchable, filterable directory of 200+
 - **Suggest a resource** — modal form opens a pre-filled GitHub Issue for community contributions
 - **Report issue** — flag button on each card opens a GitHub Issue for dead links or miscategorization
 - **Sort options** — sort within each category by title (A–Z), source, or newest
+- **Bookmarks** — heart icon on each card saves favorites to `localStorage`; bookmarked resources are pre-checked in Export view
+- **Export view** — dedicated view with checkboxes to select resources and download as CSV; filters still work; bookmarks pre-checked
+- **Keyboard shortcuts** — press `?` to see all shortcuts; `/` search, `d` dark mode, `e` export, `Esc` clear/close
 - **Print-friendly** — clean print layout with URLs shown after links
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
 
@@ -127,21 +130,19 @@ The site is deployed via **GitHub Pages** from the `main` branch. Any push to `m
 
 ## Status
 
-**Current version:** 0.9.0 (Prototype)
+**Current version:** 0.10.0 (Prototype)
 
 This is a working prototype for user testing and feedback collection. See `USER_TEST_SCRIPT.md` for the test protocol.
 
 ### Roadmap
 
 #### Near-term
-- **Export filtered view** — "Download as CSV" button for the currently filtered resources (useful for syllabi planning)
 - **"New" badge refinement** — add "Recently Updated" indicator alongside existing "New" badges
+- **Resource count in shared URLs** — show "Showing 12 of 205 resources" more prominently when sharing filtered views
 
 #### Medium-term
 - **Star/voting system** — Registered users can star or vote on resources to surface the most useful ones
-- **Bookmarks / "My List"** — Save favorites to `localStorage` and export as shareable URL or CSV (no login needed)
-- **Resource count badge in URL** — Show "Showing 12 of 205 resources" more prominently when sharing filtered views
-- **Keyboard shortcut legend** — "?" modal showing available keyboard shortcuts
+- **Mobile multi-category parity** — replace `<select>` dropdown with chip/checkbox UI for multi-select on mobile
 
 #### Long-term
 - **Embed widget** — Let faculty embed a filtered subset (e.g., "AI resources") in their LMS or course page via `<iframe>`
@@ -160,4 +161,4 @@ You are free to share and adapt this material for non-commercial purposes with a
 
 ## Contact
 
-AIS VP Education — [aisnet.org/page/Education](https://aisnet.org/page/Education)
+AIS Education advisory board — [aisnet.org/page/Education](https://aisnet.org/page/Education)

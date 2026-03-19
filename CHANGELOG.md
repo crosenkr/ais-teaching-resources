@@ -5,6 +5,24 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2026-03-19
+
+### Added
+
+- **Bookmarks** — heart icon toggle on each resource card; saves favorites to `localStorage` (`ais-bookmarks`); filled red heart when bookmarked, outline when not; 32x32px button in share bar
+- **Export view** — dedicated "Export" link in nav bar switches to a compact list layout with checkboxes; select/deselect individual resources or "Select All"; bookmarked resources are pre-checked on entry; "Download CSV" exports selected resources with columns: Title, URL, Source, Category, Description, Tags, Last Accessed; all existing filters (categories, tags, search) work in export mode; deep-linkable via `#mode=export` in URL hash
+- **Keyboard shortcuts** — `?` opens a shortcuts legend modal; `d` toggles dark mode; `e` toggles export view; all guarded against firing when typing in input fields
+- **Keyboard shortcut legend modal** — styled consistently with Suggest modal; includes focus trap, Escape-to-close, overlay click-to-close
+
+### Changed
+
+- Renamed "AIS VP Education team" to "AIS Education advisory board" across all files (index.html meta, welcome banner, footer; README)
+- Export view toolbar is sticky below the header for easy access while scrolling
+- CSV export properly escapes fields containing commas, quotes, or newlines
+- Print stylesheet updated to hide bookmark buttons, export toolbar, and keyboard modal
+- Dark mode overrides added for all new elements (bookmarks, export view, keyboard modal)
+- README roadmap updated — moved completed items (export, bookmarks, keyboard shortcuts) out; added mobile multi-category parity
+
 ## [0.9.0] - 2026-03-18
 
 ### Added
