@@ -5,6 +5,13 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-04-25
+
+### Changed
+
+- **First public release.** Removed "PROTOTYPE" badge from header. Repository is public on GitHub; site is live at `crosenkr.github.io/ais-teaching-resources`.
+- Updated `Communities` nav link from `/page/Communities` (404) to `/page/GetInvolved` (the canonical AIS hub for SIGs, Chapters, Colleges, and Student Chapters).
+
 ## [0.11.1] - 2026-04-25
 
 ### Changed
