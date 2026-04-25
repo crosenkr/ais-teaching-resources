@@ -497,14 +497,14 @@
                 ? `<span class="resource-accessed">Last accessed: ${escapeHtml(r.lastAccessed)}</span>`
                 : '';
 
-            // "New" badge: show if lastAccessed is within the last 60 days
+            // "New" badge: show if lastAccessed is within the last 30 days (1 month)
             let newBadge = '';
             if (r.lastAccessed) {
                 const parts = r.lastAccessed.split('/');
                 if (parts.length === 3) {
                     const accessed = new Date(parts[2], parts[1] - 1, parts[0]);
                     const daysSince = (Date.now() - accessed.getTime()) / (1000 * 60 * 60 * 24);
-                    if (daysSince <= 60) newBadge = '<span class="new-badge">New</span>';
+                    if (daysSince <= 30) newBadge = '<span class="new-badge">New</span>';
                 }
             }
 

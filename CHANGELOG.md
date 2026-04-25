@@ -5,6 +5,16 @@ All notable changes to the AIS Teaching Resources website are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.1] - 2026-04-25
+
+### Changed
+
+- **"New" badge lifetime shortened** — badge now disappears after 30 days (was 60). Resources tagged with `lastAccessed` within the past month show as "New"; older entries no longer carry the badge.
+
+### Security
+
+- **CSP hardened** — added `object-src 'none'` (explicitly blocks `<object>`/`<embed>` plugin content) and `upgrade-insecure-requests` (forces any stray http:// reference to upgrade to https://). No regressions in functionality verified in browser preview.
+
 ## [0.11.0] - 2026-03-19
 
 ### Changed
